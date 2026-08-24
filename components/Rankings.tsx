@@ -222,6 +222,12 @@ export default function Rankings({
                   <div className="flex items-center justify-end gap-1">
                     {r.onSale && <span className="chip chip-on">sale</span>}
                     {r.isLow && r.history.length > 1 && <span className="chip chip-on">low</span>}
+                    {!r.taxesIncluded && (
+                      <span className="chip" style={{ color: 'var(--up)' }}
+                        title="This resort quotes before tax, so this figure is lower than what you would pay and is not comparable to the others.">
+                        ex-tax
+                      </span>
+                    )}
                   </div>
                 </td>
 
@@ -251,6 +257,13 @@ export default function Rankings({
       <p className="muted mt-3 text-xs">
         ● amenity included in the entry room · ◐ only with the upgraded room · · not available
       </p>
+      {filtered.some((r) => !r.taxesIncluded) && (
+        <p className="mt-1 text-xs" style={{ color: 'var(--up)' }}>
+          ex-tax marks a resort that quotes before taxes and fees. Its price is
+          lower than what you would actually pay, so it is not comparable to the
+          rest and is left out of the totals above.
+        </p>
+      )}
     </>
   );
 }

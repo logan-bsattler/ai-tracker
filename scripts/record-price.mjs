@@ -19,6 +19,7 @@
 //   --trip     trip id or part of its label      (default: first active trip)
 //   --url      page the price came from
 //   --notes    free text
+//   --ex-tax   the quote excludes taxes and fees (default: taxes included)
 //   --dry-run  print what would be written, change nothing
 // ---------------------------------------------------------------------------
 import fs from 'node:fs';
@@ -115,6 +116,7 @@ const snapshot = {
   price,
   salePrice,
   currency: 'USD',
+  taxesIncluded: args['ex-tax'] !== true,
   url: typeof args.url === 'string' ? args.url : null,
   notes: typeof args.notes === 'string' ? args.notes : '',
   capturedAt: new Date().toISOString(),
@@ -131,6 +133,7 @@ const delta = previous ? effective(snapshot) - effective(previous) : null;
 const summary =
   `${resort.name} · ${room.name} · ${trip.label}\n` +
   `  ${source}  $${price}${salePrice != null ? ` (sale $${salePrice})` : ''}` +
+  (snapshot.taxesIncluded ? '' : ' [EX-TAX]') +
   (delta == null ? '  [first observation]'
     : delta === 0 ? '  [unchanged]'
     : `  [${delta > 0 ? '+' : ''}$${delta} vs $${effective(previous)}]`);

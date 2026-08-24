@@ -71,6 +71,10 @@ export default async function CapturePage({
               ))}
             </select>
           </label>
+          <label className="flex items-center gap-1.5 pb-2 text-xs">
+            <input type="checkbox" name="taxesIncluded" defaultChecked />
+            <span>Prices include taxes and fees</span>
+          </label>
           <p className="muted max-w-md text-xs">
             Record each source as its own round. Comparing resort-direct against
             CheapCaribbean for the same room is how you find out which actually

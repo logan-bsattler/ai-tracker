@@ -129,6 +129,11 @@ export default function CompareView({ data }: { data: AllRankings }) {
                   {r.onSale && <span className="chip chip-on ml-1">sale</span>}
                 </span>
               )} />
+            <Row label="Taxes in price?" rows={rows} render={(r) => (
+              r.taxesIncluded
+                ? <span className="muted">Included</span>
+                : <span style={{ color: 'var(--up)' }}>Excluded — not comparable</span>
+            )} />
             <Row label="Entry room price" rows={rows}
               render={(r) => <span className="num muted">{money(r.entryPrice)}</span>} />
             <Row label="Cost to upgrade" rows={rows} highlight={smallestUpgrade}

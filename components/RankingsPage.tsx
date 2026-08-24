@@ -34,7 +34,14 @@ export default function RankingsPage({
   const trip = data.trips.find((t) => t.id === requested) ?? data.trips[0] ?? null;
   const rows = trip ? data.byTrip[trip.id] ?? [] : [];
 
-  const live = rows.filter((r) => r.status !== 'closed' && r.price != null);
+  // Headline figures compare like with like: a resort quoting before tax would
+  // top every one of them while being more expensive in reality.
+  const live = rows.filter(
+    (r) => r.status !== 'closed' && r.price != null && r.taxesIncluded,
+  );
+  const exTaxCount = rows.filter(
+    (r) => r.status !== 'closed' && r.price != null && !r.taxesIncluded,
+  ).length;
   const cheapest = [...live].sort((a, b) => a.price! - b.price!)[0];
   const bestMatch = [...live].sort((a, b) => b.score - a.score || a.price! - b.price!)[0];
   const bestDrop = [...live].filter((r) => (r.delta ?? 0) < 0).sort((a, b) => a.delta! - b.delta!)[0];
@@ -78,6 +85,14 @@ export default function RankingsPage({
         <Stat label="Biggest drop" value={bestDrop ? money(bestDrop.delta) : '—'}
           hint={bestDrop?.name ?? 'No drops since last capture'} />
       </div>
+
+      {exTaxCount > 0 && (
+        <p className="muted -mt-3 mb-5 text-xs">
+          {exTaxCount === 1 ? '1 resort quotes' : `${exTaxCount} resorts quote`} before
+          tax and {exTaxCount === 1 ? 'is' : 'are'} excluded from these figures — see
+          the ex-tax note below the table.
+        </p>
+      )}
 
       <Rankings rows={rows} criteria={data.criteria} tripId={trip?.id ?? null} />
     </>

@@ -95,6 +95,16 @@ export interface PriceSnapshot {
   /** Discounted price if the resort is running a sale. */
   salePrice: number | null;
   currency: string;
+  /**
+   * Whether `price` already includes taxes and fees.
+   *
+   * Most resorts quote all-in, but some (Punta Cana Princess) quote before
+   * tax, which in the Dominican Republic is roughly 28% once ITBIS and the
+   * service charge are added. Comparing the two directly makes an ex-tax
+   * resort look far cheaper than it is, so the figure travels with the flag
+   * rather than being silently grossed up to something nobody quoted.
+   */
+  taxesIncluded: boolean;
   url: string | null;
   notes: string;
   capturedAt: string; // ISO timestamp
@@ -112,4 +122,12 @@ export interface Database {
 /** The price you actually pay: the sale price when there is one. */
 export function effectivePrice(p: PriceSnapshot): number {
   return p.salePrice != null && p.salePrice > 0 ? p.salePrice : p.price;
+}
+
+/**
+ * Older snapshots predate the flag. They were all captured from tax-inclusive
+ * quotes, so absent means included.
+ */
+export function includesTaxes(p: PriceSnapshot): boolean {
+  return p.taxesIncluded !== false;
 }

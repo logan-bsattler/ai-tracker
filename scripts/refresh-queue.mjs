@@ -88,6 +88,7 @@ const items = db.resorts
       websiteUrl: resort.websiteUrl,
       searchUrl: `https://www.cheapcaribbean.com/search?q=${encodeURIComponent(resort.name)}`,
       lastSeen,
+      quotesExTax: prices.some((p) => p.taxesIncluded === false),
       staleDays: lastSeen ? Math.floor((now - Date.parse(lastSeen)) / 86_400_000) : null,
       rooms: rooms.map((r) => ({ tier: r.tier, name: r.name, lastPrice: lastFor(r) })),
     };

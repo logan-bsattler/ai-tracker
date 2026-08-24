@@ -269,6 +269,10 @@ export default async function ResortPage({
               <span className="muted mb-1 block">Link / notes</span>
               <input className="input" name="url" placeholder="https://…" />
             </label>
+            <label className="flex items-center gap-1.5 pb-2 text-xs">
+              <input type="checkbox" name="taxesIncluded" defaultChecked />
+              <span>Taxes included</span>
+            </label>
             <button className="btn btn-primary" type="submit">Add</button>
           </form>
           )}
@@ -293,7 +297,12 @@ export default async function ResortPage({
                       <td className="muted text-xs">{SOURCE_LABELS[p.source] ?? p.source}</td>
                       <td className="num text-right">{money(p.price)}</td>
                       <td className="num text-right">{money(p.salePrice)}</td>
-                      <td className="num text-right font-semibold">{money(effectivePrice(p))}</td>
+                      <td className="num text-right font-semibold">
+                        {money(effectivePrice(p))}
+                        {p.taxesIncluded === false && (
+                          <span className="chip ml-1" style={{ color: 'var(--up)' }}>ex-tax</span>
+                        )}
+                      </td>
                       {!IS_STATIC && (
                         <td className="text-right">
                           <form action={deletePrice}>

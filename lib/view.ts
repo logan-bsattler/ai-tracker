@@ -2,7 +2,7 @@ import { buildBookingUrl } from './booking';
 import { read } from './db';
 import { scoreAll } from './scoring';
 import type { Criterion, Trip } from './types';
-import { effectivePrice } from './types';
+import { effectivePrice, includesTaxes } from './types';
 
 /** Flat, serializable shape handed to client components. */
 export interface RankingRow {
@@ -25,6 +25,8 @@ export interface RankingRow {
   targetName: string | null;
   price: number | null;
   onSale: boolean;
+  /** False when the quote excludes taxes, so it is not comparable as-is. */
+  taxesIncluded: boolean;
   listPrice: number | null;
   delta: number | null;
   low: number | null;
@@ -84,6 +86,7 @@ export function buildRankings(trip: Trip | null): {
       targetName: s.target?.room.name ?? null,
       price,
       onSale: latest?.salePrice != null && latest.salePrice > 0,
+      taxesIncluded: latest ? includesTaxes(latest) : true,
       listPrice: latest?.price ?? null,
       delta: s.target?.pricing.delta ?? null,
       low: s.target?.pricing.low ?? null,

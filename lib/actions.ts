@@ -124,6 +124,7 @@ export async function addPrice(form: FormData) {
       price,
       salePrice: numOrNull(form.get('salePrice')),
       currency: str(form.get('currency')) || 'USD',
+      taxesIncluded: form.get('taxesIncluded') === 'on',
       url: str(form.get('url')) || null,
       notes: str(form.get('notes')),
       capturedAt: new Date().toISOString(),
@@ -143,6 +144,8 @@ export async function captureRound(form: FormData) {
   if (!tripId) return;
 
   const capturedAt = new Date().toISOString();
+  // One setting for the whole round: a given source quotes one way or the other.
+  const taxesIncluded = form.get('taxesIncluded') === 'on';
   mutate((db) => {
     for (const room of db.rooms) {
       const price = numOrNull(form.get(`price:${room.id}`));
@@ -155,6 +158,7 @@ export async function captureRound(form: FormData) {
         price,
         salePrice: numOrNull(form.get(`sale:${room.id}`)),
         currency: 'USD',
+        taxesIncluded,
         url: null,
         notes: '',
         capturedAt,

@@ -635,7 +635,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_bahia-principe-luxury-ambar_target_import",
@@ -647,7 +648,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_barcelo-bavaro-beach_entry_import",
@@ -659,7 +661,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_barcelo-bavaro-beach_target_import",
@@ -671,7 +674,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_punta-cana-princess_entry_import",
@@ -683,7 +687,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_punta-cana-princess_target_import",
@@ -695,7 +700,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_catalonia-royal-bavaro_entry_import",
@@ -707,7 +713,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_catalonia-royal-bavaro_target_import",
@@ -719,7 +726,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_serenade-all-suites_entry_import",
@@ -731,7 +739,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_serenade-all-suites_target_import",
@@ -743,7 +752,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_trs-turquesa_entry_import",
@@ -755,7 +765,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_trs-turquesa_target_import",
@@ -767,7 +778,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_majestic-elegance_entry_import",
@@ -779,7 +791,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_majestic-elegance_target_import",
@@ -791,7 +804,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_excellence-el-carmen_entry_import",
@@ -803,7 +817,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_excellence-el-carmen_target_import",
@@ -815,7 +830,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_melia-punta-cana-beach_entry_import",
@@ -827,7 +843,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_melia-punta-cana-beach_target_import",
@@ -839,7 +856,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_joia-bavaro-by-iberostar_entry_import",
@@ -851,7 +869,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_joia-bavaro-by-iberostar_target_import",
@@ -863,7 +882,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_joia-rose-hall-by-iberostar_entry_import",
@@ -875,7 +895,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_joia-rose-hall-by-iberostar_target_import",
@@ -887,7 +908,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_excellence-oyster-bay_entry_import",
@@ -899,7 +921,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_excellence-oyster-bay_target_import",
@@ -911,7 +934,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_sanctuary-cap-cana_entry_import",
@@ -923,7 +947,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_sanctuary-cap-cana_target_import",
@@ -935,7 +960,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_trs-cap-cana_entry_import",
@@ -947,7 +973,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_room_trs-cap-cana_target_import",
@@ -959,7 +986,8 @@
       "currency": "USD",
       "url": null,
       "notes": "Imported from spreadsheet",
-      "capturedAt": "2025-01-15T12:00:00.000Z"
+      "capturedAt": "2025-01-15T12:00:00.000Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7kzb8h9mde0r",
@@ -971,7 +999,8 @@
       "currency": "USD",
       "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceelcarmen/2027-04-17/2027-04-24/",
       "notes": "Non-refundable Pay Now rate; refundable Reserve Later rate was $3301",
-      "capturedAt": "2026-08-24T18:40:00.929Z"
+      "capturedAt": "2026-08-24T18:40:00.929Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7kzbgid5fmt5",
@@ -983,7 +1012,8 @@
       "currency": "USD",
       "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceelcarmen/2027-04-17/2027-04-24/",
       "notes": "Non-refundable Pay Now rate; refundable Reserve Later rate was $4115",
-      "capturedAt": "2026-08-24T18:40:01.219Z"
+      "capturedAt": "2026-08-24T18:40:01.219Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7l0f6jpj8g24",
@@ -995,7 +1025,8 @@
       "currency": "USD",
       "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
       "notes": "Non-refundable Pay Now rate for plain Junior Suite (run of house); refundable Reserve Later rate was $5165",
-      "capturedAt": "2026-08-24T18:40:52.699Z"
+      "capturedAt": "2026-08-24T18:40:52.699Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7l175nkno6sm",
@@ -1007,7 +1038,8 @@
       "currency": "USD",
       "url": "https://booking.iberostar.com",
       "notes": "List price shown as 'Without discounts'; sale is non-refundable Pay Now rate. Pay-at-hotel flexible rate was $4818.",
-      "capturedAt": "2026-08-24T18:41:28.955Z"
+      "capturedAt": "2026-08-24T18:41:28.955Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7l17d5ainlk4",
@@ -1019,7 +1051,8 @@
       "currency": "USD",
       "url": "https://booking.iberostar.com",
       "notes": "List price shown as 'Without discounts'; sale is non-refundable Pay Now rate. Pay-at-hotel flexible rate was $5782.",
-      "capturedAt": "2026-08-24T18:41:29.225Z"
+      "capturedAt": "2026-08-24T18:41:29.225Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7l206vy9ma7j",
@@ -1031,7 +1064,8 @@
       "currency": "USD",
       "url": "https://booking.iberostar.com",
       "notes": "List price shown as 'Without discounts'; sale is non-refundable Pay Now rate. Pay-at-hotel flexible rate was $8169.",
-      "capturedAt": "2026-08-24T18:42:06.583Z"
+      "capturedAt": "2026-08-24T18:42:06.583Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7mw8u5ta5s42",
@@ -1043,7 +1077,8 @@
       "currency": "USD",
       "url": "https://en.book.bahia-principe.com/bookcore/availability/bpluxamb/2027-04-17/2027-04-24/2/0/",
       "notes": "1 King Bed Deluxe Junior Suite; summer flash sale ends Aug 26",
-      "capturedAt": "2026-08-24T19:33:37.085Z"
+      "capturedAt": "2026-08-24T19:33:37.085Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7mw91vln9wnd",
@@ -1055,7 +1090,8 @@
       "currency": "USD",
       "url": "https://en.book.bahia-principe.com/bookcore/availability/bpluxamb/2027-04-17/2027-04-24/2/0/",
       "notes": "1 King Bed Corner Deluxe Junior Suite",
-      "capturedAt": "2026-08-24T19:33:37.363Z"
+      "capturedAt": "2026-08-24T19:33:37.363Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7mytggwvdb20",
@@ -1067,7 +1103,8 @@
       "currency": "USD",
       "url": "https://bookings.palladiumhotelgroup.com/bookcore/availability/suitesturquesa/2027-04-17/2027-04-24/2/0/",
       "notes": "Non-refundable best rate, -39.6%; taxes+charges 24% included",
-      "capturedAt": "2026-08-24T19:35:37.120Z"
+      "capturedAt": "2026-08-24T19:35:37.120Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7myto1h0zhhl",
@@ -1079,7 +1116,8 @@
       "currency": "USD",
       "url": "https://bookings.palladiumhotelgroup.com/bookcore/availability/suitesturquesa/2027-04-17/2027-04-24/2/0/",
       "notes": "Non-refundable best rate, -39.6%; taxes+charges 24% included",
-      "capturedAt": "2026-08-24T19:35:37.393Z"
+      "capturedAt": "2026-08-24T19:35:37.393Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7n0ue2c1xakc",
@@ -1091,7 +1129,8 @@
       "currency": "USD",
       "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceelcarmen/2027-04-17/2027-04-24/",
       "notes": "US$424/night x7; taxes included",
-      "capturedAt": "2026-08-24T19:37:11.642Z"
+      "capturedAt": "2026-08-24T19:37:11.642Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7n0umb1xo5u3",
@@ -1103,7 +1142,8 @@
       "currency": "USD",
       "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceelcarmen/2027-04-17/2027-04-24/",
       "notes": "US$529/night x7; taxes included",
-      "capturedAt": "2026-08-24T19:37:11.939Z"
+      "capturedAt": "2026-08-24T19:37:11.939Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7n2k9dd56jvv",
@@ -1115,7 +1155,8 @@
       "currency": "USD",
       "url": "https://www.iberostar.com/en/bookings/?vo_booking%5Bcheck_in_date%5D=04%2F17%2F2027&vo_booking%5Bcheck_out_date%5D=04%2F24%2F2027&vo_booking%5Bhotel_id%5D=78",
       "notes": "Best price modifiable prepaid rate",
-      "capturedAt": "2026-08-24T19:38:31.826Z"
+      "capturedAt": "2026-08-24T19:38:31.826Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7n2khg0w7f1t",
@@ -1127,7 +1168,8 @@
       "currency": "USD",
       "url": "https://www.iberostar.com/en/bookings/?vo_booking%5Bcheck_in_date%5D=04%2F17%2F2027&vo_booking%5Bcheck_out_date%5D=04%2F24%2F2027&vo_booking%5Bhotel_id%5D=78",
       "notes": "Best price modifiable prepaid rate",
-      "capturedAt": "2026-08-24T19:38:32.116Z"
+      "capturedAt": "2026-08-24T19:38:32.116Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7n3b42bthwf0",
@@ -1139,7 +1181,8 @@
       "currency": "USD",
       "url": "https://www.iberostar.com/en/bookings/?vo_booking%5Bhotel_id%5D=79",
       "notes": "Best price modifiable prepaid rate",
-      "capturedAt": "2026-08-24T19:39:06.626Z"
+      "capturedAt": "2026-08-24T19:39:06.626Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7nc1itpvf3uc",
@@ -1151,7 +1194,8 @@
       "currency": "USD",
       "url": "https://www.serenadepuntacana.com/booking1?startDate=17%2F04%2F2027&endDate=24%2F04%2F2027&numRooms=1&adultsRoom1=2&childrenRoom1=0",
       "notes": "Total without club discount; club/registered rate is 1482",
-      "capturedAt": "2026-08-24T19:45:54.101Z"
+      "capturedAt": "2026-08-24T19:45:54.101Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7nc1qh84cf4b",
@@ -1163,7 +1207,8 @@
       "currency": "USD",
       "url": "https://www.serenadepuntacana.com/booking1?startDate=17%2F04%2F2027&endDate=24%2F04%2F2027&numRooms=1&adultsRoom1=2&childrenRoom1=0",
       "notes": "Total without club discount; club/registered rate is 1926",
-      "capturedAt": "2026-08-24T19:45:54.377Z"
+      "capturedAt": "2026-08-24T19:45:54.377Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7nc1y814ovk6",
@@ -1175,7 +1220,8 @@
       "currency": "USD",
       "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
       "notes": "US$674/night x7",
-      "capturedAt": "2026-08-24T19:45:54.656Z"
+      "capturedAt": "2026-08-24T19:45:54.656Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7nc2609j197m",
@@ -1187,7 +1233,8 @@
       "currency": "USD",
       "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
       "notes": "US$785/night x7",
-      "capturedAt": "2026-08-24T19:45:54.936Z"
+      "capturedAt": "2026-08-24T19:45:54.936Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7nc2dp0zn6qp",
@@ -1199,7 +1246,8 @@
       "currency": "USD",
       "url": "https://www.iberostar.com/en/bookings/?vo_booking%5Bhotel_id%5D=79",
       "notes": "Best price modifiable prepaid rate",
-      "capturedAt": "2026-08-24T19:45:55.213Z"
+      "capturedAt": "2026-08-24T19:45:55.213Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7nhgybklq3rn",
@@ -1211,7 +1259,8 @@
       "currency": "USD",
       "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
       "notes": "US$882/night x7; all fees and taxes included",
-      "capturedAt": "2026-08-24T19:50:07.379Z"
+      "capturedAt": "2026-08-24T19:50:07.379Z",
+      "taxesIncluded": true
     },
     {
       "id": "price_mt7nr8q7xzpygi",
@@ -1223,7 +1272,8 @@
       "currency": "USD",
       "url": "https://www.princess-hotels.com/en/bookingstep1/?idtokenprovider=100376314&lang=en&nights=7&checkin=17%2F04%2F2027&step=1&currency=USD&parties=W3siYWR1bHRzIjoyLCJjaGlsZHJlbiI6W119XQ%3D%3D",
       "notes": "TAXES EXCLUDED; non-refundable, 48% off, incl. 5% member benefit",
-      "capturedAt": "2026-08-24T19:57:43.279Z"
+      "capturedAt": "2026-08-24T19:57:43.279Z",
+      "taxesIncluded": false
     },
     {
       "id": "price_mt7nr8u7y3owba",
@@ -1235,7 +1285,8 @@
       "currency": "USD",
       "url": "https://www.princess-hotels.com/en/bookingstep1/?idtokenprovider=100376314&lang=en&nights=7&checkin=17%2F04%2F2027&step=1&currency=USD&parties=W3siYWR1bHRzIjoyLCJjaGlsZHJlbiI6W119XQ%3D%3D",
       "notes": "TAXES EXCLUDED; non-refundable, 51% off, incl. 5% member benefit",
-      "capturedAt": "2026-08-24T19:57:43.423Z"
+      "capturedAt": "2026-08-24T19:57:43.423Z",
+      "taxesIncluded": false
     }
   ],
   "meta": {
