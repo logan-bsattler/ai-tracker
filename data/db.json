@@ -939,6 +939,78 @@
       "url": null,
       "notes": "Imported from spreadsheet",
       "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_mt7kzb8h9mde0r",
+      "roomId": "room_excellence-el-carmen_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 2971,
+      "salePrice": null,
+      "currency": "USD",
+      "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceelcarmen/2027-04-17/2027-04-24/",
+      "notes": "Non-refundable Pay Now rate; refundable Reserve Later rate was $3301",
+      "capturedAt": "2026-08-24T18:40:00.929Z"
+    },
+    {
+      "id": "price_mt7kzbgid5fmt5",
+      "roomId": "room_excellence-el-carmen_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 3704,
+      "salePrice": null,
+      "currency": "USD",
+      "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceelcarmen/2027-04-17/2027-04-24/",
+      "notes": "Non-refundable Pay Now rate; refundable Reserve Later rate was $4115",
+      "capturedAt": "2026-08-24T18:40:01.219Z"
+    },
+    {
+      "id": "price_mt7l0f6jpj8g24",
+      "roomId": "room_excellence-oyster-bay_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 4717,
+      "salePrice": null,
+      "currency": "USD",
+      "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
+      "notes": "Non-refundable Pay Now rate for plain Junior Suite (run of house); refundable Reserve Later rate was $5165",
+      "capturedAt": "2026-08-24T18:40:52.699Z"
+    },
+    {
+      "id": "price_mt7l175nkno6sm",
+      "roomId": "room_joia-bavaro-by-iberostar_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 6762,
+      "salePrice": 4336,
+      "currency": "USD",
+      "url": "https://booking.iberostar.com",
+      "notes": "List price shown as 'Without discounts'; sale is non-refundable Pay Now rate. Pay-at-hotel flexible rate was $4818.",
+      "capturedAt": "2026-08-24T18:41:28.955Z"
+    },
+    {
+      "id": "price_mt7l17d5ainlk4",
+      "roomId": "room_joia-bavaro-by-iberostar_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 8114,
+      "salePrice": 5203,
+      "currency": "USD",
+      "url": "https://booking.iberostar.com",
+      "notes": "List price shown as 'Without discounts'; sale is non-refundable Pay Now rate. Pay-at-hotel flexible rate was $5782.",
+      "capturedAt": "2026-08-24T18:41:29.225Z"
+    },
+    {
+      "id": "price_mt7l206vy9ma7j",
+      "roomId": "room_joia-rose-hall-by-iberostar_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 10892,
+      "salePrice": 7352,
+      "currency": "USD",
+      "url": "https://booking.iberostar.com",
+      "notes": "List price shown as 'Without discounts'; sale is non-refundable Pay Now rate. Pay-at-hotel flexible rate was $8169.",
+      "capturedAt": "2026-08-24T18:42:06.583Z"
     }
   ],
   "meta": {
