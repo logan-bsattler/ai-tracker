@@ -10,7 +10,7 @@
       "tags": [
         "24-hour room service"
       ],
-      "bookingUrlTemplate": null,
+      "bookingUrlTemplate": "https://en.book.bahia-principe.com/bookcore/availability/bpluxamb/{checkIn}/{checkOut}/{adults}/{children}/",
       "websiteUrl": "https://www.bahia-principe.com/en/dominican-republic/punta-cana/resort-ambar/",
       "imageUrl": null,
       "notes": "Renamed by the chain to \"Bahia Principe Escape Ambar\".",
@@ -28,7 +28,7 @@
       "bookingUrlTemplate": null,
       "websiteUrl": "https://www.barcelo.com/en-us/barcelo-bavaro-beach/",
       "imageUrl": null,
-      "notes": "",
+      "notes": "Engine: reservation-api.barcelo.com XHR, hotel_id 7389. No GET deep link found.",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z"
     },
@@ -43,7 +43,7 @@
       "bookingUrlTemplate": null,
       "websiteUrl": "https://www.princess-hotels.com/en/punta-cana/punta-cana-princess/",
       "imageUrl": null,
-      "notes": "",
+      "notes": "Engine: Mirai, idtokenprovider=100376314. Dispatcher loads but ignores checkin=.",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z"
     },
@@ -60,7 +60,7 @@
       "bookingUrlTemplate": null,
       "websiteUrl": "https://www.cataloniahotels.com/en/hotel/catalonia-royal-bavaro-adults-only",
       "imageUrl": null,
-      "notes": "",
+      "notes": "Engine: Mirai, hotelBackCode=CRB. Public min-price API at apiweb.cataloniahotels.com.",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z"
     },
@@ -72,7 +72,7 @@
       "transferMinutes": 18,
       "stars": 5,
       "tags": [],
-      "bookingUrlTemplate": null,
+      "bookingUrlTemplate": "https://www.serenadepuntacana.com/booking1?startDate={checkInEUEnc}&endDate={checkOutEUEnc}&numRooms=1&adultsRoom1={adults}&childrenRoom1={children}",
       "websiteUrl": "https://www.serenadepuntacana.com/",
       "imageUrl": null,
       "notes": "",
@@ -89,7 +89,7 @@
       "tags": [
         "24-hour room service"
       ],
-      "bookingUrlTemplate": null,
+      "bookingUrlTemplate": "https://bookings.palladiumhotelgroup.com/bookcore/availability/suitesturquesa/{checkIn}/{checkOut}/{adults}/{children}/",
       "websiteUrl": "https://www.palladiumhotelgroup.com/en/hotels/republicadominicana/puntacana/trs-turquesa-hotel",
       "imageUrl": null,
       "notes": "",
@@ -110,7 +110,7 @@
       "bookingUrlTemplate": null,
       "websiteUrl": "https://www.majestic-resorts.com/punta-cana/resorts/majestic-elegance-punta-cana",
       "imageUrl": null,
-      "notes": "",
+      "notes": "Engine: Hotetec SPA. No GET form exposed.",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z"
     },
@@ -140,7 +140,7 @@
       "bookingUrlTemplate": null,
       "websiteUrl": "https://www.melia.com/en/hotels/dominican-republic/punta-cana/melia-punta-cana-beach-resort",
       "imageUrl": null,
-      "notes": "",
+      "notes": "Engine: Melia SPA, hotelCode 5917. Query params ignored.",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z"
     },
@@ -206,7 +206,7 @@
       "bookingUrlTemplate": null,
       "websiteUrl": "https://www.marriott.com/en-us/hotels/pujlc-sanctuary-cap-cana-a-luxury-collection-resort-dominican-republic-adult-all-inclusive/overview/",
       "imageUrl": null,
-      "notes": "Marriott Luxury Collection property, code PUJLC.",
+      "notes": "Marriott Luxury Collection property, code PUJLC. Marriott (PUJLC) serves a bot-protection interstitial. Not automatable.",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z"
     },

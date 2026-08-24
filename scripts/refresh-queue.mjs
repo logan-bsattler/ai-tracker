@@ -38,6 +38,7 @@ function buildBookingUrl(resort) {
   const tpl = resort.bookingUrlTemplate;
   if (!tpl) return null;
   const us = (iso) => { const [y, m, d] = iso.split('-'); return `${m}/${d}/${y}`; };
+  const eu = (iso) => { const [y, m, d] = iso.split('-'); return `${d}/${m}/${y}`; };
   const subs = {
     checkIn: trip.checkIn,
     checkOut: trip.checkOut,
@@ -45,6 +46,10 @@ function buildBookingUrl(resort) {
     checkOutUS: us(trip.checkOut),
     checkInUSEnc: encodeURIComponent(us(trip.checkIn)),
     checkOutUSEnc: encodeURIComponent(us(trip.checkOut)),
+    checkInEU: eu(trip.checkIn),
+    checkOutEU: eu(trip.checkOut),
+    checkInEUEnc: encodeURIComponent(eu(trip.checkIn)),
+    checkOutEUEnc: encodeURIComponent(eu(trip.checkOut)),
     checkInCompact: trip.checkIn.replace(/-/g, ''),
     checkOutCompact: trip.checkOut.replace(/-/g, ''),
     adults: String(trip.adults),

@@ -60,8 +60,14 @@ everywhere. `searchUrl` (CheapCaribbean) is the last resort.
 Record the source you actually used: `resort-direct` for both the deep link and
 the hotel-page widget, `cheapcaribbean` only if you priced it there.
 
-Currently only Excellence (both resorts) and Iberostar (both JOIA properties)
-have verified deep links. The other nine need the widget.
+Seven resorts have verified deep links: Excellence (both), Iberostar (both
+JOIA), Bahia Principe, TRS Turquesa and Serenade. Six still need the widget --
+Barcelo, Punta Cana Princess, Catalonia, Majestic, Melia and Sanctuary. Each of
+those carries a note on the resort recording which engine it runs and what has
+already been ruled out; read it before spending time re-deriving that.
+
+Sanctuary Cap Cana is a Marriott property behind bot protection. Do not try to
+get past it -- report it as blocked.
 
 **4. Record what you found**
 

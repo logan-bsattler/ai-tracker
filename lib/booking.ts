@@ -9,6 +9,8 @@ import type { Resort, Trip } from './types';
  *   {checkIn} {checkOut}          ISO  2027-04-17
  *   {checkInUS} {checkOutUS}      US   04/17/2027
  *   {checkInUSEnc} {checkOutUSEnc} US, URL-encoded  04%2F17%2F2027
+ *   {checkInEU} {checkOutEU}      EU   17/04/2027
+ *   {checkInEUEnc} {checkOutEUEnc} EU, URL-encoded  17%2F04%2F2027
  *   {checkInCompact}              flat 20270417
  *   {adults} {children} {nights}
  *
@@ -24,6 +26,10 @@ export function buildBookingUrl(resort: Resort, trip: Trip | null): string | nul
     const [y, m, d] = iso.split('-');
     return `${m}/${d}/${y}`;
   };
+  const eu = (iso: string) => {
+    const [y, m, d] = iso.split('-');
+    return `${d}/${m}/${y}`;
+  };
 
   const subs: Record<string, string> = {
     checkIn: trip.checkIn,
@@ -32,6 +38,10 @@ export function buildBookingUrl(resort: Resort, trip: Trip | null): string | nul
     checkOutUS: us(trip.checkOut),
     checkInUSEnc: encodeURIComponent(us(trip.checkIn)),
     checkOutUSEnc: encodeURIComponent(us(trip.checkOut)),
+    checkInEU: eu(trip.checkIn),
+    checkOutEU: eu(trip.checkOut),
+    checkInEUEnc: encodeURIComponent(eu(trip.checkIn)),
+    checkOutEUEnc: encodeURIComponent(eu(trip.checkOut)),
     checkInCompact: trip.checkIn.replace(/-/g, ''),
     checkOutCompact: trip.checkOut.replace(/-/g, ''),
     adults: String(trip.adults),
