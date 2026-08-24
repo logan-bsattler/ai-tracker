@@ -601,13 +601,22 @@
       "adults": 2,
       "children": 0,
       "archived": false
+    },
+    {
+      "id": "trip_spreadsheet_baseline",
+      "label": "Original spreadsheet (dates unknown)",
+      "checkIn": "2025-01-15",
+      "checkOut": "2025-01-22",
+      "adults": 2,
+      "children": 0,
+      "archived": true
     }
   ],
   "prices": [
     {
       "id": "price_room_bahia-principe-luxury-ambar_entry_import",
       "roomId": "room_bahia-principe-luxury-ambar_entry",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 1324,
       "salePrice": null,
@@ -619,7 +628,7 @@
     {
       "id": "price_room_bahia-principe-luxury-ambar_target_import",
       "roomId": "room_bahia-principe-luxury-ambar_target",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 1417,
       "salePrice": 1331,
@@ -631,7 +640,7 @@
     {
       "id": "price_room_barcelo-bavaro-beach_entry_import",
       "roomId": "room_barcelo-bavaro-beach_entry",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 1367,
       "salePrice": null,
@@ -643,7 +652,7 @@
     {
       "id": "price_room_barcelo-bavaro-beach_target_import",
       "roomId": "room_barcelo-bavaro-beach_target",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 2139,
       "salePrice": 1596,
@@ -655,7 +664,7 @@
     {
       "id": "price_room_punta-cana-princess_entry_import",
       "roomId": "room_punta-cana-princess_entry",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 1112,
       "salePrice": null,
@@ -667,7 +676,7 @@
     {
       "id": "price_room_punta-cana-princess_target_import",
       "roomId": "room_punta-cana-princess_target",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 1714,
       "salePrice": 1655,
@@ -679,7 +688,7 @@
     {
       "id": "price_room_catalonia-royal-bavaro_entry_import",
       "roomId": "room_catalonia-royal-bavaro_entry",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 897,
       "salePrice": null,
@@ -691,7 +700,7 @@
     {
       "id": "price_room_catalonia-royal-bavaro_target_import",
       "roomId": "room_catalonia-royal-bavaro_target",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 1926,
       "salePrice": null,
@@ -703,7 +712,7 @@
     {
       "id": "price_room_serenade-all-suites_entry_import",
       "roomId": "room_serenade-all-suites_entry",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 1474,
       "salePrice": null,
@@ -715,7 +724,7 @@
     {
       "id": "price_room_serenade-all-suites_target_import",
       "roomId": "room_serenade-all-suites_target",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 2947,
       "salePrice": 2106,
@@ -727,7 +736,7 @@
     {
       "id": "price_room_trs-turquesa_entry_import",
       "roomId": "room_trs-turquesa_entry",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 1958,
       "salePrice": null,
@@ -739,7 +748,7 @@
     {
       "id": "price_room_trs-turquesa_target_import",
       "roomId": "room_trs-turquesa_target",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 2545,
       "salePrice": 2160,
@@ -751,7 +760,7 @@
     {
       "id": "price_room_majestic-elegance_entry_import",
       "roomId": "room_majestic-elegance_entry",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 1782,
       "salePrice": null,
@@ -763,7 +772,7 @@
     {
       "id": "price_room_majestic-elegance_target_import",
       "roomId": "room_majestic-elegance_target",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 2318,
       "salePrice": null,
@@ -775,7 +784,7 @@
     {
       "id": "price_room_excellence-el-carmen_entry_import",
       "roomId": "room_excellence-el-carmen_entry",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 2068,
       "salePrice": null,
@@ -787,7 +796,7 @@
     {
       "id": "price_room_excellence-el-carmen_target_import",
       "roomId": "room_excellence-el-carmen_target",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 2533,
       "salePrice": 2518,
@@ -799,7 +808,7 @@
     {
       "id": "price_room_melia-punta-cana-beach_entry_import",
       "roomId": "room_melia-punta-cana-beach_entry",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 1530,
       "salePrice": null,
@@ -811,7 +820,7 @@
     {
       "id": "price_room_melia-punta-cana-beach_target_import",
       "roomId": "room_melia-punta-cana-beach_target",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 2890,
       "salePrice": 2695,
@@ -823,7 +832,7 @@
     {
       "id": "price_room_joia-bavaro-by-iberostar_entry_import",
       "roomId": "room_joia-bavaro-by-iberostar_entry",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 2443,
       "salePrice": null,
@@ -835,7 +844,7 @@
     {
       "id": "price_room_joia-bavaro-by-iberostar_target_import",
       "roomId": "room_joia-bavaro-by-iberostar_target",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 2937,
       "salePrice": 2725,
@@ -847,7 +856,7 @@
     {
       "id": "price_room_joia-rose-hall-by-iberostar_entry_import",
       "roomId": "room_joia-rose-hall-by-iberostar_entry",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 2705,
       "salePrice": null,
@@ -859,7 +868,7 @@
     {
       "id": "price_room_joia-rose-hall-by-iberostar_target_import",
       "roomId": "room_joia-rose-hall-by-iberostar_target",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 3297,
       "salePrice": 2905,
@@ -871,7 +880,7 @@
     {
       "id": "price_room_excellence-oyster-bay_entry_import",
       "roomId": "room_excellence-oyster-bay_entry",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 2657,
       "salePrice": null,
@@ -883,7 +892,7 @@
     {
       "id": "price_room_excellence-oyster-bay_target_import",
       "roomId": "room_excellence-oyster-bay_target",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 3417,
       "salePrice": 3284,
@@ -895,7 +904,7 @@
     {
       "id": "price_room_sanctuary-cap-cana_entry_import",
       "roomId": "room_sanctuary-cap-cana_entry",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 3021,
       "salePrice": null,
@@ -907,7 +916,7 @@
     {
       "id": "price_room_sanctuary-cap-cana_target_import",
       "roomId": "room_sanctuary-cap-cana_target",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 3355,
       "salePrice": null,
@@ -919,7 +928,7 @@
     {
       "id": "price_room_trs-cap-cana_entry_import",
       "roomId": "room_trs-cap-cana_entry",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 2616,
       "salePrice": null,
@@ -931,7 +940,7 @@
     {
       "id": "price_room_trs-cap-cana_target_import",
       "roomId": "room_trs-cap-cana_target",
-      "tripId": "trip_imported",
+      "tripId": "trip_spreadsheet_baseline",
       "source": "resort-direct",
       "price": 3080,
       "salePrice": null,

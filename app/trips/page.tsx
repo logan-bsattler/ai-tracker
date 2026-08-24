@@ -111,6 +111,14 @@ export default function TripsPage() {
                 Delete
               </button>
             </div>
+
+            {priceCount(trip.id) > 0 && (
+              <p className="muted w-full text-xs" style={{ color: 'var(--up)' }}>
+                Changing these dates relabels all {priceCount(trip.id)} existing
+                prices as belonging to the new dates — they were captured for the
+                old ones. Add a new date range instead.
+              </p>
+            )}
           </form>
         ))}
       </div>
