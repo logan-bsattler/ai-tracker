@@ -509,13 +509,13 @@
       "id": "room_excellence-oyster-bay_target",
       "resortId": "res_excellence-oyster-bay",
       "name": "Excellence Club Junior Suite Partial Ocean View",
-      "tier": "target",
+      "tier": "other",
       "amenities": {
         "room-service": true,
         "oceanview": true,
         "soaking-tub": true
       },
-      "notes": "Renamed from \"Excellence Club Junior Suite Ocean Front\" (2026-08-24); the resort no longer offers that category."
+      "notes": "Renamed from \"Excellence Club Junior Suite Ocean Front\" (2026-08-24); the resort no longer offers that category. Was the target room until 2026-08-24; kept for reference."
     },
     {
       "id": "room_sanctuary-cap-cana_entry",
@@ -564,6 +564,18 @@
         "soaking-tub": true
       },
       "notes": ""
+    },
+    {
+      "id": "room_mt7nhgr1i8nqko",
+      "resortId": "res_excellence-oyster-bay",
+      "name": "Excellence Club Rooftop Terrace Suite with Plunge Pool Ocean Front",
+      "tier": "target",
+      "amenities": {
+        "room-service": true,
+        "oceanview": true,
+        "soaking-tub": true
+      },
+      "notes": "Ocean front, private plunge pool and a jetted whirlpool bathtub, per the resort description."
     }
   ],
   "criteria": [
@@ -1188,6 +1200,18 @@
       "url": "https://www.iberostar.com/en/bookings/?vo_booking%5Bhotel_id%5D=79",
       "notes": "Best price modifiable prepaid rate",
       "capturedAt": "2026-08-24T19:45:55.213Z"
+    },
+    {
+      "id": "price_mt7nhgybklq3rn",
+      "roomId": "room_mt7nhgr1i8nqko",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 6171,
+      "salePrice": null,
+      "currency": "USD",
+      "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
+      "notes": "US$882/night x7; all fees and taxes included",
+      "capturedAt": "2026-08-24T19:50:07.379Z"
     }
   ],
   "meta": {
