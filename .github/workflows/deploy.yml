@@ -26,12 +26,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # enablement: true turns Pages on for the repo if it isn't already, so
-      # the first run doesn't need a visit to repository settings.
-      - uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
+      # No configure-pages step: it can only read or enable Pages settings, and
+      # the default token cannot enable Pages on a repo where it has never been
+      # turned on. Enable it once by hand (Settings > Pages > Source: GitHub
+      # Actions); the base path is set explicitly below rather than detected.
       - uses: actions/setup-node@v4
         with:
           node-version: 20
