@@ -52,8 +52,16 @@ the trip dates. Look for both rooms in the item's `rooms` list — match on the
 room name, not on position in the page. Note the list price and, separately,
 any discounted/sale price.
 
-If `bookingUrl` is null, try `websiteUrl`, then `searchUrl` (CheapCaribbean).
-Record the source you actually used.
+If `bookingUrl` is null the engine has no working deep link. Open `websiteUrl`
+— the official hotel page — and drive its own booking widget: enter the trip's
+dates and occupancy, search, then read the rates. That is slower but works
+everywhere. `searchUrl` (CheapCaribbean) is the last resort.
+
+Record the source you actually used: `resort-direct` for both the deep link and
+the hotel-page widget, `cheapcaribbean` only if you priced it there.
+
+Currently only Excellence (both resorts) and Iberostar (both JOIA properties)
+have verified deep links. The other nine need the widget.
 
 **4. Record what you found**
 

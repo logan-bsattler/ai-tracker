@@ -11,9 +11,9 @@
         "24-hour room service"
       ],
       "bookingUrlTemplate": null,
-      "websiteUrl": null,
+      "websiteUrl": "https://www.bahia-principe.com/en/dominican-republic/punta-cana/resort-ambar/",
       "imageUrl": null,
-      "notes": "",
+      "notes": "Renamed by the chain to \"Bahia Principe Escape Ambar\".",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z"
     },
@@ -26,7 +26,7 @@
       "stars": 5,
       "tags": [],
       "bookingUrlTemplate": null,
-      "websiteUrl": null,
+      "websiteUrl": "https://www.barcelo.com/en-us/barcelo-bavaro-beach/",
       "imageUrl": null,
       "notes": "",
       "status": "active",
@@ -41,7 +41,7 @@
       "stars": 5,
       "tags": [],
       "bookingUrlTemplate": null,
-      "websiteUrl": null,
+      "websiteUrl": "https://www.princess-hotels.com/en/punta-cana/punta-cana-princess/",
       "imageUrl": null,
       "notes": "",
       "status": "active",
@@ -58,7 +58,7 @@
         "24-hour room service"
       ],
       "bookingUrlTemplate": null,
-      "websiteUrl": null,
+      "websiteUrl": "https://www.cataloniahotels.com/en/hotel/catalonia-royal-bavaro-adults-only",
       "imageUrl": null,
       "notes": "",
       "status": "active",
@@ -73,7 +73,7 @@
       "stars": 5,
       "tags": [],
       "bookingUrlTemplate": null,
-      "websiteUrl": null,
+      "websiteUrl": "https://www.serenadepuntacana.com/",
       "imageUrl": null,
       "notes": "",
       "status": "active",
@@ -90,7 +90,7 @@
         "24-hour room service"
       ],
       "bookingUrlTemplate": null,
-      "websiteUrl": null,
+      "websiteUrl": "https://www.palladiumhotelgroup.com/en/hotels/republicadominicana/puntacana/trs-turquesa-hotel",
       "imageUrl": null,
       "notes": "",
       "status": "active",
@@ -108,7 +108,7 @@
         "adults-only room"
       ],
       "bookingUrlTemplate": null,
-      "websiteUrl": null,
+      "websiteUrl": "https://www.majestic-resorts.com/punta-cana/resorts/majestic-elegance-punta-cana",
       "imageUrl": null,
       "notes": "",
       "status": "active",
@@ -122,8 +122,8 @@
       "transferMinutes": 49,
       "stars": 5,
       "tags": [],
-      "bookingUrlTemplate": null,
-      "websiteUrl": null,
+      "bookingUrlTemplate": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceelcarmen/{checkIn}/{checkOut}/",
+      "websiteUrl": "https://www.excellenceresorts.com/hotels/",
       "imageUrl": null,
       "notes": "",
       "status": "active",
@@ -138,7 +138,7 @@
       "stars": 5,
       "tags": [],
       "bookingUrlTemplate": null,
-      "websiteUrl": null,
+      "websiteUrl": "https://www.melia.com/en/hotels/dominican-republic/punta-cana/melia-punta-cana-beach-resort",
       "imageUrl": null,
       "notes": "",
       "status": "active",
@@ -154,8 +154,8 @@
       "tags": [
         "24-hour room service"
       ],
-      "bookingUrlTemplate": null,
-      "websiteUrl": null,
+      "bookingUrlTemplate": "https://www.iberostar.com/en/bookings/?vo_booking%5Bcheck_in_date%5D={checkInUSEnc}&vo_booking%5Bcheck_out_date%5D={checkOutUSEnc}&vo_booking%5Bhotel_id%5D=78",
+      "websiteUrl": "https://www.iberostar.com/en/hotels/punta-cana/joia-bavaro-by-iberostar/",
       "imageUrl": null,
       "notes": "",
       "status": "active",
@@ -171,8 +171,8 @@
       "tags": [
         "24-hour room service"
       ],
-      "bookingUrlTemplate": null,
-      "websiteUrl": null,
+      "bookingUrlTemplate": "https://www.iberostar.com/en/bookings/?vo_booking%5Bcheck_in_date%5D={checkInUSEnc}&vo_booking%5Bcheck_out_date%5D={checkOutUSEnc}&vo_booking%5Bhotel_id%5D=79",
+      "websiteUrl": "https://www.iberostar.com/en/hotels/montego-bay/joia-rose-hall-by-iberostar/",
       "imageUrl": null,
       "notes": "",
       "status": "active",
@@ -188,8 +188,8 @@
       "tags": [
         "24-hour room service"
       ],
-      "bookingUrlTemplate": null,
-      "websiteUrl": null,
+      "bookingUrlTemplate": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/{checkIn}/{checkOut}/",
+      "websiteUrl": "https://www.excellenceresorts.com/hotels/",
       "imageUrl": null,
       "notes": "",
       "status": "active",
@@ -204,9 +204,9 @@
       "stars": 5,
       "tags": [],
       "bookingUrlTemplate": null,
-      "websiteUrl": null,
+      "websiteUrl": "https://www.marriott.com/en-us/hotels/pujlc-sanctuary-cap-cana-a-luxury-collection-resort-dominican-republic-adult-all-inclusive/overview/",
       "imageUrl": null,
-      "notes": "",
+      "notes": "Marriott Luxury Collection property, code PUJLC.",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z"
     },
@@ -221,9 +221,9 @@
         "24-hour room service"
       ],
       "bookingUrlTemplate": null,
-      "websiteUrl": null,
+      "websiteUrl": "https://www.palladiumhotelgroup.com/en/hotels/republicadominicana",
       "imageUrl": null,
-      "notes": "Marked CLOSED in the original spreadsheet.",
+      "notes": "Marked CLOSED in the original spreadsheet. Marked closed, so excluded from the refresh queue.",
       "status": "closed",
       "createdAt": "2025-01-15T12:00:00.000Z"
     }
@@ -595,9 +595,9 @@
   "trips": [
     {
       "id": "trip_imported",
-      "label": "Imported from spreadsheet",
-      "checkIn": "2026-02-14",
-      "checkOut": "2026-02-21",
+      "label": "April 2027",
+      "checkIn": "2027-04-17",
+      "checkOut": "2027-04-24",
       "adults": 2,
       "children": 0,
       "archived": false

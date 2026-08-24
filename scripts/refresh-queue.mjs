@@ -43,6 +43,8 @@ function buildBookingUrl(resort) {
     checkOut: trip.checkOut,
     checkInUS: us(trip.checkIn),
     checkOutUS: us(trip.checkOut),
+    checkInUSEnc: encodeURIComponent(us(trip.checkIn)),
+    checkOutUSEnc: encodeURIComponent(us(trip.checkOut)),
     checkInCompact: trip.checkIn.replace(/-/g, ''),
     checkOutCompact: trip.checkOut.replace(/-/g, ''),
     adults: String(trip.adults),

@@ -6,10 +6,14 @@ import type { Resort, Trip } from './types';
  * any resort row lands on that resort's own availability search, pre-filled.
  *
  * Supported placeholders (case-sensitive):
- *   {checkIn} {checkOut}          ISO  2026-02-14
- *   {checkInUS} {checkOutUS}      US   02/14/2026
- *   {checkInCompact}              flat 20260214
+ *   {checkIn} {checkOut}          ISO  2027-04-17
+ *   {checkInUS} {checkOutUS}      US   04/17/2027
+ *   {checkInUSEnc} {checkOutUSEnc} US, URL-encoded  04%2F17%2F2027
+ *   {checkInCompact}              flat 20270417
  *   {adults} {children} {nights}
+ *
+ * The *Enc variants exist because some engines (Iberostar) carry the date
+ * inside a query value and reject a literal slash there.
  */
 export function buildBookingUrl(resort: Resort, trip: Trip | null): string | null {
   const tpl = resort.bookingUrlTemplate?.trim();
@@ -26,6 +30,8 @@ export function buildBookingUrl(resort: Resort, trip: Trip | null): string | nul
     checkOut: trip.checkOut,
     checkInUS: us(trip.checkIn),
     checkOutUS: us(trip.checkOut),
+    checkInUSEnc: encodeURIComponent(us(trip.checkIn)),
+    checkOutUSEnc: encodeURIComponent(us(trip.checkOut)),
     checkInCompact: trip.checkIn.replace(/-/g, ''),
     checkOutCompact: trip.checkOut.replace(/-/g, ''),
     adults: String(trip.adults),
