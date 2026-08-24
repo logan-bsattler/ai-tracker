@@ -57,6 +57,12 @@ If `bookingUrl` is null the engine has no working deep link. Open `websiteUrl`
 dates and occupancy, search, then read the rates. That is slower but works
 everywhere. `searchUrl` (CheapCaribbean) is the last resort.
 
+**Check whether the quote includes taxes.** Most resorts here quote all-in;
+Punta Cana Princess quotes before tax. If the page says taxes are excluded,
+pass `--ex-tax` so the figure is not compared against tax-inclusive ones. Do
+not add an estimated tax yourself -- record what is quoted and set the flag.
+The queue's `quotesExTax` tells you which resorts did this last time.
+
 Record the source you actually used: `resort-direct` for both the deep link and
 the hotel-page widget, `cheapcaribbean` only if you priced it there.
 
