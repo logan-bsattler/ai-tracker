@@ -1,0 +1,85 @@
+'use client';
+
+import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
+import Rankings from './Rankings';
+import type { AllRankings } from '@/lib/view';
+
+const money = (n: number | null) =>
+  n == null ? '—' : '$' + n.toLocaleString('en-US', { maximumFractionDigits: 0 });
+
+function Stat({ label, value, hint }: { label: string; value: string; hint?: string }) {
+  return (
+    <div className="card p-4">
+      <div className="muted text-xs uppercase tracking-wide">{label}</div>
+      <div className="num mt-1 text-2xl font-semibold">{value}</div>
+      {hint && <div className="muted mt-0.5 truncate text-xs">{hint}</div>}
+    </div>
+  );
+}
+
+function nightsBetween(checkIn: string, checkOut: string) {
+  return Math.max(1, Math.round((Date.parse(checkOut) - Date.parse(checkIn)) / 86_400_000));
+}
+
+/**
+ * Reads the selected trip from the URL on the client, so the published static
+ * export stays interactive without a server to resolve `?trip=`.
+ */
+export default function RankingsPage({
+  data, canEdit,
+}: { data: AllRankings; canEdit: boolean }) {
+  const params = useSearchParams();
+  const requested = params.get('trip');
+  const trip = data.trips.find((t) => t.id === requested) ?? data.trips[0] ?? null;
+  const rows = trip ? data.byTrip[trip.id] ?? [] : [];
+
+  const live = rows.filter((r) => r.status !== 'closed' && r.price != null);
+  const cheapest = [...live].sort((a, b) => a.price! - b.price!)[0];
+  const bestMatch = [...live].sort((a, b) => b.score - a.score || a.price! - b.price!)[0];
+  const bestDrop = [...live].filter((r) => (r.delta ?? 0) < 0).sort((a, b) => a.delta! - b.delta!)[0];
+  const perfect = live.filter((r) => r.score === 100);
+  const cheapestPerfect = [...perfect].sort((a, b) => a.price! - b.price!)[0];
+
+  const lastCapture = rows.map((r) => r.capturedAt).filter(Boolean).sort().pop();
+
+  return (
+    <>
+      <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h1 className="text-2xl font-semibold tracking-tight">Rankings</h1>
+          <p className="muted mt-1 text-sm">
+            {trip ? (
+              <>
+                {trip.checkIn} → {trip.checkOut} · {nightsBetween(trip.checkIn, trip.checkOut)} nights
+                {' · '}{trip.adults} adults{trip.children ? `, ${trip.children} children` : ''}
+              </>
+            ) : (
+              <>
+                No trip dates yet — <Link className="underline" href="/trips">add a date range</Link> to start tracking.
+              </>
+            )}
+            {lastCapture && <> · last updated {lastCapture.slice(0, 10)}</>}
+          </p>
+        </div>
+        {canEdit && (
+          <Link className="btn btn-primary" href={`/capture${trip ? `?trip=${trip.id}` : ''}`}>
+            Update prices
+          </Link>
+        )}
+      </div>
+
+      <div className="mb-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <Stat label="Cheapest" value={money(cheapest?.price ?? null)} hint={cheapest?.name} />
+        <Stat label="Best match" value={bestMatch ? `${bestMatch.score}%` : '—'}
+          hint={bestMatch ? `${bestMatch.name} · ${money(bestMatch.price)}` : undefined} />
+        <Stat label="Cheapest 100% match" value={money(cheapestPerfect?.price ?? null)}
+          hint={cheapestPerfect?.name ?? `${perfect.length} resorts meet every criterion`} />
+        <Stat label="Biggest drop" value={bestDrop ? money(bestDrop.delta) : '—'}
+          hint={bestDrop?.name ?? 'No drops since last capture'} />
+      </div>
+
+      <Rankings rows={rows} criteria={data.criteria} tripId={trip?.id ?? null} />
+    </>
+  );
+}

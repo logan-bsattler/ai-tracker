@@ -86,13 +86,61 @@ scripts/seed.mjs  spreadsheet importer
 data/db.json    your data
 ```
 
-## Notes on automation
+## The published site
 
-There is no reliable way to auto-fetch these rates: the resorts each run their
-own booking engine, and the OTAs actively block scraping. So the site optimizes
-the manual loop instead — pre-filled deep links out, bulk entry back in — and
-keeps the data layer source-agnostic. If you later get access to an affiliate
-feed (Travelpayouts, Expedia TAAP, Hotelbeds), it can write `PriceSnapshot`
-rows with a new `source` value and everything else works unchanged.
+`main` is published to GitHub Pages by `.github/workflows/deploy.yml` on every
+push. Build it locally with:
+
+```bash
+npm run build:static
+```
+
+The output lands in `out/`. It is the same app in **read-only mode**: static
+export cannot run server actions, so capture, editing and delete controls are
+omitted (see `lib/mode.ts`). Trip switching and side-by-side comparison still
+work — selection is resolved in the browser from the URL rather than on a
+server.
+
+For a custom domain served from the root, set a repository variable
+`PAGES_BASE_PATH` to an empty string, or build with
+`npm run build:static -- --base ""`.
+
+## Automated refresh
+
+`.claude/skills/refresh-rates/SKILL.md` defines a Claude job that reads current
+rates, records them, and pushes — which republishes the site. Its two CLI ends
+are usable by hand too:
+
+```bash
+npm run queue
+```
+
+prints the worklist — every resort, its booking URL with the trip's dates
+injected, and the rooms to price. `npm run queue -- --stale 7` limits it to
+resorts not priced in the last week.
+
+```bash
+npm run record -- --resort "TRS Turquesa" --room target --price 2545 --sale 2160
+```
+
+appends one observation. It validates the resort, room and price and reports
+the change against the previous one; `--dry-run` checks a call first.
+
+The job only records what it can actually read. Resorts without a
+`bookingUrlTemplate`, and sites that block automated access, are reported and
+skipped rather than guessed at.
+
+## How reliable the automation is
+
+Each resort runs its own booking engine and several actively discourage
+automated access, so the refresh job is best-effort by design: it records what
+it can read and reports what it couldn't, rather than guessing. Expect partial
+runs, and expect individual resorts to need their `bookingUrlTemplate` fixed
+when a site is redesigned. The manual `/capture` page remains the fallback and
+is always faster than debugging a broken selector.
+
+Because every snapshot is source-tagged, an affiliate feed (Travelpayouts,
+Expedia TAAP, Hotelbeds) can later write `PriceSnapshot` rows with a new
+`source` and everything else works unchanged.
 
 `data/db.json` is a plain file — back it up by copying it.

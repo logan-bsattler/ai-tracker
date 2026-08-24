@@ -4,6 +4,7 @@ import { Suspense } from 'react';
 import './globals.css';
 import { read } from '@/lib/db';
 import TripSwitcher from '@/components/TripSwitcher';
+import { IS_STATIC } from '@/lib/mode';
 
 export const metadata: Metadata = {
   title: 'All Inclusive Tracker',
@@ -12,7 +13,8 @@ export const metadata: Metadata = {
 
 const NAV = [
   { href: '/', label: 'Rankings' },
-  { href: '/capture', label: 'Capture' },
+  // Capturing needs a server to post to, so it is absent from the static site.
+  ...(IS_STATIC ? [] : [{ href: '/capture', label: 'Capture' }]),
   { href: '/compare', label: 'Compare' },
   { href: '/trips', label: 'Trips' },
   { href: '/criteria', label: 'Criteria' },

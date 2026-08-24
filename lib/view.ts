@@ -104,3 +104,31 @@ export function buildRankings(trip: Trip | null): {
     criteria: [...db.criteria].sort((a, b) => a.sortOrder - b.sortOrder),
   };
 }
+
+/**
+ * Every trip's rankings in one payload.
+ *
+ * The published site is a static export with no server to read `?trip=` or
+ * `?ids=`, so selection happens in the browser instead. The whole data set is
+ * a few dozen rows, so shipping all of it to the client costs far less than
+ * the machinery needed to avoid it — and it makes the dev and static builds
+ * behave identically.
+ */
+export interface AllRankings {
+  trips: Trip[];
+  byTrip: Record<string, RankingRow[]>;
+  criteria: Criterion[];
+}
+
+export function buildAllRankings(): AllRankings {
+  const db = read();
+  const trips = db.trips.filter((t) => !t.archived);
+  const byTrip: Record<string, RankingRow[]> = {};
+  for (const trip of trips) byTrip[trip.id] = buildRankings(trip).rows;
+
+  return {
+    trips,
+    byTrip,
+    criteria: [...db.criteria].sort((a, b) => a.sortOrder - b.sortOrder),
+  };
+}

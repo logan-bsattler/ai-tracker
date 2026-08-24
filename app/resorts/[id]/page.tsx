@@ -8,9 +8,15 @@ import { buildBookingUrl, comparisonLinks, SOURCE_LABELS } from '@/lib/booking';
 import { read } from '@/lib/db';
 import { scoreResort } from '@/lib/scoring';
 import { effectivePrice } from '@/lib/types';
+import { IS_STATIC } from '@/lib/mode';
 import { resolveTrip } from '@/lib/view';
 
-export const dynamic = 'force-dynamic';
+export { PAGE_DYNAMIC as dynamic } from '@/lib/mode';
+
+/** Every resort gets its own page in the static export. */
+export function generateStaticParams() {
+  return read().resorts.map((r) => ({ id: r.id }));
+}
 
 const money = (n: number | null) =>
   n == null ? '—' : '$' + n.toLocaleString('en-US', { maximumFractionDigits: 0 });
@@ -128,6 +134,41 @@ export default async function ResortPage({
       {/* Rooms ---------------------------------------------------------- */}
       <section className="mb-5">
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide">Rooms</h2>
+
+        {IS_STATIC ? (
+          <div className="card overflow-x-auto">
+            <table className="grid">
+              <thead>
+                <tr>
+                  <th>Room</th>
+                  <th>Tier</th>
+                  {criteria.map((c) => <th key={c.key} className="text-center">{c.label}</th>)}
+                  <th className="text-right">Current</th>
+                </tr>
+              </thead>
+              <tbody>
+                {scored.rooms.map((sr) => (
+                  <tr key={sr.room.id}>
+                    <td className="font-medium">{sr.room.name}</td>
+                    <td className="muted text-xs">
+                      {sr.room.tier === 'entry' ? 'Cheapest' : sr.room.tier === 'target' ? 'Target' : 'Other'}
+                    </td>
+                    {criteria.map((c) => (
+                      <td key={c.key} className="text-center">
+                        {sr.room.amenities[c.key] === true
+                          ? <span style={{ color: 'var(--accent)' }}>&#9679;</span>
+                          : <span className="muted">&middot;</span>}
+                      </td>
+                    ))}
+                    <td className="num text-right font-semibold">
+                      {money(sr.pricing.latest ? effectivePrice(sr.pricing.latest) : null)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : (
         <div className="space-y-3">
           {scored.rooms.map((sr) => (
             <form key={sr.room.id} action={saveRoom} className="card p-4">
@@ -188,12 +229,16 @@ export default async function ResortPage({
             <button className="btn" type="submit">Add room</button>
           </form>
         </div>
+        )}
       </section>
 
       {/* Manual price entry --------------------------------------------- */}
       {trip && (
         <section className="card mb-5 p-5">
-          <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide">Log a price</h2>
+          <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide">
+            {IS_STATIC ? 'Price log' : 'Log a price'}
+          </h2>
+          {!IS_STATIC && (
           <form action={addPrice} className="flex flex-wrap items-end gap-3">
             <input type="hidden" name="tripId" value={trip.id} />
             <label className="text-xs">
@@ -226,6 +271,7 @@ export default async function ResortPage({
             </label>
             <button className="btn btn-primary" type="submit">Add</button>
           </form>
+          )}
 
           {priceLog.length > 0 && (
             <div className="mt-4 overflow-x-auto">
@@ -236,7 +282,7 @@ export default async function ResortPage({
                     <th className="text-right">Price</th>
                     <th className="text-right">Sale</th>
                     <th className="text-right">Paid</th>
-                    <th></th>
+                    {!IS_STATIC && <th></th>}
                   </tr>
                 </thead>
                 <tbody>
@@ -248,12 +294,14 @@ export default async function ResortPage({
                       <td className="num text-right">{money(p.price)}</td>
                       <td className="num text-right">{money(p.salePrice)}</td>
                       <td className="num text-right font-semibold">{money(effectivePrice(p))}</td>
-                      <td className="text-right">
-                        <form action={deletePrice}>
-                          <input type="hidden" name="id" value={p.id} />
-                          <button className="btn btn-ghost btn-danger" type="submit">×</button>
-                        </form>
-                      </td>
+                      {!IS_STATIC && (
+                        <td className="text-right">
+                          <form action={deletePrice}>
+                            <input type="hidden" name="id" value={p.id} />
+                            <button className="btn btn-ghost btn-danger" type="submit">×</button>
+                          </form>
+                        </td>
+                      )}
                     </tr>
                   ))}
                 </tbody>
@@ -264,6 +312,7 @@ export default async function ResortPage({
       )}
 
       {/* Resort settings ------------------------------------------------- */}
+      {!IS_STATIC && (
       <section className="card p-5">
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide">Resort details</h2>
         <form action={saveResort} className="grid gap-3 sm:grid-cols-2">
@@ -330,6 +379,7 @@ export default async function ResortPage({
           </button>
         </form>
       </section>
+      )}
     </>
   );
 }

@@ -1,0 +1,67 @@
+name: Publish site
+
+# Builds the read-only static export and publishes it to GitHub Pages.
+# Runs on every push to main, so a price update committed by the refresh job
+# republishes the site automatically.
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'README.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish rather than cancelling it mid-publish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # enablement: true turns Pages on for the repo if it isn't already, so
+      # the first run doesn't need a visit to repository settings.
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build static export
+        env:
+          NEXT_PUBLIC_STATIC_EXPORT: '1'
+          # Project sites are served from /<repo>. For a custom domain, set a
+          # repository variable PAGES_BASE_PATH to an empty string.
+          PAGES_BASE_PATH: ${{ vars.PAGES_BASE_PATH || '/ai-tracker' }}
+        run: npm run build
+
+      - name: Disable Jekyll
+        # Without this, Pages drops the _next/ directory and the site loads
+        # with no CSS or JS.
+        run: touch out/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

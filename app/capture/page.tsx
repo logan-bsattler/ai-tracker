@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import { captureRound } from '@/lib/actions';
+import { IS_STATIC } from '@/lib/mode';
 import { buildBookingUrl, comparisonLinks, SOURCE_LABELS } from '@/lib/booking';
 import { read } from '@/lib/db';
 import { pricingFor } from '@/lib/scoring';
 import { effectivePrice } from '@/lib/types';
 import { resolveTrip } from '@/lib/view';
 
-export const dynamic = 'force-dynamic';
+export { PAGE_DYNAMIC as dynamic } from '@/lib/mode';
 
 const money = (n: number | null) =>
   n == null ? '—' : '$' + n.toLocaleString('en-US', { maximumFractionDigits: 0 });
@@ -22,6 +23,19 @@ export default async function CapturePage({
   const params = await searchParams;
   const trip = resolveTrip(params.trip);
   const db = read();
+
+  if (IS_STATIC) {
+    return (
+      <div className="card p-8 text-center">
+        <h1 className="mb-2 text-lg font-semibold">Capture runs locally</h1>
+        <p className="muted mx-auto max-w-md text-sm">
+          This is the published read-only site. Prices are captured on Ben&rsquo;s
+          machine (or by the scheduled refresh job) and published here on the
+          next build.
+        </p>
+      </div>
+    );
+  }
 
   if (!trip) {
     return (
