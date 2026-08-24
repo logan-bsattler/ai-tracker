@@ -1,0 +1,947 @@
+{
+  "resorts": [
+    {
+      "id": "res_bahia-principe-luxury-ambar",
+      "name": "Bahia Principe Luxury Ambar",
+      "destination": "Punta Cana",
+      "airport": "PUJ",
+      "transferMinutes": 32,
+      "stars": 5,
+      "tags": [
+        "24-hour room service"
+      ],
+      "bookingUrlTemplate": null,
+      "websiteUrl": null,
+      "imageUrl": null,
+      "notes": "",
+      "status": "active",
+      "createdAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "res_barcelo-bavaro-beach",
+      "name": "Barcelo Bavaro Beach",
+      "destination": "Punta Cana",
+      "airport": "PUJ",
+      "transferMinutes": 26,
+      "stars": 5,
+      "tags": [],
+      "bookingUrlTemplate": null,
+      "websiteUrl": null,
+      "imageUrl": null,
+      "notes": "",
+      "status": "active",
+      "createdAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "res_punta-cana-princess",
+      "name": "Punta Cana Princess",
+      "destination": "Punta Cana",
+      "airport": "PUJ",
+      "transferMinutes": 34,
+      "stars": 5,
+      "tags": [],
+      "bookingUrlTemplate": null,
+      "websiteUrl": null,
+      "imageUrl": null,
+      "notes": "",
+      "status": "active",
+      "createdAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "res_catalonia-royal-bavaro",
+      "name": "Catalonia Royal Bavaro",
+      "destination": "Punta Cana",
+      "airport": "PUJ",
+      "transferMinutes": 22,
+      "stars": 5,
+      "tags": [
+        "24-hour room service"
+      ],
+      "bookingUrlTemplate": null,
+      "websiteUrl": null,
+      "imageUrl": null,
+      "notes": "",
+      "status": "active",
+      "createdAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "res_serenade-all-suites",
+      "name": "Serenade All Suites",
+      "destination": "Punta Cana",
+      "airport": "PUJ",
+      "transferMinutes": 18,
+      "stars": 5,
+      "tags": [],
+      "bookingUrlTemplate": null,
+      "websiteUrl": null,
+      "imageUrl": null,
+      "notes": "",
+      "status": "active",
+      "createdAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "res_trs-turquesa",
+      "name": "TRS Turquesa",
+      "destination": "Punta Cana",
+      "airport": "PUJ",
+      "transferMinutes": 33,
+      "stars": 5,
+      "tags": [
+        "24-hour room service"
+      ],
+      "bookingUrlTemplate": null,
+      "websiteUrl": null,
+      "imageUrl": null,
+      "notes": "",
+      "status": "active",
+      "createdAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "res_majestic-elegance",
+      "name": "Majestic Elegance",
+      "destination": "Punta Cana",
+      "airport": "PUJ",
+      "transferMinutes": 31,
+      "stars": 5,
+      "tags": [
+        "24-hour room service",
+        "adults-only room"
+      ],
+      "bookingUrlTemplate": null,
+      "websiteUrl": null,
+      "imageUrl": null,
+      "notes": "",
+      "status": "active",
+      "createdAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "res_excellence-el-carmen",
+      "name": "Excellence El Carmen",
+      "destination": "Punta Cana",
+      "airport": "PUJ",
+      "transferMinutes": 49,
+      "stars": 5,
+      "tags": [],
+      "bookingUrlTemplate": null,
+      "websiteUrl": null,
+      "imageUrl": null,
+      "notes": "",
+      "status": "active",
+      "createdAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "res_melia-punta-cana-beach",
+      "name": "Melia Punta Cana Beach",
+      "destination": "Punta Cana",
+      "airport": "PUJ",
+      "transferMinutes": 25,
+      "stars": 5,
+      "tags": [],
+      "bookingUrlTemplate": null,
+      "websiteUrl": null,
+      "imageUrl": null,
+      "notes": "",
+      "status": "active",
+      "createdAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "res_joia-bavaro-by-iberostar",
+      "name": "JOIA Bavaro by Iberostar",
+      "destination": "Punta Cana",
+      "airport": "PUJ",
+      "transferMinutes": 28,
+      "stars": 5,
+      "tags": [
+        "24-hour room service"
+      ],
+      "bookingUrlTemplate": null,
+      "websiteUrl": null,
+      "imageUrl": null,
+      "notes": "",
+      "status": "active",
+      "createdAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "res_joia-rose-hall-by-iberostar",
+      "name": "JOIA Rose Hall by Iberostar",
+      "destination": "Montego Bay",
+      "airport": "MBJ",
+      "transferMinutes": 22,
+      "stars": 5,
+      "tags": [
+        "24-hour room service"
+      ],
+      "bookingUrlTemplate": null,
+      "websiteUrl": null,
+      "imageUrl": null,
+      "notes": "",
+      "status": "active",
+      "createdAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "res_excellence-oyster-bay",
+      "name": "Excellence Oyster Bay",
+      "destination": "Oyster Bay",
+      "airport": "MBJ",
+      "transferMinutes": 40,
+      "stars": 5,
+      "tags": [
+        "24-hour room service"
+      ],
+      "bookingUrlTemplate": null,
+      "websiteUrl": null,
+      "imageUrl": null,
+      "notes": "",
+      "status": "active",
+      "createdAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "res_sanctuary-cap-cana",
+      "name": "Sanctuary Cap Cana",
+      "destination": "Punta Cana",
+      "airport": "PUJ",
+      "transferMinutes": 20,
+      "stars": 5,
+      "tags": [],
+      "bookingUrlTemplate": null,
+      "websiteUrl": null,
+      "imageUrl": null,
+      "notes": "",
+      "status": "active",
+      "createdAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "res_trs-cap-cana",
+      "name": "TRS Cap Cana",
+      "destination": "Punta Cana",
+      "airport": "PUJ",
+      "transferMinutes": 15,
+      "stars": 5,
+      "tags": [
+        "24-hour room service"
+      ],
+      "bookingUrlTemplate": null,
+      "websiteUrl": null,
+      "imageUrl": null,
+      "notes": "Marked CLOSED in the original spreadsheet.",
+      "status": "closed",
+      "createdAt": "2025-01-15T12:00:00.000Z"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "room_bahia-principe-luxury-ambar_entry",
+      "resortId": "res_bahia-principe-luxury-ambar",
+      "name": "Junior Suite Deluxe",
+      "tier": "entry",
+      "amenities": {
+        "room-service": true,
+        "oceanview": false,
+        "soaking-tub": false
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_bahia-principe-luxury-ambar_target",
+      "resortId": "res_bahia-principe-luxury-ambar",
+      "name": "Junior Suite Deluxe Corner",
+      "tier": "target",
+      "amenities": {
+        "room-service": true,
+        "oceanview": false,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_barcelo-bavaro-beach_entry",
+      "resortId": "res_barcelo-bavaro-beach",
+      "name": "Superior Room",
+      "tier": "entry",
+      "amenities": {
+        "room-service": false,
+        "oceanview": false,
+        "soaking-tub": false
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_barcelo-bavaro-beach_target",
+      "resortId": "res_barcelo-bavaro-beach",
+      "name": "Superior Ocean Front Premium Level",
+      "tier": "target",
+      "amenities": {
+        "room-service": true,
+        "oceanview": true,
+        "soaking-tub": false
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_punta-cana-princess_entry",
+      "resortId": "res_punta-cana-princess",
+      "name": "Deluxe Suite",
+      "tier": "entry",
+      "amenities": {
+        "room-service": false,
+        "oceanview": false,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_punta-cana-princess_target",
+      "resortId": "res_punta-cana-princess",
+      "name": "Honeymoon Suite",
+      "tier": "target",
+      "amenities": {
+        "room-service": false,
+        "oceanview": true,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_catalonia-royal-bavaro_entry",
+      "resortId": "res_catalonia-royal-bavaro",
+      "name": "Superior Junior Suite",
+      "tier": "entry",
+      "amenities": {
+        "room-service": true,
+        "oceanview": false,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_catalonia-royal-bavaro_target",
+      "resortId": "res_catalonia-royal-bavaro",
+      "name": "Privileged Duplex Suite & Swimming Pool",
+      "tier": "target",
+      "amenities": {
+        "room-service": true,
+        "oceanview": false,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_serenade-all-suites_entry",
+      "resortId": "res_serenade-all-suites",
+      "name": "Junior Suite Garden View",
+      "tier": "entry",
+      "amenities": {
+        "room-service": true,
+        "oceanview": false,
+        "soaking-tub": false
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_serenade-all-suites_target",
+      "resortId": "res_serenade-all-suites",
+      "name": "Junior Suite Ocean Front View",
+      "tier": "target",
+      "amenities": {
+        "room-service": true,
+        "oceanview": true,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_trs-turquesa_entry",
+      "resortId": "res_trs-turquesa",
+      "name": "Junior Suite Garden / Pool View",
+      "tier": "entry",
+      "amenities": {
+        "room-service": true,
+        "oceanview": false,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_trs-turquesa_target",
+      "resortId": "res_trs-turquesa",
+      "name": "Jacuzzi Terrace Suite Beachside",
+      "tier": "target",
+      "amenities": {
+        "room-service": true,
+        "oceanview": true,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_majestic-elegance_entry",
+      "resortId": "res_majestic-elegance",
+      "name": "ELEGANCE CLUB Junior Suite with Jacuzzi 18+",
+      "tier": "entry",
+      "amenities": {
+        "room-service": true,
+        "oceanview": false,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_majestic-elegance_target",
+      "resortId": "res_majestic-elegance",
+      "name": "ELEGANCE CLUB Ocean View Suite (Outdoor Jacuzzi) 18+",
+      "tier": "target",
+      "amenities": {
+        "room-service": true,
+        "oceanview": true,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_excellence-el-carmen_entry",
+      "resortId": "res_excellence-el-carmen",
+      "name": "Junior Suite Garden View or Pool View",
+      "tier": "entry",
+      "amenities": {
+        "room-service": true,
+        "oceanview": false,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_excellence-el-carmen_target",
+      "resortId": "res_excellence-el-carmen",
+      "name": "Excellence Club Junior Suite Ocean View",
+      "tier": "target",
+      "amenities": {
+        "room-service": true,
+        "oceanview": true,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_melia-punta-cana-beach_entry",
+      "resortId": "res_melia-punta-cana-beach",
+      "name": "Deluxe Room",
+      "tier": "entry",
+      "amenities": {
+        "room-service": true,
+        "oceanview": false,
+        "soaking-tub": false
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_melia-punta-cana-beach_target",
+      "resortId": "res_melia-punta-cana-beach",
+      "name": "The Level Garden Suite by Stay Well",
+      "tier": "target",
+      "amenities": {
+        "room-service": true,
+        "oceanview": false,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_joia-bavaro-by-iberostar_entry",
+      "resortId": "res_joia-bavaro-by-iberostar",
+      "name": "Suite",
+      "tier": "entry",
+      "amenities": {
+        "room-service": true,
+        "oceanview": false,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_joia-bavaro-by-iberostar_target",
+      "resortId": "res_joia-bavaro-by-iberostar",
+      "name": "Ocean View Butler Suite",
+      "tier": "target",
+      "amenities": {
+        "room-service": true,
+        "oceanview": true,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_joia-rose-hall-by-iberostar_entry",
+      "resortId": "res_joia-rose-hall-by-iberostar",
+      "name": "Suite",
+      "tier": "entry",
+      "amenities": {
+        "room-service": true,
+        "oceanview": false,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_joia-rose-hall-by-iberostar_target",
+      "resortId": "res_joia-rose-hall-by-iberostar",
+      "name": "Ocean View Suite",
+      "tier": "target",
+      "amenities": {
+        "room-service": true,
+        "oceanview": true,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_excellence-oyster-bay_entry",
+      "resortId": "res_excellence-oyster-bay",
+      "name": "Junior Suite Run of the House",
+      "tier": "entry",
+      "amenities": {
+        "room-service": true,
+        "oceanview": false,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_excellence-oyster-bay_target",
+      "resortId": "res_excellence-oyster-bay",
+      "name": "Excellence Club Junior Suite Ocean Front",
+      "tier": "target",
+      "amenities": {
+        "room-service": true,
+        "oceanview": true,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_sanctuary-cap-cana_entry",
+      "resortId": "res_sanctuary-cap-cana",
+      "name": "Junior Suite Ocean View",
+      "tier": "entry",
+      "amenities": {
+        "room-service": true,
+        "oceanview": true,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_sanctuary-cap-cana_target",
+      "resortId": "res_sanctuary-cap-cana",
+      "name": "Premium Luxury Junior Suite Ocean View",
+      "tier": "target",
+      "amenities": {
+        "room-service": true,
+        "oceanview": true,
+        "soaking-tub": true
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_trs-cap-cana_entry",
+      "resortId": "res_trs-cap-cana",
+      "name": "Junior Suite Marina View",
+      "tier": "entry",
+      "amenities": {
+        "room-service": true,
+        "oceanview": false,
+        "soaking-tub": false
+      },
+      "notes": ""
+    },
+    {
+      "id": "room_trs-cap-cana_target",
+      "resortId": "res_trs-cap-cana",
+      "name": "Suite Jacuzzi Terrace Ocean View",
+      "tier": "target",
+      "amenities": {
+        "room-service": true,
+        "oceanview": true,
+        "soaking-tub": true
+      },
+      "notes": ""
+    }
+  ],
+  "criteria": [
+    {
+      "id": "crit_room-service",
+      "key": "room-service",
+      "label": "Room Service",
+      "weight": 2,
+      "required": false,
+      "sortOrder": 0
+    },
+    {
+      "id": "crit_oceanview",
+      "key": "oceanview",
+      "label": "Oceanview",
+      "weight": 3,
+      "required": false,
+      "sortOrder": 1
+    },
+    {
+      "id": "crit_soaking-tub",
+      "key": "soaking-tub",
+      "label": "Soaking Tub",
+      "weight": 3,
+      "required": false,
+      "sortOrder": 2
+    }
+  ],
+  "trips": [
+    {
+      "id": "trip_imported",
+      "label": "Imported from spreadsheet",
+      "checkIn": "2026-02-14",
+      "checkOut": "2026-02-21",
+      "adults": 2,
+      "children": 0,
+      "archived": false
+    }
+  ],
+  "prices": [
+    {
+      "id": "price_room_bahia-principe-luxury-ambar_entry_import",
+      "roomId": "room_bahia-principe-luxury-ambar_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 1324,
+      "salePrice": null,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_bahia-principe-luxury-ambar_target_import",
+      "roomId": "room_bahia-principe-luxury-ambar_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 1417,
+      "salePrice": 1331,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_barcelo-bavaro-beach_entry_import",
+      "roomId": "room_barcelo-bavaro-beach_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 1367,
+      "salePrice": null,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_barcelo-bavaro-beach_target_import",
+      "roomId": "room_barcelo-bavaro-beach_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 2139,
+      "salePrice": 1596,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_punta-cana-princess_entry_import",
+      "roomId": "room_punta-cana-princess_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 1112,
+      "salePrice": null,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_punta-cana-princess_target_import",
+      "roomId": "room_punta-cana-princess_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 1714,
+      "salePrice": 1655,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_catalonia-royal-bavaro_entry_import",
+      "roomId": "room_catalonia-royal-bavaro_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 897,
+      "salePrice": null,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_catalonia-royal-bavaro_target_import",
+      "roomId": "room_catalonia-royal-bavaro_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 1926,
+      "salePrice": null,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_serenade-all-suites_entry_import",
+      "roomId": "room_serenade-all-suites_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 1474,
+      "salePrice": null,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_serenade-all-suites_target_import",
+      "roomId": "room_serenade-all-suites_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 2947,
+      "salePrice": 2106,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_trs-turquesa_entry_import",
+      "roomId": "room_trs-turquesa_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 1958,
+      "salePrice": null,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_trs-turquesa_target_import",
+      "roomId": "room_trs-turquesa_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 2545,
+      "salePrice": 2160,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_majestic-elegance_entry_import",
+      "roomId": "room_majestic-elegance_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 1782,
+      "salePrice": null,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_majestic-elegance_target_import",
+      "roomId": "room_majestic-elegance_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 2318,
+      "salePrice": null,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_excellence-el-carmen_entry_import",
+      "roomId": "room_excellence-el-carmen_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 2068,
+      "salePrice": null,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_excellence-el-carmen_target_import",
+      "roomId": "room_excellence-el-carmen_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 2533,
+      "salePrice": 2518,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_melia-punta-cana-beach_entry_import",
+      "roomId": "room_melia-punta-cana-beach_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 1530,
+      "salePrice": null,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_melia-punta-cana-beach_target_import",
+      "roomId": "room_melia-punta-cana-beach_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 2890,
+      "salePrice": 2695,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_joia-bavaro-by-iberostar_entry_import",
+      "roomId": "room_joia-bavaro-by-iberostar_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 2443,
+      "salePrice": null,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_joia-bavaro-by-iberostar_target_import",
+      "roomId": "room_joia-bavaro-by-iberostar_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 2937,
+      "salePrice": 2725,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_joia-rose-hall-by-iberostar_entry_import",
+      "roomId": "room_joia-rose-hall-by-iberostar_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 2705,
+      "salePrice": null,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_joia-rose-hall-by-iberostar_target_import",
+      "roomId": "room_joia-rose-hall-by-iberostar_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 3297,
+      "salePrice": 2905,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_excellence-oyster-bay_entry_import",
+      "roomId": "room_excellence-oyster-bay_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 2657,
+      "salePrice": null,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_excellence-oyster-bay_target_import",
+      "roomId": "room_excellence-oyster-bay_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 3417,
+      "salePrice": 3284,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_sanctuary-cap-cana_entry_import",
+      "roomId": "room_sanctuary-cap-cana_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 3021,
+      "salePrice": null,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_sanctuary-cap-cana_target_import",
+      "roomId": "room_sanctuary-cap-cana_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 3355,
+      "salePrice": null,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_trs-cap-cana_entry_import",
+      "roomId": "room_trs-cap-cana_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 2616,
+      "salePrice": null,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    },
+    {
+      "id": "price_room_trs-cap-cana_target_import",
+      "roomId": "room_trs-cap-cana_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 3080,
+      "salePrice": null,
+      "currency": "USD",
+      "url": null,
+      "notes": "Imported from spreadsheet",
+      "capturedAt": "2025-01-15T12:00:00.000Z"
+    }
+  ],
+  "meta": {
+    "version": 1
+  }
+}

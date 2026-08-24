@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+/* --------------------------------------------------------------------------
+   Design tokens. Warm sand + deep teal — reads as "Caribbean" without being
+   a postcard. Light and dark are both first-class.
+   -------------------------------------------------------------------------- */
+@theme {
+  --color-sand-50: #fbf9f5;
+  --color-sand-100: #f4efe6;
+  --color-sand-200: #e7dfd1;
+  --color-ink-400: #7b8794;
+  --color-ink-600: #46525f;
+  --color-ink-800: #1f2933;
+  --color-ink-900: #141a20;
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-teal-700: #0f766e;
+  --color-coral-500: #f2683c;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+:root {
+  --bg: var(--color-sand-50);
+  --surface: #ffffff;
+  --surface-2: var(--color-sand-100);
+  --border: var(--color-sand-200);
+  --text: var(--color-ink-800);
+  --text-dim: var(--color-ink-400);
+  --accent: var(--color-teal-600);
+  --accent-soft: #d9f5f0;
+  --up: #c2410c;
+  --down: #15803d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e1418;
+    --surface: #161e24;
+    --surface-2: #1d272e;
+    --border: #2a363f;
+    --text: #e6edf3;
+    --text-dim: #8b9aa7;
+    --accent: var(--color-teal-400);
+    --accent-soft: #0f3b38;
+    --up: #fb923c;
+    --down: #4ade80;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Reusable primitives -------------------------------------------------- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+.muted { color: var(--text-dim); }
+.hairline { border-color: var(--border); }
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.875rem;
+  color: var(--text);
+}
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -1px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 0.5rem;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.8125rem;
+  font-weight: 550;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+.btn:hover { background: var(--surface-2); }
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #04211f;
+}
+.btn-primary:hover { filter: brightness(1.07); background: var(--accent); }
+.btn-ghost { border-color: transparent; background: transparent; }
+.btn-ghost:hover { background: var(--surface-2); }
+.btn-danger { color: var(--up); }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.6875rem;
+  font-weight: 550;
+  background: var(--surface-2);
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+.chip-on { background: var(--accent-soft); color: var(--accent); }
+
+table.grid { width: 100%; border-collapse: separate; border-spacing: 0; }
+table.grid th {
+  text-align: left;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+table.grid td {
+  padding: 0.7rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.875rem;
+  vertical-align: middle;
+}
+table.grid tbody tr:hover { background: var(--surface-2); }
+table.grid tbody tr:last-child td { border-bottom: none; }
+
+.num { font-variant-numeric: tabular-nums; }
