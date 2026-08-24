@@ -239,7 +239,8 @@
         "oceanview": false,
         "soaking-tub": false
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_bahia-principe-luxury-ambar_target",
@@ -251,7 +252,8 @@
         "oceanview": false,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_barcelo-bavaro-beach_entry",
@@ -263,7 +265,8 @@
         "oceanview": false,
         "soaking-tub": false
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_barcelo-bavaro-beach_target",
@@ -275,7 +278,8 @@
         "oceanview": true,
         "soaking-tub": false
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_punta-cana-princess_entry",
@@ -287,7 +291,8 @@
         "oceanview": false,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_punta-cana-princess_target",
@@ -299,7 +304,8 @@
         "oceanview": true,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_catalonia-royal-bavaro_entry",
@@ -311,7 +317,8 @@
         "oceanview": false,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_catalonia-royal-bavaro_target",
@@ -323,7 +330,8 @@
         "oceanview": false,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_serenade-all-suites_entry",
@@ -335,7 +343,8 @@
         "oceanview": false,
         "soaking-tub": false
       },
-      "notes": "Renamed from \"Junior Suite Garden View\" (2026-08-24); the resort no longer offers that category."
+      "notes": "Renamed from \"Junior Suite Garden View\" (2026-08-24); the resort no longer offers that category.",
+      "url": null
     },
     {
       "id": "room_serenade-all-suites_target",
@@ -347,7 +356,8 @@
         "oceanview": true,
         "soaking-tub": true
       },
-      "notes": "Renamed from \"Junior Suite Ocean Front View\" (2026-08-24); the resort no longer offers that category."
+      "notes": "Renamed from \"Junior Suite Ocean Front View\" (2026-08-24); the resort no longer offers that category.",
+      "url": null
     },
     {
       "id": "room_trs-turquesa_entry",
@@ -359,7 +369,8 @@
         "oceanview": false,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_trs-turquesa_target",
@@ -371,7 +382,8 @@
         "oceanview": true,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_majestic-elegance_entry",
@@ -383,7 +395,8 @@
         "oceanview": false,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_majestic-elegance_target",
@@ -395,7 +408,8 @@
         "oceanview": true,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_excellence-el-carmen_entry",
@@ -407,7 +421,8 @@
         "oceanview": false,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_excellence-el-carmen_target",
@@ -419,7 +434,8 @@
         "oceanview": true,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_melia-punta-cana-beach_entry",
@@ -431,7 +447,8 @@
         "oceanview": false,
         "soaking-tub": false
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_melia-punta-cana-beach_target",
@@ -443,7 +460,8 @@
         "oceanview": false,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_joia-bavaro-by-iberostar_entry",
@@ -455,7 +473,8 @@
         "oceanview": false,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_joia-bavaro-by-iberostar_target",
@@ -467,7 +486,8 @@
         "oceanview": true,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_joia-rose-hall-by-iberostar_entry",
@@ -479,7 +499,8 @@
         "oceanview": false,
         "soaking-tub": true
       },
-      "notes": "Renamed from \"Suite\" (2026-08-24); the resort no longer offers that category."
+      "notes": "Renamed from \"Suite\" (2026-08-24); the resort no longer offers that category.",
+      "url": null
     },
     {
       "id": "room_joia-rose-hall-by-iberostar_target",
@@ -491,7 +512,8 @@
         "oceanview": true,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_excellence-oyster-bay_entry",
@@ -503,7 +525,8 @@
         "oceanview": false,
         "soaking-tub": false
       },
-      "notes": "Renamed from \"Junior Suite Run of the House\" (2026-08-24); the resort no longer offers that category."
+      "notes": "Renamed from \"Junior Suite Run of the House\" (2026-08-24); the resort no longer offers that category.",
+      "url": null
     },
     {
       "id": "room_excellence-oyster-bay_target",
@@ -515,7 +538,8 @@
         "oceanview": true,
         "soaking-tub": true
       },
-      "notes": "Renamed from \"Excellence Club Junior Suite Ocean Front\" (2026-08-24); the resort no longer offers that category. Was the target room until 2026-08-24; kept for reference."
+      "notes": "Renamed from \"Excellence Club Junior Suite Ocean Front\" (2026-08-24); the resort no longer offers that category. Was the target room until 2026-08-24; kept for reference.",
+      "url": null
     },
     {
       "id": "room_sanctuary-cap-cana_entry",
@@ -527,7 +551,8 @@
         "oceanview": true,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_sanctuary-cap-cana_target",
@@ -539,7 +564,8 @@
         "oceanview": true,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_trs-cap-cana_entry",
@@ -551,7 +577,8 @@
         "oceanview": false,
         "soaking-tub": false
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_trs-cap-cana_target",
@@ -563,7 +590,8 @@
         "oceanview": true,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "",
+      "url": null
     },
     {
       "id": "room_mt7nhgr1i8nqko",
@@ -575,7 +603,8 @@
         "oceanview": true,
         "soaking-tub": true
       },
-      "notes": "Ocean front, private plunge pool and a jetted whirlpool bathtub, per the resort description."
+      "notes": "Ocean front, private plunge pool and a jetted whirlpool bathtub, per the resort description.",
+      "url": null
     }
   ],
   "criteria": [

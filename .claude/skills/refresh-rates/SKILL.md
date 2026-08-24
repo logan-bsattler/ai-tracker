@@ -83,6 +83,10 @@ One call per room, per source:
 npm run record -- --resort "TRS Turquesa" --room target --price 2545 --sale 2160 --source resort-direct --url "https://..."
 ```
 
+Pass `--url` the deep link you actually opened, including its dates -- not
+whatever origin the browser ended up on after a redirect. A bare domain is
+worse than no URL.
+
 `--room` takes `entry`, `target`, or part of a room name. `--source` is one of
 `resort-direct`, `cheapcaribbean`, `allinclusiveoutlet`, `costco`, `expedia`,
 `other`. The script prints the change against the previous observation. Add

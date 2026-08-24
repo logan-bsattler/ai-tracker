@@ -52,8 +52,8 @@ export async function saveResort(form: FormData) {
     // A resort with no rooms can't be priced, so give it the two the workflow
     // assumes: the cheapest option and the one you'd actually book.
     db.rooms.push(
-      { id: newId('room'), resortId, name: 'Cheapest room', tier: 'entry', amenities: {}, notes: '' },
-      { id: newId('room'), resortId, name: 'Best room for us', tier: 'target', amenities: {}, notes: '' },
+      { id: newId('room'), resortId, name: 'Cheapest room', tier: 'entry', amenities: {}, url: null, notes: '' },
+      { id: newId('room'), resortId, name: 'Best room for us', tier: 'target', amenities: {}, url: null, notes: '' },
     );
   });
   refresh();
@@ -78,6 +78,7 @@ export async function saveRoom(form: FormData) {
   const name = str(form.get('name'));
   const tier = (str(form.get('tier')) || 'other') as Room['tier'];
   const notes = str(form.get('notes'));
+  const url = str(form.get('url')) || null;
   if (!name || !resortId) return;
 
   // Checkboxes only post when checked, so the full key list rides along in a
@@ -90,9 +91,9 @@ export async function saveRoom(form: FormData) {
   mutate((db) => {
     const existing = db.rooms.find((r) => r.id === id);
     if (existing) {
-      Object.assign(existing, { name, tier, notes, amenities });
+      Object.assign(existing, { name, tier, notes, amenities, url });
     } else {
-      db.rooms.push({ id: newId('room'), resortId, name, tier, notes, amenities });
+      db.rooms.push({ id: newId('room'), resortId, name, tier, notes, amenities, url });
     }
   });
   refresh();

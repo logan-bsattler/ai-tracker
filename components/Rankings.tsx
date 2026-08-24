@@ -181,7 +181,14 @@ export default function Rankings({
                 </td>
 
                 <td className="max-w-[16rem]">
-                  <div className="truncate" title={r.targetName ?? ''}>{r.targetName ?? '—'}</div>
+                  <div className="truncate" title={r.targetName ?? ''}>
+                    {r.targetName == null ? '—' : r.targetUrl ? (
+                      <a href={r.targetUrl} target="_blank" rel="noreferrer"
+                        className="hover:underline" title={`Open ${r.targetName} on the booking site`}>
+                        {r.targetName} <span className="muted">↗</span>
+                      </a>
+                    ) : r.targetName}
+                  </div>
                   {r.upgradeCost != null && r.upgradeCost > 0 && (
                     <div className="muted text-xs num">+{money(r.upgradeCost)} over entry</div>
                   )}

@@ -21,8 +21,10 @@ export interface RankingRow {
   /** Amenities the entry room already has — drives the "upgrade needed" hint. */
   entryMet: Record<string, boolean>;
   entryName: string | null;
+  entryUrl: string | null;
   entryPrice: number | null;
   targetName: string | null;
+  targetUrl: string | null;
   price: number | null;
   onSale: boolean;
   /** False when the quote excludes taxes, so it is not comparable as-is. */
@@ -54,6 +56,20 @@ export function buildRankings(trip: Trip | null): {
 
   const rows: RankingRow[] = scored.map((s) => {
     const latest = s.target?.pricing.latest ?? null;
+
+    /**
+     * Where a room's name should link to, best available first:
+     *   1. an explicit room link, if the resort has a per-room page
+     *   2. the resort's booking URL, rebuilt for the trip currently selected
+     *   3. the page the last price was read from
+     *
+     * The booking URL outranks the stored snapshot URL because it is generated
+     * for whichever trip you are looking at now, whereas a snapshot's URL is
+     * frozen to the dates it was captured for - and would quietly send you to
+     * the wrong week after a trip switch.
+     */
+    const linkFor = (r: typeof s.target) =>
+      r?.room.url || buildBookingUrl(s.resort, trip) || r?.pricing.latest?.url || null;
     const price = s.price;
     const entryPrice = s.entry?.pricing.latest
       ? effectivePrice(s.entry.pricing.latest)
@@ -82,8 +98,10 @@ export function buildRankings(trip: Trip | null): {
       met: s.target?.room.amenities ?? {},
       entryMet: s.entry?.room.amenities ?? {},
       entryName: s.entry?.room.name ?? null,
+      entryUrl: linkFor(s.entry),
       entryPrice,
       targetName: s.target?.room.name ?? null,
+      targetUrl: linkFor(s.target),
       price,
       onSale: latest?.salePrice != null && latest.salePrice > 0,
       taxesIncluded: latest ? includesTaxes(latest) : true,

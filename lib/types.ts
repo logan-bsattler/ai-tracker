@@ -46,6 +46,12 @@ export interface Room {
   tier: 'entry' | 'target' | 'other';
   /** criteriaKey -> met. Absent key means "unknown", which scores as not met. */
   amenities: Record<string, boolean>;
+  /**
+   * Direct link to this specific room, when the resort has one. Most booking
+   * engines list every room on a single availability page, so this is usually
+   * empty and the link falls back to the resort's dated booking URL.
+   */
+  url: string | null;
   notes: string;
 }
 

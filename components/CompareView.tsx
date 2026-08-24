@@ -121,7 +121,13 @@ export default function CompareView({ data }: { data: AllRankings }) {
             <Row label="Destination" rows={rows} render={(r) => r.destination} />
             <Row label="Airport transfer" rows={rows} highlight={closest}
               render={(r) => r.transferMinutes != null ? `${r.transferMinutes} min` : '—'} />
-            <Row label="Room you'd book" rows={rows} render={(r) => r.targetName ?? '—'} />
+            <Row label="Room you'd book" rows={rows} render={(r) => (
+              r.targetName == null ? '—' : r.targetUrl ? (
+                <a href={r.targetUrl} target="_blank" rel="noreferrer" className="hover:underline">
+                  {r.targetName} <span className="muted">↗</span>
+                </a>
+              ) : r.targetName
+            )} />
             <Row label="Price" rows={rows} highlight={cheapest}
               render={(r) => (
                 <span className="num">
@@ -133,6 +139,13 @@ export default function CompareView({ data }: { data: AllRankings }) {
               r.taxesIncluded
                 ? <span className="muted">Included</span>
                 : <span style={{ color: 'var(--up)' }}>Excluded — not comparable</span>
+            )} />
+            <Row label="Cheapest room" rows={rows} render={(r) => (
+              r.entryName == null ? '—' : r.entryUrl ? (
+                <a href={r.entryUrl} target="_blank" rel="noreferrer" className="muted hover:underline">
+                  {r.entryName} <span>↗</span>
+                </a>
+              ) : <span className="muted">{r.entryName}</span>
             )} />
             <Row label="Entry room price" rows={rows}
               render={(r) => <span className="num muted">{money(r.entryPrice)}</span>} />

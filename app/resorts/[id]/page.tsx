@@ -59,6 +59,11 @@ export default async function ResortPage({
     })
     .filter((s) => s.points.length > 0);
 
+  /** Same order as lib/view.ts: room link, then the trip's booking URL, then
+   *  whatever page the last price came from. */
+  const roomLink = (sr: (typeof scored.rooms)[number]) =>
+    sr.room.url || bookingUrl || sr.pricing.latest?.url || null;
+
   const priceLog = db.prices
     .filter((p) => db.rooms.some((r) => r.resortId === resort.id && r.id === p.roomId))
     .filter((p) => !trip || p.tripId === trip.id)
@@ -149,7 +154,13 @@ export default async function ResortPage({
               <tbody>
                 {scored.rooms.map((sr) => (
                   <tr key={sr.room.id}>
-                    <td className="font-medium">{sr.room.name}</td>
+                    <td className="font-medium">
+                      {roomLink(sr) ? (
+                        <a href={roomLink(sr)!} target="_blank" rel="noreferrer" className="hover:underline">
+                          {sr.room.name} <span className="muted">↗</span>
+                        </a>
+                      ) : sr.room.name}
+                    </td>
                     <td className="muted text-xs">
                       {sr.room.tier === 'entry' ? 'Cheapest' : sr.room.tier === 'target' ? 'Target' : 'Other'}
                     </td>
@@ -188,6 +199,18 @@ export default async function ResortPage({
                     <option value="target">Target</option>
                     <option value="other">Other</option>
                   </select>
+                </label>
+                <label className="min-w-[14rem] flex-1 text-xs">
+                  <span className="muted mb-1 block">
+                    Direct link{' '}
+                    {roomLink(sr) && (
+                      <a href={roomLink(sr)!} target="_blank" rel="noreferrer" className="underline">
+                        open ↗
+                      </a>
+                    )}
+                  </span>
+                  <input className="input" name="url" defaultValue={sr.room.url ?? ''}
+                    placeholder="optional — falls back to the booking URL" />
                 </label>
                 <div className="text-xs">
                   <span className="muted mb-1 block">Current</span>
