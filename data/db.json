@@ -40,10 +40,10 @@
       "transferMinutes": 34,
       "stars": 5,
       "tags": [],
-      "bookingUrlTemplate": null,
+      "bookingUrlTemplate": "https://www.princess-hotels.com/en/bookingstep1/?idtokenprovider=100376314&lang=en&nights={nights}&checkin={checkInEUEnc}&step=1&currency=USD&parties=W3siYWR1bHRzIjoyLCJjaGlsZHJlbiI6W119XQ%3D%3D",
       "websiteUrl": "https://www.princess-hotels.com/en/punta-cana/punta-cana-princess/",
       "imageUrl": null,
-      "notes": "Engine: Mirai, idtokenprovider=100376314. Dispatcher loads but ignores checkin=.",
+      "notes": "Engine: Mirai, idtokenprovider=100376314. Dispatcher loads but ignores checkin=. PRICES EXCLUDE TAXES, unlike every other resort here — not directly comparable. Mirai engine; the parties= parameter hard-codes 2 adults.",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z"
     },
@@ -1212,6 +1212,30 @@
       "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
       "notes": "US$882/night x7; all fees and taxes included",
       "capturedAt": "2026-08-24T19:50:07.379Z"
+    },
+    {
+      "id": "price_mt7nr8q7xzpygi",
+      "roomId": "room_punta-cana-princess_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 2481,
+      "salePrice": 1224,
+      "currency": "USD",
+      "url": "https://www.princess-hotels.com/en/bookingstep1/?idtokenprovider=100376314&lang=en&nights=7&checkin=17%2F04%2F2027&step=1&currency=USD&parties=W3siYWR1bHRzIjoyLCJjaGlsZHJlbiI6W119XQ%3D%3D",
+      "notes": "TAXES EXCLUDED; non-refundable, 48% off, incl. 5% member benefit",
+      "capturedAt": "2026-08-24T19:57:43.279Z"
+    },
+    {
+      "id": "price_mt7nr8u7y3owba",
+      "roomId": "room_punta-cana-princess_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 3994,
+      "salePrice": 1874,
+      "currency": "USD",
+      "url": "https://www.princess-hotels.com/en/bookingstep1/?idtokenprovider=100376314&lang=en&nights=7&checkin=17%2F04%2F2027&step=1&currency=USD&parties=W3siYWR1bHRzIjoyLCJjaGlsZHJlbiI6W119XQ%3D%3D",
+      "notes": "TAXES EXCLUDED; non-refundable, 51% off, incl. 5% member benefit",
+      "capturedAt": "2026-08-24T19:57:43.423Z"
     }
   ],
   "meta": {
