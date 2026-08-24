@@ -328,26 +328,26 @@
     {
       "id": "room_serenade-all-suites_entry",
       "resortId": "res_serenade-all-suites",
-      "name": "Junior Suite Garden View",
+      "name": "Luxury Tropical Garden View",
       "tier": "entry",
       "amenities": {
         "room-service": true,
         "oceanview": false,
         "soaking-tub": false
       },
-      "notes": ""
+      "notes": "Renamed from \"Junior Suite Garden View\" (2026-08-24); the resort no longer offers that category."
     },
     {
       "id": "room_serenade-all-suites_target",
       "resortId": "res_serenade-all-suites",
-      "name": "Junior Suite Ocean Front View",
+      "name": "Luxury Suite Ocean View Outdoor Jacuzzi",
       "tier": "target",
       "amenities": {
         "room-service": true,
         "oceanview": true,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "Renamed from \"Junior Suite Ocean Front View\" (2026-08-24); the resort no longer offers that category."
     },
     {
       "id": "room_trs-turquesa_entry",
@@ -472,14 +472,14 @@
     {
       "id": "room_joia-rose-hall-by-iberostar_entry",
       "resortId": "res_joia-rose-hall-by-iberostar",
-      "name": "Suite",
+      "name": "Jacuzzi Suite",
       "tier": "entry",
       "amenities": {
         "room-service": true,
         "oceanview": false,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "Renamed from \"Suite\" (2026-08-24); the resort no longer offers that category."
     },
     {
       "id": "room_joia-rose-hall-by-iberostar_target",
@@ -496,26 +496,26 @@
     {
       "id": "room_excellence-oyster-bay_entry",
       "resortId": "res_excellence-oyster-bay",
-      "name": "Junior Suite Run of the House",
+      "name": "Junior Suite",
       "tier": "entry",
       "amenities": {
         "room-service": true,
         "oceanview": false,
-        "soaking-tub": true
+        "soaking-tub": false
       },
-      "notes": ""
+      "notes": "Renamed from \"Junior Suite Run of the House\" (2026-08-24); the resort no longer offers that category."
     },
     {
       "id": "room_excellence-oyster-bay_target",
       "resortId": "res_excellence-oyster-bay",
-      "name": "Excellence Club Junior Suite Ocean Front",
+      "name": "Excellence Club Junior Suite Partial Ocean View",
       "tier": "target",
       "amenities": {
         "room-service": true,
         "oceanview": true,
         "soaking-tub": true
       },
-      "notes": ""
+      "notes": "Renamed from \"Excellence Club Junior Suite Ocean Front\" (2026-08-24); the resort no longer offers that category."
     },
     {
       "id": "room_sanctuary-cap-cana_entry",
@@ -1128,6 +1128,66 @@
       "url": "https://www.iberostar.com/en/bookings/?vo_booking%5Bhotel_id%5D=79",
       "notes": "Best price modifiable prepaid rate",
       "capturedAt": "2026-08-24T19:39:06.626Z"
+    },
+    {
+      "id": "price_mt7nc1itpvf3uc",
+      "roomId": "room_serenade-all-suites_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 1679,
+      "salePrice": null,
+      "currency": "USD",
+      "url": "https://www.serenadepuntacana.com/booking1?startDate=17%2F04%2F2027&endDate=24%2F04%2F2027&numRooms=1&adultsRoom1=2&childrenRoom1=0",
+      "notes": "Total without club discount; club/registered rate is 1482",
+      "capturedAt": "2026-08-24T19:45:54.101Z"
+    },
+    {
+      "id": "price_mt7nc1qh84cf4b",
+      "roomId": "room_serenade-all-suites_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 2183,
+      "salePrice": null,
+      "currency": "USD",
+      "url": "https://www.serenadepuntacana.com/booking1?startDate=17%2F04%2F2027&endDate=24%2F04%2F2027&numRooms=1&adultsRoom1=2&childrenRoom1=0",
+      "notes": "Total without club discount; club/registered rate is 1926",
+      "capturedAt": "2026-08-24T19:45:54.377Z"
+    },
+    {
+      "id": "price_mt7nc1y814ovk6",
+      "roomId": "room_excellence-oyster-bay_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 4717,
+      "salePrice": null,
+      "currency": "USD",
+      "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
+      "notes": "US$674/night x7",
+      "capturedAt": "2026-08-24T19:45:54.656Z"
+    },
+    {
+      "id": "price_mt7nc2609j197m",
+      "roomId": "room_excellence-oyster-bay_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 5493,
+      "salePrice": null,
+      "currency": "USD",
+      "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
+      "notes": "US$785/night x7",
+      "capturedAt": "2026-08-24T19:45:54.936Z"
+    },
+    {
+      "id": "price_mt7nc2dp0zn6qp",
+      "roomId": "room_joia-rose-hall-by-iberostar_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 10472,
+      "salePrice": 7069,
+      "currency": "USD",
+      "url": "https://www.iberostar.com/en/bookings/?vo_booking%5Bhotel_id%5D=79",
+      "notes": "Best price modifiable prepaid rate",
+      "capturedAt": "2026-08-24T19:45:55.213Z"
     }
   ],
   "meta": {
