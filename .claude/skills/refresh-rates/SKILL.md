@@ -38,8 +38,12 @@ cd /c/development/ai-meta-site && git pull --rebase
 **2. Get the worklist**
 
 ```bash
-npm run queue -- --json
+npm run queue -- --all-trips --json
 ```
+
+That returns one payload per active week. Several weeks are tracked now, so
+work through them one at a time and record each price against the right week
+with `--trip`. Without `--all-trips` you only get the first one.
 
 Each item gives the resort, the booking URL with the trip's dates already
 injected, the rooms to price, and the last price seen for each. Add
@@ -48,8 +52,15 @@ injected, the rooms to price, and the last price seen for each. Add
 **3. Price each resort**
 
 For each item, open `bookingUrl` with the browser tools and find the total for
-the trip dates. Look for both rooms in the item's `rooms` list — match on the
-room name, not on position in the page. Note the list price and, separately,
+the trip dates. Price **every room the page offers**, not just the two the
+tracker already knows: the app now chooses which room counts by itself, so the
+more of the ladder it can see, the better that choice is. Match on the room
+name, not on position in the page.
+
+When the page lists rooms the tracker has never seen, capture them with
+`scripts/import-rooms.mjs` — it adds the room, derives its amenities from the
+resort's own description, and records the price in one step. Its file header
+has the input shape. Note the list price and, separately,
 any discounted/sale price.
 
 If `bookingUrl` is null the engine has no working deep link. Open `websiteUrl`
