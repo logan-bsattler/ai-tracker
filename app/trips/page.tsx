@@ -28,7 +28,26 @@ export default function TripsPage() {
           </p>
         </div>
 
-        <div className="card overflow-x-auto">
+        <div className="card divide-y md:hidden" style={{ borderColor: 'var(--border)' }}>
+          {trips.filter((t) => !t.archived).map((trip) => (
+            <div key={trip.id} className="flex items-center justify-between gap-3 p-3">
+              <div className="min-w-0">
+                <Link href={`/?trip=${trip.id}`} className="font-medium hover:underline">
+                  {trip.label}
+                </Link>
+                <div className="muted num mt-0.5 text-xs">
+                  {trip.checkIn} → {trip.checkOut} · {nights(trip)}n
+                </div>
+              </div>
+              <div className="muted num shrink-0 text-right text-xs">
+                {trip.adults}a{trip.children ? `/${trip.children}c` : ''}
+                <span className="block">{priceCount(trip.id)} prices</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="card hidden overflow-x-auto md:block">
           <table className="grid">
             <thead>
               <tr>

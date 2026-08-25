@@ -141,7 +141,46 @@ export default async function ResortPage({
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide">Rooms</h2>
 
         {IS_STATIC ? (
-          <div className="card overflow-x-auto">
+          <>
+          {/* Mobile: one block per room. With seven criteria the table is ten
+              columns wide and can only scroll sideways on a phone. */}
+          <div className="card divide-y md:hidden" style={{ borderColor: 'var(--border)' }}>
+            {scored.rooms.map((sr) => (
+              <div key={sr.room.id} className="p-3"
+                style={sr.room.id === scored.target?.room.id
+                  ? { background: 'var(--accent-soft)' } : undefined}>
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    {roomLink(sr) ? (
+                      <a href={roomLink(sr)!} target="_blank" rel="noreferrer"
+                        className="font-medium hover:underline">
+                        {sr.room.name} <span className="muted">&#8599;</span>
+                      </a>
+                    ) : <span className="font-medium">{sr.room.name}</span>}
+                    {sr.room.id === scored.target?.room.id && (
+                      <span className="chip chip-on ml-2">the pick</span>
+                    )}
+                  </div>
+                  <span className="num shrink-0 font-semibold">
+                    {money(sr.pricing.latest ? effectivePrice(sr.pricing.latest) : null)}
+                  </span>
+                </div>
+                <div className="mt-2 flex flex-wrap gap-1.5">
+                  {criteria.map((c) => {
+                    const has = sr.room.amenities[c.key] === true;
+                    return (
+                      <span key={c.key} className={`chip ${has ? 'chip-on' : ''}`}
+                        style={has ? undefined : { textDecoration: 'line-through', opacity: 0.6 }}>
+                        {c.label}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="card hidden overflow-x-auto md:block">
             <table className="grid">
               <thead>
                 <tr>
@@ -181,6 +220,7 @@ export default async function ResortPage({
               </tbody>
             </table>
           </div>
+          </>
         ) : (
         <div className="space-y-3">
           {scored.rooms.map((sr) => (

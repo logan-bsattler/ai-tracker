@@ -21,47 +21,58 @@ export default function CriteriaPage() {
       <div className="mb-6">
         <h1 className="text-2xl font-semibold tracking-tight">Criteria</h1>
         <p className="muted mt-1 max-w-2xl text-sm">
-          Ordered by how much they matter — the one at the top counts most.
-          Move a criterion up or down to change its weight; switch one off to
-          leave it out of scoring entirely. Marking one <em>required</em> is
-          stricter still: any room missing it is disqualified rather than
-          merely scoring lower.
+          {IS_STATIC ? (
+            <>
+              What the match score is built from, most important first. A
+              criterion&rsquo;s weight comes from its position, so the top one
+              counts most. Reordering happens in the local app.
+            </>
+          ) : (
+            <>
+              Ordered by how much they matter — the one at the top counts most.
+              Move a criterion up or down to change its weight; switch one off to
+              leave it out of scoring entirely. Marking one <em>required</em> is
+              stricter still: any room missing it is disqualified rather than
+              merely scoring lower.
+            </>
+          )}
         </p>
       </div>
 
       {IS_STATIC ? (
-        <div className="card overflow-x-auto">
-          <table className="grid">
-            <thead>
-              <tr>
-                <th style={{ width: 44 }}>#</th>
-                <th>Criterion</th>
-                <th className="text-right">Weight</th>
-                <th className="text-right">Share</th>
-                <th className="text-right">Required</th>
-                <th className="text-right">Rooms with it</th>
-              </tr>
-            </thead>
-            <tbody>
-              {criteria.map((c, i) => (
-                <tr key={c.id} style={{ opacity: c.enabled ? 1 : 0.45 }}>
-                  <td className="num muted">{i + 1}</td>
-                  <td className="font-medium">
-                    {c.label}
-                    {!c.enabled && <span className="chip ml-2">off</span>}
-                  </td>
-                  <td className="num text-right">{c.weight}</td>
-                  <td className="num muted text-right">
-                    {totalWeight > 0 ? Math.round((Math.max(0, c.weight) / totalWeight) * 100) : 0}%
-                  </td>
-                  <td className="muted text-right">{c.required ? 'Yes' : '—'}</td>
-                  <td className="num muted text-right">
-                    {db.rooms.filter((r) => r.amenities[c.key] === true).length} / {db.rooms.length}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="card divide-y" style={{ borderColor: 'var(--border)' }}>
+          {criteria.map((c, i) => {
+            const share = totalWeight > 0
+              ? Math.round((Math.max(0, c.weight) / totalWeight) * 100) : 0;
+            const withIt = db.rooms.filter((r) => r.amenities[c.key] === true).length;
+            return (
+              <div key={c.id} className="flex items-center gap-3 p-3"
+                style={{ opacity: c.enabled ? 1 : 0.45 }}>
+                <span className="num muted w-4 shrink-0 text-sm">{i + 1}</span>
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-center gap-x-2">
+                    <span className="font-medium">{c.label}</span>
+                    {!c.enabled && <span className="chip">off</span>}
+                    {c.required && <span className="chip chip-on">required</span>}
+                  </div>
+                  {/* A bar carries relative importance better than a bare
+                      number, and costs no horizontal room. */}
+                  <div className="mt-1.5 flex items-center gap-2">
+                    <div className="h-1.5 max-w-[9rem] flex-1 overflow-hidden rounded-full"
+                      style={{ background: 'var(--surface-2)' }}>
+                      <div className="h-full rounded-full"
+                        style={{ width: `${share}%`, background: 'var(--accent)' }} />
+                    </div>
+                    <span className="muted num text-xs">{share}%</span>
+                  </div>
+                </div>
+                <span className="muted num shrink-0 text-right text-xs">
+                  {withIt}/{db.rooms.length}
+                  <span className="block">rooms</span>
+                </span>
+              </div>
+            );
+          })}
         </div>
       ) : (
         <>

@@ -110,7 +110,9 @@ function priceOf(r: ScoredRoom): number | null {
  * then it decides whether the resort is disqualified rather than merely
  * scored low.
  */
-function pickTarget(rooms: ScoredRoom[], resort: Resort): ScoredRoom | null {
+function pickTarget(
+  rooms: ScoredRoom[], resort: Resort, hasRequired: boolean,
+): ScoredRoom | null {
   if (rooms.length === 0) return null;
 
   if (resort.pinnedRoomId) {
@@ -120,17 +122,18 @@ function pickTarget(rooms: ScoredRoom[], resort: Resort): ScoredRoom | null {
 
   const priced = rooms.filter((r) => priceOf(r) != null);
   const pool = priced.length > 0 ? priced : rooms;
+  const cheapestFirst = (a: ScoredRoom, b: ScoredRoom) =>
+    (priceOf(a) ?? Infinity) - (priceOf(b) ?? Infinity);
 
-  const qualifying = pool.filter((r) => !r.disqualified);
-  if (qualifying.length > 0) {
-    return [...qualifying].sort(
-      (a, b) => (priceOf(a) ?? Infinity) - (priceOf(b) ?? Infinity),
-    )[0];
+  // Only meaningful once something is actually marked required — otherwise no
+  // room is ever disqualified and "cheapest that qualifies" would collapse to
+  // "cheapest", making the pick identical to the entry room everywhere.
+  if (hasRequired) {
+    const qualifying = pool.filter((r) => !r.disqualified);
+    if (qualifying.length > 0) return [...qualifying].sort(cheapestFirst)[0];
   }
 
-  return [...pool].sort(
-    (a, b) => b.score - a.score || (priceOf(a) ?? Infinity) - (priceOf(b) ?? Infinity),
-  )[0];
+  return [...pool].sort((a, b) => b.score - a.score || cheapestFirst(a, b))[0];
 }
 
 export function scoreResort(
@@ -147,7 +150,8 @@ export function scoreResort(
     ? [...priced].sort((a, b) => priceOf(a)! - priceOf(b)!)[0]
     : rooms.find((r) => r.room.tier === 'entry') ?? null;
 
-  const target = pickTarget(rooms, resort);
+  const hasRequired = db.criteria.some((c) => c.enabled !== false && c.required);
+  const target = pickTarget(rooms, resort, hasRequired);
 
   const price = target?.pricing.latest ? effectivePrice(target.pricing.latest) : null;
   const score = target?.score ?? 0;
