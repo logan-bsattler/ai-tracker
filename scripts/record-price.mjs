@@ -53,13 +53,22 @@ const args = parseArgs(process.argv.slice(2));
 if (!fs.existsSync(DB_PATH)) fail('data/db.json not found — run from the project root.');
 const db = JSON.parse(fs.readFileSync(DB_PATH, 'utf8'));
 
-/** Match by exact id first, then by a unique case-insensitive name fragment. */
+/**
+ * Match by id, then by exact name, then by a unique name fragment.
+ *
+ * The exact-name step matters because real room names nest: "Junior Suite
+ * Deluxe" is a prefix of "Junior Suite Deluxe Corner", so fragment matching
+ * alone would call the exact name ambiguous.
+ */
 function pick(items, needle, label, nameOf) {
   if (!needle || needle === true) return null;
   const exact = items.find((i) => i.id === needle);
   if (exact) return exact;
 
   const q = String(needle).toLowerCase();
+  const byName = items.filter((i) => nameOf(i).toLowerCase() === q);
+  if (byName.length === 1) return byName[0];
+
   const matches = items.filter((i) => nameOf(i).toLowerCase().includes(q));
   if (matches.length === 1) return matches[0];
   if (matches.length === 0) fail(`no ${label} matches "${needle}"`);
