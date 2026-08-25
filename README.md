@@ -105,6 +105,21 @@ For a custom domain served from the root, set a repository variable
 `PAGES_BASE_PATH` to an empty string, or build with
 `npm run build:static -- --base ""`.
 
+## Tuning criteria on the published site
+
+Scoring is not baked in at build time. `lib/rank.ts` is a pure function of the
+data plus a criteria configuration, and it runs on both sides: the server uses
+it to render the pages, and the browser re-runs it when a viewer reorders or
+switches off criteria on the live site.
+
+So `/criteria` on the published site is interactive. Reordering changes the
+weights, switching one off drops it from scoring, the columns and the filters,
+and everything recomputes with no server involved. That weighting is kept in
+the viewer's own browser and never reaches the repo — the local app stays the
+source of truth for the published default. "Copy as link" encodes a weighting
+into the URL, which takes precedence over the browser's copy so a shared link
+always shows the sender's view.
+
 ## Automated refresh
 
 `.claude/skills/refresh-rates/SKILL.md` defines a Claude job that reads current

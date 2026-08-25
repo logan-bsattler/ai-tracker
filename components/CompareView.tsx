@@ -2,8 +2,11 @@
 
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
+import { useMemo } from 'react';
 import PriceChart, { type Series } from './PriceChart';
-import type { AllRankings, RankingRow } from '@/lib/view';
+import { useRankConfig } from './useRankConfig';
+import { rankResorts, type RankingRow } from '@/lib/rank';
+import type { AllRankings } from '@/lib/view';
 
 const money = (n: number | null) =>
   n == null ? '—' : '$' + n.toLocaleString('en-US', { maximumFractionDigits: 0 });
@@ -55,7 +58,12 @@ export default function CompareView({ data }: { data: AllRankings }) {
   const params = useSearchParams();
   const requestedTrip = params.get('trip');
   const trip = data.trips.find((t) => t.id === requestedTrip) ?? data.trips[0] ?? null;
-  const allRows = trip ? data.byTrip[trip.id] ?? [] : [];
+
+  const { config } = useRankConfig();
+  const { rows: allRows, criteria } = useMemo(
+    () => rankResorts(trip ? data.resortsByTrip[trip.id] ?? [] : [], data.criteria, config),
+    [data, trip, config],
+  );
 
   const ids = (params.get('ids') ?? '').split(',').filter(Boolean);
   const rows = ids
@@ -166,7 +174,7 @@ export default function CompareView({ data }: { data: AllRankings }) {
             <Row label="$ per match point" rows={rows} highlight={bestValue}
               render={(r) => <span className="num">{money(r.valueIndex)}</span>} />
 
-            {data.criteria.map((c) => (
+            {criteria.filter((c) => c.enabled).map((c) => (
               <Row key={c.key} label={c.label} rows={rows} render={(r) => (
                 r.met[c.key] === true
                   ? r.entryMet[c.key] === true

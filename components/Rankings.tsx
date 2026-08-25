@@ -3,8 +3,7 @@
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import Sparkline from './Sparkline';
-import type { RankingRow } from '@/lib/view';
-import type { Criterion } from '@/lib/types';
+import type { EffectiveCriterion, RankingRow } from '@/lib/rank';
 
 const money = (n: number | null) =>
   n == null ? '—' : '$' + n.toLocaleString('en-US', { maximumFractionDigits: 0 });
@@ -22,7 +21,7 @@ const SORTS: { key: SortKey; label: string }[] = [
 
 export default function Rankings({
   rows, criteria, tripId,
-}: { rows: RankingRow[]; criteria: Criterion[]; tripId: string | null }) {
+}: { rows: RankingRow[]; criteria: EffectiveCriterion[]; tripId: string | null }) {
   const [q, setQ] = useState('');
   const [destination, setDestination] = useState('all');
   const [maxTransfer, setMaxTransfer] = useState('');

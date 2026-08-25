@@ -2,7 +2,10 @@
 
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
+import { useMemo } from 'react';
 import Rankings from './Rankings';
+import { useRankConfig } from './useRankConfig';
+import { rankResorts } from '@/lib/rank';
 import type { AllRankings } from '@/lib/view';
 
 const money = (n: number | null) =>
@@ -32,7 +35,14 @@ export default function RankingsPage({
   const params = useSearchParams();
   const requested = params.get('trip');
   const trip = data.trips.find((t) => t.id === requested) ?? data.trips[0] ?? null;
-  const rows = trip ? data.byTrip[trip.id] ?? [] : [];
+
+  // Scoring happens here, not at build time, so re-weighting the criteria
+  // takes effect without a server.
+  const { config, isCustom } = useRankConfig();
+  const { rows, criteria } = useMemo(
+    () => rankResorts(trip ? data.resortsByTrip[trip.id] ?? [] : [], data.criteria, config),
+    [data, trip, config],
+  );
 
   // Headline figures compare like with like: a resort quoting before tax would
   // top every one of them while being more expensive in reality.
@@ -94,7 +104,15 @@ export default function RankingsPage({
         </p>
       )}
 
-      <Rankings rows={rows} criteria={data.criteria} tripId={trip?.id ?? null} />
+      {isCustom && (
+        <p className="muted mb-3 text-xs">
+          Using your own criteria weighting.{' '}
+          <Link className="underline" href="/criteria">Change or reset it</Link>.
+        </p>
+      )}
+
+      <Rankings rows={rows} criteria={criteria.filter((c) => c.enabled)}
+        tripId={trip?.id ?? null} />
     </>
   );
 }
