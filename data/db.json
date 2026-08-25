@@ -15,7 +15,8 @@
       "imageUrl": null,
       "notes": "Renamed by the chain to \"Bahia Principe Escape Ambar\".",
       "status": "active",
-      "createdAt": "2025-01-15T12:00:00.000Z"
+      "createdAt": "2025-01-15T12:00:00.000Z",
+      "pinnedRoomId": null
     },
     {
       "id": "res_barcelo-bavaro-beach",
@@ -30,7 +31,8 @@
       "imageUrl": null,
       "notes": "Engine: reservation-api.barcelo.com XHR, hotel_id 7389. No GET deep link found.",
       "status": "active",
-      "createdAt": "2025-01-15T12:00:00.000Z"
+      "createdAt": "2025-01-15T12:00:00.000Z",
+      "pinnedRoomId": null
     },
     {
       "id": "res_punta-cana-princess",
@@ -45,7 +47,8 @@
       "imageUrl": null,
       "notes": "Engine: Mirai, idtokenprovider=100376314. Dispatcher loads but ignores checkin=. PRICES EXCLUDE TAXES, unlike every other resort here — not directly comparable. Mirai engine; the parties= parameter hard-codes 2 adults.",
       "status": "active",
-      "createdAt": "2025-01-15T12:00:00.000Z"
+      "createdAt": "2025-01-15T12:00:00.000Z",
+      "pinnedRoomId": null
     },
     {
       "id": "res_catalonia-royal-bavaro",
@@ -62,7 +65,8 @@
       "imageUrl": null,
       "notes": "Engine: Mirai, hotelBackCode=CRB. Public min-price API at apiweb.cataloniahotels.com.",
       "status": "active",
-      "createdAt": "2025-01-15T12:00:00.000Z"
+      "createdAt": "2025-01-15T12:00:00.000Z",
+      "pinnedRoomId": null
     },
     {
       "id": "res_serenade-all-suites",
@@ -77,7 +81,8 @@
       "imageUrl": null,
       "notes": "",
       "status": "active",
-      "createdAt": "2025-01-15T12:00:00.000Z"
+      "createdAt": "2025-01-15T12:00:00.000Z",
+      "pinnedRoomId": null
     },
     {
       "id": "res_trs-turquesa",
@@ -94,7 +99,8 @@
       "imageUrl": null,
       "notes": "",
       "status": "active",
-      "createdAt": "2025-01-15T12:00:00.000Z"
+      "createdAt": "2025-01-15T12:00:00.000Z",
+      "pinnedRoomId": null
     },
     {
       "id": "res_majestic-elegance",
@@ -112,7 +118,8 @@
       "imageUrl": null,
       "notes": "Engine: Hotetec SPA. No GET form exposed.",
       "status": "active",
-      "createdAt": "2025-01-15T12:00:00.000Z"
+      "createdAt": "2025-01-15T12:00:00.000Z",
+      "pinnedRoomId": null
     },
     {
       "id": "res_excellence-el-carmen",
@@ -127,7 +134,8 @@
       "imageUrl": null,
       "notes": "",
       "status": "active",
-      "createdAt": "2025-01-15T12:00:00.000Z"
+      "createdAt": "2025-01-15T12:00:00.000Z",
+      "pinnedRoomId": null
     },
     {
       "id": "res_melia-punta-cana-beach",
@@ -142,7 +150,8 @@
       "imageUrl": null,
       "notes": "Engine: Melia SPA, hotelCode 5917. Query params ignored.",
       "status": "active",
-      "createdAt": "2025-01-15T12:00:00.000Z"
+      "createdAt": "2025-01-15T12:00:00.000Z",
+      "pinnedRoomId": null
     },
     {
       "id": "res_joia-bavaro-by-iberostar",
@@ -159,7 +168,8 @@
       "imageUrl": null,
       "notes": "",
       "status": "active",
-      "createdAt": "2025-01-15T12:00:00.000Z"
+      "createdAt": "2025-01-15T12:00:00.000Z",
+      "pinnedRoomId": null
     },
     {
       "id": "res_joia-rose-hall-by-iberostar",
@@ -176,7 +186,8 @@
       "imageUrl": null,
       "notes": "",
       "status": "active",
-      "createdAt": "2025-01-15T12:00:00.000Z"
+      "createdAt": "2025-01-15T12:00:00.000Z",
+      "pinnedRoomId": null
     },
     {
       "id": "res_excellence-oyster-bay",
@@ -193,7 +204,8 @@
       "imageUrl": null,
       "notes": "",
       "status": "active",
-      "createdAt": "2025-01-15T12:00:00.000Z"
+      "createdAt": "2025-01-15T12:00:00.000Z",
+      "pinnedRoomId": null
     },
     {
       "id": "res_sanctuary-cap-cana",
@@ -208,7 +220,8 @@
       "imageUrl": null,
       "notes": "Marriott Luxury Collection property, code PUJLC. Marriott (PUJLC) serves a bot-protection interstitial. Not automatable.",
       "status": "active",
-      "createdAt": "2025-01-15T12:00:00.000Z"
+      "createdAt": "2025-01-15T12:00:00.000Z",
+      "pinnedRoomId": null
     },
     {
       "id": "res_trs-cap-cana",
@@ -225,7 +238,8 @@
       "imageUrl": null,
       "notes": "Marked CLOSED in the original spreadsheet. Marked closed, so excluded from the refresh queue.",
       "status": "closed",
-      "createdAt": "2025-01-15T12:00:00.000Z"
+      "createdAt": "2025-01-15T12:00:00.000Z",
+      "pinnedRoomId": null
     }
   ],
   "rooms": [
@@ -237,7 +251,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": false,
-        "soaking-tub": false
+        "soaking-tub": false,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -250,7 +268,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": false,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -263,7 +285,11 @@
       "amenities": {
         "room-service": false,
         "oceanview": false,
-        "soaking-tub": false
+        "soaking-tub": false,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -276,7 +302,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": true,
-        "soaking-tub": false
+        "soaking-tub": false,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -289,7 +319,11 @@
       "amenities": {
         "room-service": false,
         "oceanview": false,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -302,7 +336,11 @@
       "amenities": {
         "room-service": false,
         "oceanview": true,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -315,7 +353,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": false,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -328,7 +370,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": false,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -341,7 +387,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": false,
-        "soaking-tub": false
+        "soaking-tub": false,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "Renamed from \"Junior Suite Garden View\" (2026-08-24); the resort no longer offers that category.",
       "url": null
@@ -354,7 +404,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": true,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "Renamed from \"Junior Suite Ocean Front View\" (2026-08-24); the resort no longer offers that category.",
       "url": null
@@ -367,7 +421,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": false,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -380,7 +438,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": true,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": true,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -393,7 +455,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": false,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -406,7 +472,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": true,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -419,7 +489,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": false,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -432,7 +506,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": true,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -445,7 +523,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": false,
-        "soaking-tub": false
+        "soaking-tub": false,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -458,7 +540,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": false,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -471,7 +557,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": false,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -484,7 +574,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": true,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -497,7 +591,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": false,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "Renamed from \"Suite\" (2026-08-24); the resort no longer offers that category.",
       "url": null
@@ -510,7 +608,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": true,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -523,7 +625,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": false,
-        "soaking-tub": false
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "Renamed from \"Junior Suite Run of the House\" (2026-08-24); the resort no longer offers that category.",
       "url": null
@@ -536,7 +642,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": true,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": true
       },
       "notes": "Renamed from \"Excellence Club Junior Suite Ocean Front\" (2026-08-24); the resort no longer offers that category. Was the target room until 2026-08-24; kept for reference.",
       "url": null
@@ -549,7 +659,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": true,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -562,7 +676,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": true,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -575,7 +693,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": false,
-        "soaking-tub": false
+        "soaking-tub": false,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -588,7 +710,11 @@
       "amenities": {
         "room-service": true,
         "oceanview": true,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false
       },
       "notes": "",
       "url": null
@@ -601,10 +727,337 @@
       "amenities": {
         "room-service": true,
         "oceanview": true,
-        "soaking-tub": true
+        "soaking-tub": true,
+        "ocean-front": true,
+        "swim-up": false,
+        "plunge-pool": true,
+        "butler-club": true
       },
       "notes": "Ocean front, private plunge pool and a jetted whirlpool bathtub, per the resort description.",
       "url": null
+    },
+    {
+      "id": "room_mt7yqu1ziezhbc",
+      "resortId": "res_trs-turquesa",
+      "name": "Junior Suite Poolside",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mt7yqu1z7fdw9c",
+      "resortId": "res_trs-turquesa",
+      "name": "Romance Suite Poolside",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false,
+        "soaking-tub": true,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mt7yqu1zotkgwx",
+      "resortId": "res_trs-turquesa",
+      "name": "Villa Suite Poolside (Web Exclusive)",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mt7yqu1zi9da42",
+      "resortId": "res_trs-turquesa",
+      "name": "Junior Suite Swim Up",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": true,
+        "plunge-pool": false,
+        "butler-club": false,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mt7yqu1z2nxrsb",
+      "resortId": "res_trs-turquesa",
+      "name": "Romance Suite Swim Up",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": true,
+        "plunge-pool": false,
+        "butler-club": false,
+        "soaking-tub": true,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mt7yqu20orkahk",
+      "resortId": "res_trs-turquesa",
+      "name": "Villa Suite Swim Up (Web Exclusive)",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": true,
+        "plunge-pool": false,
+        "butler-club": false,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mt7yqu20zvvsga",
+      "resortId": "res_trs-turquesa",
+      "name": "Ambassador Suite (Web Exclusive)",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false,
+        "soaking-tub": true,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mt7yrv5cgxt370",
+      "resortId": "res_excellence-oyster-bay",
+      "name": "Junior Suite Garden View",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mt7yrv5c1lt8rs",
+      "resortId": "res_excellence-oyster-bay",
+      "name": "Junior Suite with Plunge Pool Garden View",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": false,
+        "plunge-pool": true,
+        "butler-club": false,
+        "soaking-tub": true,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mt7yrv5c7iji23",
+      "resortId": "res_excellence-oyster-bay",
+      "name": "Junior Suite with Private Pool",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": false,
+        "plunge-pool": true,
+        "butler-club": false,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mt7yrv5cskobv8",
+      "resortId": "res_excellence-oyster-bay",
+      "name": "Junior Suite Ocean View",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": true,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mt7yrv5ch9lwqs",
+      "resortId": "res_excellence-oyster-bay",
+      "name": "Junior Suite Ocean Front",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": true,
+        "oceanview": true,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mt7yrv5d3pmz7e",
+      "resortId": "res_excellence-oyster-bay",
+      "name": "Excellence Club Junior Suite with Private Pool",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": false,
+        "plunge-pool": true,
+        "butler-club": true,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mt7yrv5d4oolce",
+      "resortId": "res_excellence-oyster-bay",
+      "name": "Excellence Club Beach House Suite with Plunge Pool Ocean Front",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": true,
+        "oceanview": true,
+        "swim-up": false,
+        "plunge-pool": true,
+        "butler-club": true,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mt7yrv5dnxaf1k",
+      "resortId": "res_excellence-oyster-bay",
+      "name": "Excellence Club Beachfront House Suite with Plunge Pool",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": true,
+        "oceanview": true,
+        "swim-up": false,
+        "plunge-pool": true,
+        "butler-club": true,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mt7yspw7e3ltu0",
+      "resortId": "res_bahia-principe-luxury-ambar",
+      "name": "2 Double Beds Deluxe Junior Suite",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mt7yspw7jsu6yi",
+      "resortId": "res_bahia-principe-luxury-ambar",
+      "name": "1 King Bed Swim Up Premium Junior Suite",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": true,
+        "plunge-pool": false,
+        "butler-club": false,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mt7yspw7zctdhg",
+      "resortId": "res_bahia-principe-luxury-ambar",
+      "name": "2 Double Beds Swim Up Premium Junior Suite",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": true,
+        "plunge-pool": false,
+        "butler-club": false,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mt7yspw7km2ovi",
+      "resortId": "res_bahia-principe-luxury-ambar",
+      "name": "1 King Bed Swim Up Corner Premium Junior Suite",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": true,
+        "plunge-pool": false,
+        "butler-club": false,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
     }
   ],
   "criteria": [
@@ -619,7 +1072,7 @@
     {
       "id": "crit_oceanview",
       "key": "oceanview",
-      "label": "Oceanview",
+      "label": "Ocean View",
       "weight": 3,
       "required": false,
       "sortOrder": 1
@@ -631,6 +1084,38 @@
       "weight": 3,
       "required": false,
       "sortOrder": 2
+    },
+    {
+      "id": "crit_ocean-front",
+      "key": "ocean-front",
+      "label": "Ocean Front",
+      "weight": 2,
+      "required": false,
+      "sortOrder": 3
+    },
+    {
+      "id": "crit_swim-up",
+      "key": "swim-up",
+      "label": "Swim-up / Swim-out",
+      "weight": 1,
+      "required": false,
+      "sortOrder": 4
+    },
+    {
+      "id": "crit_plunge-pool",
+      "key": "plunge-pool",
+      "label": "Private Plunge Pool",
+      "weight": 1,
+      "required": false,
+      "sortOrder": 5
+    },
+    {
+      "id": "crit_butler-club",
+      "key": "butler-club",
+      "label": "Butler / Club Tier",
+      "weight": 1,
+      "required": false,
+      "sortOrder": 6
     }
   ],
   "trips": [
@@ -651,6 +1136,42 @@
       "adults": 2,
       "children": 0,
       "archived": true
+    },
+    {
+      "id": "trip_20270515",
+      "label": "May 2027",
+      "checkIn": "2027-05-15",
+      "checkOut": "2027-05-22",
+      "adults": 2,
+      "children": 0,
+      "archived": false
+    },
+    {
+      "id": "trip_20270612",
+      "label": "June 2027",
+      "checkIn": "2027-06-12",
+      "checkOut": "2027-06-19",
+      "adults": 2,
+      "children": 0,
+      "archived": false
+    },
+    {
+      "id": "trip_20270710",
+      "label": "July 2027",
+      "checkIn": "2027-07-10",
+      "checkOut": "2027-07-17",
+      "adults": 2,
+      "children": 0,
+      "archived": false
+    },
+    {
+      "id": "trip_20270814",
+      "label": "August 2027",
+      "checkIn": "2027-08-14",
+      "checkOut": "2027-08-21",
+      "adults": 2,
+      "children": 0,
+      "archived": false
     }
   ],
   "prices": [
@@ -1472,6 +1993,344 @@
       "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
       "notes": "",
       "capturedAt": "2026-08-24T22:26:25.579Z"
+    },
+    {
+      "id": "price_mt7yqu1xh5bvzp",
+      "roomId": "room_trs-turquesa_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 5200,
+      "salePrice": 3143,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://bookings.palladiumhotelgroup.com/bookcore/availability/suitesturquesa/2027-04-17/2027-04-24/2/0/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:05:20.032Z"
+    },
+    {
+      "id": "price_mt7yqu1zn2noo5",
+      "roomId": "room_mt7yqu1ziezhbc",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 5464,
+      "salePrice": 3303,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://bookings.palladiumhotelgroup.com/bookcore/availability/suitesturquesa/2027-04-17/2027-04-24/2/0/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:05:20.032Z"
+    },
+    {
+      "id": "price_mt7yqu1za8kuqc",
+      "roomId": "room_mt7yqu1z7fdw9c",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 5983,
+      "salePrice": 3617,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://bookings.palladiumhotelgroup.com/bookcore/availability/suitesturquesa/2027-04-17/2027-04-24/2/0/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:05:20.032Z"
+    },
+    {
+      "id": "price_mt7yqu1z5gapi9",
+      "roomId": "room_mt7yqu1zotkgwx",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 6243,
+      "salePrice": 3774,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://bookings.palladiumhotelgroup.com/bookcore/availability/suitesturquesa/2027-04-17/2027-04-24/2/0/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:05:20.032Z"
+    },
+    {
+      "id": "price_mt7yqu1z2rg2pd",
+      "roomId": "room_mt7yqu1zi9da42",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 6661,
+      "salePrice": 4027,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://bookings.palladiumhotelgroup.com/bookcore/availability/suitesturquesa/2027-04-17/2027-04-24/2/0/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:05:20.032Z"
+    },
+    {
+      "id": "price_mt7yqu1zr1jnxa",
+      "roomId": "room_trs-turquesa_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 6763,
+      "salePrice": 4088,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://bookings.palladiumhotelgroup.com/bookcore/availability/suitesturquesa/2027-04-17/2027-04-24/2/0/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:05:20.032Z"
+    },
+    {
+      "id": "price_mt7yqu20y79rlz",
+      "roomId": "room_mt7yqu1z2nxrsb",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 6867,
+      "salePrice": 4151,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://bookings.palladiumhotelgroup.com/bookcore/availability/suitesturquesa/2027-04-17/2027-04-24/2/0/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:05:20.032Z"
+    },
+    {
+      "id": "price_mt7yqu20364ghg",
+      "roomId": "room_mt7yqu20orkahk",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 7024,
+      "salePrice": 4246,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://bookings.palladiumhotelgroup.com/bookcore/availability/suitesturquesa/2027-04-17/2027-04-24/2/0/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:05:20.032Z"
+    },
+    {
+      "id": "price_mt7yqu206k3ent",
+      "roomId": "room_mt7yqu20zvvsga",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 9468,
+      "salePrice": 5723,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://bookings.palladiumhotelgroup.com/bookcore/availability/suitesturquesa/2027-04-17/2027-04-24/2/0/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:05:20.032Z"
+    },
+    {
+      "id": "price_mt7yrv5bsp55qx",
+      "roomId": "room_excellence-oyster-bay_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 4689,
+      "salePrice": null,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:06:08.106Z"
+    },
+    {
+      "id": "price_mt7yrv5c5jikr4",
+      "roomId": "room_mt7yrv5cgxt370",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 4712,
+      "salePrice": null,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:06:08.106Z"
+    },
+    {
+      "id": "price_mt7yrv5c8qbkv7",
+      "roomId": "room_mt7yrv5c1lt8rs",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 5086,
+      "salePrice": null,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:06:08.106Z"
+    },
+    {
+      "id": "price_mt7yrv5cvz4hm2",
+      "roomId": "room_mt7yrv5c7iji23",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 5011,
+      "salePrice": null,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:06:08.106Z"
+    },
+    {
+      "id": "price_mt7yrv5c5yz41c",
+      "roomId": "room_mt7yrv5cskobv8",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 5056,
+      "salePrice": null,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:06:08.106Z"
+    },
+    {
+      "id": "price_mt7yrv5ckxu7nt",
+      "roomId": "room_mt7yrv5ch9lwqs",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 5131,
+      "salePrice": null,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:06:08.106Z"
+    },
+    {
+      "id": "price_mt7yrv5dvb8jco",
+      "roomId": "room_excellence-oyster-bay_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 5461,
+      "salePrice": null,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:06:08.106Z"
+    },
+    {
+      "id": "price_mt7yrv5dnepqp4",
+      "roomId": "room_mt7yrv5d3pmz7e",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 5730,
+      "salePrice": null,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:06:08.106Z"
+    },
+    {
+      "id": "price_mt7yrv5dek0wyc",
+      "roomId": "room_mt7nhgr1i8nqko",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 6135,
+      "salePrice": null,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:06:08.106Z"
+    },
+    {
+      "id": "price_mt7yrv5du9gqm6",
+      "roomId": "room_mt7yrv5d4oolce",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 6329,
+      "salePrice": null,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:06:08.106Z"
+    },
+    {
+      "id": "price_mt7yrv5drgu5re",
+      "roomId": "room_mt7yrv5dnxaf1k",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 6554,
+      "salePrice": null,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://booking.excellenceresorts.com/en/bookcore/availability/excellenceoyster/2027-04-17/2027-04-24/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:06:08.106Z"
+    },
+    {
+      "id": "price_mt7yspw4cdy7hx",
+      "roomId": "room_bahia-principe-luxury-ambar_entry",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 3581,
+      "salePrice": 2649,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://en.book.bahia-principe.com/bookcore/availability/bpluxamb/2027-04-17/2027-04-24/2/0/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:06:47.952Z"
+    },
+    {
+      "id": "price_mt7yspw7z41o8w",
+      "roomId": "room_mt7yspw7e3ltu0",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 3581,
+      "salePrice": 2649,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://en.book.bahia-principe.com/bookcore/availability/bpluxamb/2027-04-17/2027-04-24/2/0/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:06:47.952Z"
+    },
+    {
+      "id": "price_mt7yspw7m5hiib",
+      "roomId": "room_bahia-principe-luxury-ambar_target",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 3966,
+      "salePrice": 2933,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://en.book.bahia-principe.com/bookcore/availability/bpluxamb/2027-04-17/2027-04-24/2/0/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:06:47.952Z"
+    },
+    {
+      "id": "price_mt7yspw7nw1x3w",
+      "roomId": "room_mt7yspw7jsu6yi",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 4543,
+      "salePrice": 3361,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://en.book.bahia-principe.com/bookcore/availability/bpluxamb/2027-04-17/2027-04-24/2/0/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:06:47.952Z"
+    },
+    {
+      "id": "price_mt7yspw7q0ihie",
+      "roomId": "room_mt7yspw7zctdhg",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 4543,
+      "salePrice": 3361,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://en.book.bahia-principe.com/bookcore/availability/bpluxamb/2027-04-17/2027-04-24/2/0/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:06:47.952Z"
+    },
+    {
+      "id": "price_mt7yspw7wk89ub",
+      "roomId": "room_mt7yspw7km2ovi",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 5101,
+      "salePrice": 3774,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://en.book.bahia-principe.com/bookcore/availability/bpluxamb/2027-04-17/2027-04-24/2/0/",
+      "notes": "",
+      "capturedAt": "2026-08-25T01:06:47.952Z"
     }
   ],
   "meta": {

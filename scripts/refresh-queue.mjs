@@ -6,6 +6,7 @@
 //   node scripts/refresh-queue.mjs --json       # machine-readable
 //   node scripts/refresh-queue.mjs --trip 2027  # a specific date range
 //   node scripts/refresh-queue.mjs --stale 7    # only resorts not priced in 7 days
+//   node scripts/refresh-queue.mjs --all-trips  # every active week, not just one
 // ---------------------------------------------------------------------------
 import fs from 'node:fs';
 import path from 'node:path';
@@ -22,19 +23,22 @@ for (let i = 2; i < process.argv.length; i++) {
 }
 
 const activeTrips = db.trips.filter((t) => !t.archived);
-const trip = args.trip && args.trip !== true
-  ? activeTrips.find((t) => t.id === args.trip || t.label.toLowerCase().includes(String(args.trip).toLowerCase()))
-  : activeTrips[0];
+const selected = args['all-trips']
+  ? activeTrips
+  : [args.trip && args.trip !== true
+      ? activeTrips.find((t) => t.id === args.trip || t.label.toLowerCase().includes(String(args.trip).toLowerCase()))
+      : activeTrips[0]].filter(Boolean);
 
-if (!trip) {
+if (selected.length === 0) {
   console.error('no matching active trip');
   process.exit(1);
 }
 
-const nights = Math.max(1, Math.round((Date.parse(trip.checkOut) - Date.parse(trip.checkIn)) / 86_400_000));
+const nightsFor = (t) => Math.max(1, Math.round((Date.parse(t.checkOut) - Date.parse(t.checkIn)) / 86_400_000));
 
 /** Mirrors lib/booking.ts so the CLI and the app build identical URLs. */
-function buildBookingUrl(resort) {
+function buildBookingUrl(resort, trip) {
+  const nights = nightsFor(trip);
   const tpl = resort.bookingUrlTemplate;
   if (!tpl) return null;
   const us = (iso) => { const [y, m, d] = iso.split('-'); return `${m}/${d}/${y}`; };
@@ -62,6 +66,7 @@ function buildBookingUrl(resort) {
 const staleDays = args.stale && args.stale !== true ? Number(args.stale) : null;
 const now = Date.now();
 
+function buildFor(trip) {
 const items = db.resorts
   .filter((r) => r.status !== 'closed')
   .map((resort) => {
@@ -84,7 +89,7 @@ const items = db.resorts
       resortId: resort.id,
       resort: resort.name,
       destination: resort.destination,
-      bookingUrl: buildBookingUrl(resort),
+      bookingUrl: buildBookingUrl(resort, trip),
       websiteUrl: resort.websiteUrl,
       searchUrl: `https://www.cheapcaribbean.com/search?q=${encodeURIComponent(resort.name)}`,
       lastSeen,
@@ -95,18 +100,23 @@ const items = db.resorts
   })
   .filter((i) => staleDays == null || i.staleDays == null || i.staleDays >= staleDays);
 
-const payload = {
+return {
   trip: {
     id: trip.id, label: trip.label, checkIn: trip.checkIn, checkOut: trip.checkOut,
-    nights, adults: trip.adults, children: trip.children,
+    nights: nightsFor(trip), adults: trip.adults, children: trip.children,
   },
   needsBookingUrl: items.filter((i) => !i.bookingUrl).map((i) => i.resort),
   items,
 };
+}
+
+const payloads = selected.map(buildFor);
 
 if (args.json) {
-  console.log(JSON.stringify(payload, null, 2));
+  console.log(JSON.stringify(args['all-trips'] ? payloads : payloads[0], null, 2));
 } else {
+ for (const payload of payloads) {
+  const items = payload.items;
   const t = payload.trip;
   console.log(`Trip: ${t.label}  ${t.checkIn} -> ${t.checkOut}  (${t.nights} nights, ${t.adults} adults)`);
   console.log(`${items.length} resorts to price\n`);
@@ -122,4 +132,6 @@ if (args.json) {
   if (payload.needsBookingUrl.length) {
     console.log(`No booking URL set for: ${payload.needsBookingUrl.join(', ')}`);
   }
+  console.log('');
+ }
 }

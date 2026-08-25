@@ -38,6 +38,7 @@ export async function saveResort(form: FormData) {
     imageUrl: str(form.get('imageUrl')) || null,
     notes: str(form.get('notes')),
     status: (str(form.get('status')) || 'active') as Resort['status'],
+    pinnedRoomId: str(form.get('pinnedRoomId')) || null,
   };
   if (!fields.name) return;
 

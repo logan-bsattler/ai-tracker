@@ -25,6 +25,8 @@ export interface RankingRow {
   entryPrice: number | null;
   targetName: string | null;
   targetUrl: string | null;
+  /** How many rooms at this resort have a price for this trip. */
+  pricedRooms: number;
   price: number | null;
   onSale: boolean;
   /** False when the quote excludes taxes, so it is not comparable as-is. */
@@ -102,6 +104,7 @@ export function buildRankings(trip: Trip | null): {
       entryPrice,
       targetName: s.target?.room.name ?? null,
       targetUrl: linkFor(s.target),
+      pricedRooms: s.rooms.filter((r) => r.pricing.latest != null).length,
       price,
       onSale: latest?.salePrice != null && latest.salePrice > 0,
       taxesIncluded: latest ? includesTaxes(latest) : true,

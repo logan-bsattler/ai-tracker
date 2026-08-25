@@ -181,6 +181,7 @@ export default function Rankings({
               <div className="muted num mt-0.5 text-xs">
                 cheapest {money(r.entryPrice)}
                 {r.upgradeCost != null && r.upgradeCost > 0 && ` · +${money(r.upgradeCost)} to upgrade`}
+                {r.pricedRooms > 1 && ` · ${r.pricedRooms} rooms`}
               </div>
             )}
 
@@ -280,7 +281,10 @@ export default function Rankings({
                     ) : r.targetName}
                   </div>
                   {r.upgradeCost != null && r.upgradeCost > 0 && (
-                    <div className="muted text-xs num">+{money(r.upgradeCost)} over entry</div>
+                    <div className="muted text-xs num">
+                      +{money(r.upgradeCost)} over cheapest
+                      {r.pricedRooms > 1 && ` · ${r.pricedRooms} rooms priced`}
+                    </div>
                   )}
                 </td>
 

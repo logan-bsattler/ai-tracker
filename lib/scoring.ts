@@ -92,6 +92,47 @@ export function scoreRoom(
   };
 }
 
+/** Effective price of a scored room, or null when it has never been priced. */
+function priceOf(r: ScoredRoom): number | null {
+  return r.pricing.latest ? effectivePrice(r.pricing.latest) : null;
+}
+
+/**
+ * Which room would you actually book?
+ *
+ *   1. the pinned room, if one is set
+ *   2. the cheapest room meeting every criterion marked `required`
+ *   3. failing that, the best-matching room, cheapest among equals
+ *
+ * Rule 3 is the default when nothing is marked required, and it lands in the
+ * same place as "cheapest room that has everything" whenever such a room
+ * exists. Marking criteria required only matters when no room has it all —
+ * then it decides whether the resort is disqualified rather than merely
+ * scored low.
+ */
+function pickTarget(rooms: ScoredRoom[], resort: Resort): ScoredRoom | null {
+  if (rooms.length === 0) return null;
+
+  if (resort.pinnedRoomId) {
+    const pinned = rooms.find((r) => r.room.id === resort.pinnedRoomId);
+    if (pinned) return pinned;
+  }
+
+  const priced = rooms.filter((r) => priceOf(r) != null);
+  const pool = priced.length > 0 ? priced : rooms;
+
+  const qualifying = pool.filter((r) => !r.disqualified);
+  if (qualifying.length > 0) {
+    return [...qualifying].sort(
+      (a, b) => (priceOf(a) ?? Infinity) - (priceOf(b) ?? Infinity),
+    )[0];
+  }
+
+  return [...pool].sort(
+    (a, b) => b.score - a.score || (priceOf(a) ?? Infinity) - (priceOf(b) ?? Infinity),
+  )[0];
+}
+
 export function scoreResort(
   db: Database, resort: Resort, trip: Trip | null,
 ): ScoredResort {
@@ -99,11 +140,14 @@ export function scoreResort(
     .filter((r) => r.resortId === resort.id)
     .map((room) => scoreRoom(room, db.criteria, pricingFor(db, room.id, trip?.id ?? null)));
 
-  const entry = rooms.find((r) => r.room.tier === 'entry') ?? null;
-  // Prefer an explicit target room; otherwise the highest-scoring room stands in.
-  const target = rooms.find((r) => r.room.tier === 'target')
-    ?? [...rooms].sort((a, b) => b.score - a.score)[0]
-    ?? null;
+  // Cheapest is whatever actually costs least right now, not whichever room
+  // the spreadsheet once labelled the cheapest.
+  const priced = rooms.filter((r) => priceOf(r) != null);
+  const entry = priced.length > 0
+    ? [...priced].sort((a, b) => priceOf(a)! - priceOf(b)!)[0]
+    : rooms.find((r) => r.room.tier === 'entry') ?? null;
+
+  const target = pickTarget(rooms, resort);
 
   const price = target?.pricing.latest ? effectivePrice(target.pricing.latest) : null;
   const score = target?.score ?? 0;

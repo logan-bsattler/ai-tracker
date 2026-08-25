@@ -153,7 +153,9 @@ export default async function ResortPage({
               </thead>
               <tbody>
                 {scored.rooms.map((sr) => (
-                  <tr key={sr.room.id}>
+                  <tr key={sr.room.id}
+                    style={sr.room.id === scored.target?.room.id
+                      ? { background: 'var(--accent-soft)' } : undefined}>
                     <td className="font-medium">
                       {roomLink(sr) ? (
                         <a href={roomLink(sr)!} target="_blank" rel="noreferrer" className="hover:underline">
@@ -369,6 +371,15 @@ export default async function ResortPage({
           <label className="text-xs">
             <span className="muted mb-1 block">Stars</span>
             <input className="input num" name="stars" defaultValue={resort.stars ?? ''} />
+          </label>
+          <label className="text-xs">
+            <span className="muted mb-1 block">Room you&rsquo;d book</span>
+            <select className="select" name="pinnedRoomId" defaultValue={resort.pinnedRoomId ?? ''}>
+              <option value="">Auto — cheapest that meets your must-haves</option>
+              {scored.rooms.map((sr) => (
+                <option key={sr.room.id} value={sr.room.id}>{sr.room.name}</option>
+              ))}
+            </select>
           </label>
           <label className="text-xs">
             <span className="muted mb-1 block">Status</span>

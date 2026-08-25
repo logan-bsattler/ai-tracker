@@ -31,6 +31,11 @@ export interface Resort {
   imageUrl: string | null;
   notes: string;
   status: 'active' | 'closed' | 'watchlist';
+  /**
+   * Pin a specific room as the one you'd book, overriding the automatic pick.
+   * Null means let scoring choose — see pickTarget() in scoring.ts.
+   */
+  pinnedRoomId: Id | null;
   createdAt: string;
 }
 
@@ -39,9 +44,9 @@ export interface Room {
   resortId: Id;
   name: string;
   /**
-   * 'entry'   = cheapest bookable room (the old "Cheapest Room" column)
-   * 'target'  = the room you'd actually book (the old "Best Room for Us")
-   * 'other'   = anything else worth tracking
+   * Kept from the spreadsheet import, but no longer what drives the ranking:
+   * with every room tracked, "cheapest" and "the one you'd book" are derived
+   * from live prices and criteria instead. See scoring.ts.
    */
   tier: 'entry' | 'target' | 'other';
   /** criteriaKey -> met. Absent key means "unknown", which scores as not met. */
