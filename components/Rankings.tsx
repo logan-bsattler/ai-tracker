@@ -154,6 +154,11 @@ export default function Rankings({
                   <span>{r.destination}</span>
                   {r.transferMinutes != null && <span className="num">{r.transferMinutes} min</span>}
                   {r.status === 'closed' && <span className="chip">Closed</span>}
+                  {r.missingRequired.length > 0 && (
+                    <span className="chip" style={{ color: 'var(--up)' }}>
+                      missing must-have
+                    </span>
+                  )}
                 </div>
               </div>
               <div className="shrink-0 text-right">

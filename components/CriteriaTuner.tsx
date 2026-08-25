@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { useRankConfig } from './useRankConfig';
-import { effectiveCriteria, encodeConfig, type CriterionLite, type RankConfig } from '@/lib/rank';
+import { effectiveCriteria, encodeConfig, type CriterionLite, type CriterionMode, type RankConfig } from '@/lib/rank';
 
 /**
  * Criteria tuning on the published site.
@@ -29,8 +29,8 @@ export default function CriteriaTuner({
   /** Write the whole current list back as an explicit config. */
   const commit = (next: typeof list) => setConfig({
     order: next.map((c) => c.key),
-    off: next.filter((c) => !c.enabled).map((c) => c.key),
-    required: next.filter((c) => c.required).map((c) => c.key),
+    off: next.filter((c) => c.mode === 'off').map((c) => c.key),
+    required: next.filter((c) => c.mode === 'required').map((c) => c.key),
   });
 
   const move = (i: number, dir: -1 | 1) => {
@@ -41,16 +41,15 @@ export default function CriteriaTuner({
     commit(next);
   };
 
-  const toggle = (i: number, field: 'enabled' | 'required') => {
-    const next = list.map((c, k) => (k === i ? { ...c, [field]: !c[field] } : c));
-    commit(next);
+  const setMode = (i: number, mode: CriterionMode) => {
+    commit(list.map((c, k) => (k === i ? { ...c, mode } : c)));
   };
 
   const copyLink = () => {
     const cfg: RankConfig = {
       order: list.map((c) => c.key),
-      off: list.filter((c) => !c.enabled).map((c) => c.key),
-      required: list.filter((c) => c.required).map((c) => c.key),
+      off: list.filter((c) => c.mode === 'off').map((c) => c.key),
+      required: list.filter((c) => c.mode === 'required').map((c) => c.key),
     };
     const url = `${window.location.origin}${window.location.pathname}?${encodeConfig(cfg)}`;
     navigator.clipboard?.writeText(url).then(
@@ -66,7 +65,7 @@ export default function CriteriaTuner({
           const pct = totalWeight > 0 ? Math.round((c.weight / totalWeight) * 100) : 0;
           return (
             <div key={c.key} className="flex items-center gap-2 p-3"
-              style={{ opacity: c.enabled ? 1 : 0.5 }}>
+              style={{ opacity: c.mode === 'off' ? 0.5 : 1 }}>
               <div className="flex shrink-0 flex-col gap-0.5">
                 <button className="btn btn-ghost px-1.5 py-0" onClick={() => move(i, -1)}
                   disabled={i === 0} aria-label={`Move ${c.label} up`}
@@ -95,18 +94,21 @@ export default function CriteriaTuner({
                 </div>
               </div>
 
-              <div className="flex shrink-0 flex-col items-end gap-1 text-xs">
-                <button type="button" className={`chip ${c.enabled ? 'chip-on' : ''}`}
-                  onClick={() => toggle(i, 'enabled')}
-                  aria-pressed={c.enabled}>
-                  {c.enabled ? 'On' : 'Off'}
-                </button>
-                <button type="button" className={`chip ${c.required ? 'chip-on' : ''}`}
-                  onClick={() => toggle(i, 'required')}
-                  aria-pressed={c.required}
-                  title="Rooms missing a required criterion are disqualified, not just scored lower">
-                  {c.required ? 'Required' : 'Optional'}
-                </button>
+              {/* One control, three states: the old pair of toggles could
+                  express "off but required", which means nothing. */}
+              <div className="flex shrink-0 flex-col items-stretch gap-0.5 text-xs"
+                role="group" aria-label={`${c.label} mode`}>
+                {(['optional', 'required', 'off'] as CriterionMode[]).map((m) => (
+                  <button key={m} type="button"
+                    className={`chip justify-center ${c.mode === m ? 'chip-on' : ''}`}
+                    onClick={() => setMode(i, m)}
+                    aria-pressed={c.mode === m}
+                    title={m === 'required'
+                      ? 'Rooms missing this are disqualified, not just scored lower'
+                      : m === 'off' ? 'Ignored entirely' : 'Counts toward the match score'}>
+                    {m === 'optional' ? 'Optional' : m === 'required' ? 'Required' : 'Off'}
+                  </button>
+                ))}
               </div>
             </div>
           );

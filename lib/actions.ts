@@ -186,8 +186,8 @@ export async function saveCriteria(form: FormData) {
       const c = db.criteria.find((x) => x.id === id);
       if (!c) continue;
       c.label = str(form.get(`label:${id}`)) || c.label;
-      c.enabled = form.get(`enabled:${id}`) === 'on';
-      c.required = form.get(`required:${id}`) === 'on';
+      const mode = str(form.get(`mode:${id}`));
+      if (mode === 'optional' || mode === 'required' || mode === 'off') c.mode = mode;
     }
     // Weight is a function of rank, so it is never taken from the form.
     recomputeWeights(db.criteria);
@@ -228,8 +228,7 @@ export async function addCriterion(form: FormData) {
       key,
       label,
       weight: 1, // replaced by recomputeWeights below
-      enabled: true,
-      required: form.get('required') === 'on',
+      mode: form.get('required') === 'on' ? 'required' : 'optional',
       sortOrder: db.criteria.length,
     };
     db.criteria.push(criterion);

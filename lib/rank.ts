@@ -35,11 +35,12 @@ export interface ResortLite {
   rooms: RoomLite[];
 }
 
+export type CriterionMode = 'optional' | 'required' | 'off';
+
 export interface CriterionLite {
   key: string;
   label: string;
-  enabled: boolean;
-  required: boolean;
+  mode: CriterionMode;
 }
 
 /**
@@ -49,7 +50,9 @@ export interface CriterionLite {
  */
 export interface RankConfig {
   order?: string[];
+  /** Keys switched off. Anything not listed keeps its published mode. */
   off?: string[];
+  /** Keys marked required. */
   required?: string[];
 }
 
@@ -74,17 +77,19 @@ export function effectiveCriteria(
 
   const list = order.map((key) => {
     const c = byKey.get(key)!;
-    return {
-      key,
-      label: c.label,
-      enabled: config?.off ? !config.off.includes(key) : c.enabled,
-      required: config?.required ? config.required.includes(key) : c.required,
-      weight: 0,
-    };
+    let mode = c.mode;
+    // A config that names either list is authoritative for both, so a viewer
+    // can clear a published `required` as well as set one.
+    if (config?.off || config?.required) {
+      mode = config.off?.includes(key) ? 'off'
+        : config.required?.includes(key) ? 'required'
+        : 'optional';
+    }
+    return { key, label: c.label, mode, weight: 0 };
   });
 
-  const enabled = list.filter((c) => c.enabled);
-  enabled.forEach((c, i) => { c.weight = enabled.length - i; });
+  const scoring = list.filter((c) => c.mode !== 'off');
+  scoring.forEach((c, i) => { c.weight = scoring.length - i; });
   return list;
 }
 
@@ -97,13 +102,13 @@ export interface ScoredRoomLite {
 }
 
 export function scoreRoomLite(room: RoomLite, criteria: EffectiveCriterion[]): ScoredRoomLite {
-  const active = criteria.filter((c) => c.enabled && c.weight > 0);
+  const active = criteria.filter((c) => c.mode !== 'off' && c.weight > 0);
   const total = active.reduce((s, c) => s + c.weight, 0);
   const met = active.filter((c) => room.amenities[c.key] === true);
   const earned = met.reduce((s, c) => s + c.weight, 0);
 
   const missingRequired = criteria
-    .filter((c) => c.enabled && c.required && room.amenities[c.key] !== true)
+    .filter((c) => c.mode === 'required' && room.amenities[c.key] !== true)
     .map((c) => c.key);
 
   return {
@@ -189,7 +194,7 @@ export function rankResorts(
   config?: RankConfig | null,
 ): { rows: RankingRow[]; criteria: EffectiveCriterion[] } {
   const criteria = effectiveCriteria(published, config);
-  const hasRequired = criteria.some((c) => c.enabled && c.required);
+  const hasRequired = criteria.some((c) => c.mode === 'required');
 
   const rows = resorts.map((resort) => {
     const scored = resort.rooms.map((r) => scoreRoomLite(r, criteria));
@@ -215,7 +220,7 @@ export function rankResorts(
       score,
       disqualified: target?.disqualified ?? false,
       missingRequired: target
-        ? criteria.filter((c) => c.enabled && c.required && target.room.amenities[c.key] !== true)
+        ? criteria.filter((c) => c.mode === 'required' && target.room.amenities[c.key] !== true)
             .map((c) => c.key)
         : [],
       met: target?.room.amenities ?? {},

@@ -96,11 +96,6 @@ export function buildAllRankings(): AllRankings {
     resortsByTrip,
     criteria: [...db.criteria]
       .sort((a, b) => a.sortOrder - b.sortOrder)
-      .map((c) => ({
-        key: c.key,
-        label: c.label,
-        enabled: c.enabled !== false,
-        required: c.required,
-      })),
+      .map((c) => ({ key: c.key, label: c.label, mode: c.mode })),
   };
 }

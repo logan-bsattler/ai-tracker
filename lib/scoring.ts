@@ -78,7 +78,7 @@ export function scoreRoom(
   const earned = met.reduce((s, c) => s + c.weight, 0);
 
   const missingRequired = criteria
-    .filter((c) => c.enabled !== false && c.required && room.amenities[c.key] !== true)
+    .filter((c) => c.mode === 'required' && room.amenities[c.key] !== true)
     .map((c) => c.key);
 
   return {
@@ -150,7 +150,7 @@ export function scoreResort(
     ? [...priced].sort((a, b) => priceOf(a)! - priceOf(b)!)[0]
     : rooms.find((r) => r.room.tier === 'entry') ?? null;
 
-  const hasRequired = db.criteria.some((c) => c.enabled !== false && c.required);
+  const hasRequired = db.criteria.some((c) => c.mode === 'required');
   const target = pickTarget(rooms, resort, hasRequired);
 
   const price = target?.pricing.latest ? effectivePrice(target.pricing.latest) : null;

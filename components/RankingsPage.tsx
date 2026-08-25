@@ -111,7 +111,7 @@ export default function RankingsPage({
         </p>
       )}
 
-      <Rankings rows={rows} criteria={criteria.filter((c) => c.enabled)}
+      <Rankings rows={rows} criteria={criteria.filter((c) => c.mode !== 'off')}
         tripId={trip?.id ?? null} />
     </>
   );

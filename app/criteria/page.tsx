@@ -32,10 +32,10 @@ export default function CriteriaPage() {
           ) : (
             <>
               Ordered by how much they matter — the one at the top counts most.
-              Move a criterion up or down to change its weight; switch one off to
-              leave it out of scoring entirely. Marking one <em>required</em> is
-              stricter still: any room missing it is disqualified rather than
-              merely scoring lower.
+              Move a criterion up or down to change its weight. Each is
+              <em> optional</em> (counts toward the score), <em>required</em>
+              (a room missing it is disqualified, not just scored lower), or
+              <em> off</em> (ignored entirely, without being deleted).
             </>
           )}
         </p>
@@ -43,9 +43,7 @@ export default function CriteriaPage() {
 
       {IS_STATIC ? (
         <CriteriaTuner
-          published={criteria.map((c) => ({
-            key: c.key, label: c.label, enabled: c.enabled !== false, required: c.required,
-          }))}
+          published={criteria.map((c) => ({ key: c.key, label: c.label, mode: c.mode }))}
           roomCounts={Object.fromEntries(criteria.map((c) => [
             c.key, db.rooms.filter((r) => r.amenities[c.key] === true).length,
           ]))}
@@ -61,7 +59,7 @@ export default function CriteriaPage() {
                   ? Math.round((Math.max(0, c.weight) / totalWeight) * 100) : 0;
                 return (
                   <div key={c.id} className="flex flex-wrap items-center gap-3 p-3"
-                    style={{ opacity: c.enabled ? 1 : 0.55 }}>
+                    style={{ opacity: c.mode === 'off' ? 0.55 : 1 }}>
                     <input type="hidden" name="criterionId" value={c.id} />
 
                     {/* Reorder. Submits to moveCriterion, so it works without JS. */}
@@ -88,13 +86,12 @@ export default function CriteriaPage() {
                       weight {c.weight} · {share}%
                     </div>
 
-                    <label className="flex items-center gap-1.5 text-xs">
-                      <input type="checkbox" name={`enabled:${c.id}`} defaultChecked={c.enabled} />
-                      <span>On</span>
-                    </label>
-                    <label className="flex items-center gap-1.5 text-xs">
-                      <input type="checkbox" name={`required:${c.id}`} defaultChecked={c.required} />
-                      <span>Required</span>
+                    <label className="text-xs">
+                      <select className="select w-28" name={`mode:${c.id}`} defaultValue={c.mode}>
+                        <option value="optional">Optional</option>
+                        <option value="required">Required</option>
+                        <option value="off">Off</option>
+                      </select>
                     </label>
 
                     <span className="muted num w-20 text-right text-xs">
@@ -115,8 +112,8 @@ export default function CriteriaPage() {
           </form>
 
           <p className="muted mb-4 text-xs">
-            The up and down arrows save immediately. Renaming, On and Required
-            need the Save button.
+            The up and down arrows save immediately. Renaming and the
+            optional/required/off setting need the Save button.
           </p>
 
           <form action={addCriterion} className="card flex flex-wrap items-end gap-3 p-4">

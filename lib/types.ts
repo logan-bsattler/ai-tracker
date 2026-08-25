@@ -60,6 +60,18 @@ export interface Room {
   notes: string;
 }
 
+/**
+ * How much a criterion binds:
+ *
+ *   optional — counts toward the match score, by its weight
+ *   required — as above, and a room missing it is disqualified outright
+ *   off      — plays no part in scoring at all, without being deleted
+ *
+ * One tri-state rather than two booleans, because "off but required" never
+ * meant anything and was reachable in the old two-checkbox version.
+ */
+export type CriterionMode = 'optional' | 'required' | 'off';
+
 /** A user-defined comparison criterion, e.g. "Soaking Tub". */
 export interface Criterion {
   id: Id;
@@ -68,13 +80,10 @@ export interface Criterion {
   /**
    * Derived from rank, never edited directly: the criterion at the top of the
    * list carries the most weight. Recomputed by recomputeWeights() whenever
-   * the list is reordered or a criterion is toggled. Disabled ones are 0.
+   * the list is reordered or a mode changes. Anything off is 0.
    */
   weight: number;
-  /** Off means it plays no part in scoring, without having to delete it. */
-  enabled: boolean;
-  /** Hard requirement: rooms that fail it are flagged as disqualified. */
-  required: boolean;
+  mode: CriterionMode;
   /** Position in the priority list. 0 is most important. */
   sortOrder: number;
 }
@@ -87,9 +96,9 @@ export interface Criterion {
 export function recomputeWeights(criteria: Criterion[]): void {
   const ordered = [...criteria].sort((a, b) => a.sortOrder - b.sortOrder);
   ordered.forEach((c, i) => { c.sortOrder = i; });
-  const enabled = ordered.filter((c) => c.enabled);
-  enabled.forEach((c, i) => { c.weight = enabled.length - i; });
-  for (const c of ordered) if (!c.enabled) c.weight = 0;
+  const scoring = ordered.filter((c) => c.mode !== 'off');
+  scoring.forEach((c, i) => { c.weight = scoring.length - i; });
+  for (const c of ordered) if (c.mode === 'off') c.weight = 0;
 }
 
 /** A set of travel dates being shopped. Every price belongs to one. */

@@ -174,7 +174,7 @@ export default function CompareView({ data }: { data: AllRankings }) {
             <Row label="$ per match point" rows={rows} highlight={bestValue}
               render={(r) => <span className="num">{money(r.valueIndex)}</span>} />
 
-            {criteria.filter((c) => c.enabled).map((c) => (
+            {criteria.filter((c) => c.mode !== 'off').map((c) => (
               <Row key={c.key} label={c.label} rows={rows} render={(r) => (
                 r.met[c.key] === true
                   ? r.entryMet[c.key] === true
