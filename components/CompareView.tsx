@@ -22,7 +22,9 @@ function Row({
 }) {
   return (
     <tr>
-      <th scope="row" className="whitespace-nowrap">{label}</th>
+      <th scope="row"
+        className="sticky left-0 z-10 whitespace-nowrap"
+        style={{ background: 'var(--surface)' }}>{label}</th>
       {rows.map((r, i) => (
         <td key={r.id} className={i === highlight ? 'font-semibold' : ''}
           style={i === highlight ? { color: 'var(--accent)' } : undefined}>
@@ -105,9 +107,9 @@ export default function CompareView({ data }: { data: AllRankings }) {
         <table className="grid">
           <thead>
             <tr>
-              <th style={{ width: 190 }}></th>
+              <th className="sticky left-0 z-10" style={{ width: 140, background: 'var(--surface)' }}></th>
               {rows.map((r) => (
-                <th key={r.id} style={{ minWidth: 190 }}>
+                <th key={r.id} style={{ minWidth: 160 }}>
                   <Link href={`/resorts/${r.id}${trip ? `?trip=${trip.id}` : ''}`}
                     className="text-sm font-semibold normal-case tracking-normal hover:underline"
                     style={{ color: 'var(--text)' }}>

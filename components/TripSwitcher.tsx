@@ -16,10 +16,10 @@ export default function TripSwitcher({ trips }: { trips: Trip[] }) {
   if (trips.length === 0) return null;
 
   return (
-    <label className="flex items-center gap-2 text-xs">
+    <label className="flex w-full items-center gap-2 text-xs sm:w-auto">
       <span className="muted whitespace-nowrap">Dates</span>
       <select
-        className="select max-w-[22rem]"
+        className="select w-full sm:max-w-[22rem]"
         value={current}
         onChange={(e) => {
           const next = new URLSearchParams(params.toString());

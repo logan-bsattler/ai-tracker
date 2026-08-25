@@ -75,32 +75,32 @@ export default function Rankings({
       {/* Filter bar ---------------------------------------------------- */}
       <div className="card mb-5 p-4">
         <div className="flex flex-wrap items-end gap-3">
-          <label className="min-w-[13rem] flex-1 text-xs">
+          <label className="w-full text-xs sm:min-w-[13rem] sm:flex-1">
             <span className="muted mb-1 block">Search</span>
             <input className="input" placeholder="Resort or room name"
               value={q} onChange={(e) => setQ(e.target.value)} />
           </label>
-          <label className="text-xs">
+          <label className="flex-1 text-xs sm:flex-none">
             <span className="muted mb-1 block">Destination</span>
-            <select className="select" value={destination}
+            <select className="select w-full" value={destination}
               onChange={(e) => setDestination(e.target.value)}>
               <option value="all">All</option>
               {destinations.map((d) => <option key={d} value={d}>{d}</option>)}
             </select>
           </label>
-          <label className="text-xs">
+          <label className="flex-1 text-xs sm:flex-none">
             <span className="muted mb-1 block">Max transfer</span>
-            <input className="input num w-28" inputMode="numeric" placeholder="min"
+            <input className="input num w-full sm:w-28" inputMode="numeric" placeholder="min"
               value={maxTransfer} onChange={(e) => setMaxTransfer(e.target.value)} />
           </label>
-          <label className="text-xs">
+          <label className="flex-1 text-xs sm:flex-none">
             <span className="muted mb-1 block">Max price</span>
-            <input className="input num w-28" inputMode="numeric" placeholder="$"
+            <input className="input num w-full sm:w-28" inputMode="numeric" placeholder="$"
               value={maxPrice} onChange={(e) => setMaxPrice(e.target.value)} />
           </label>
-          <label className="text-xs">
+          <label className="w-full text-xs sm:w-auto">
             <span className="muted mb-1 block">Sort by</span>
-            <select className="select" value={sort}
+            <select className="select w-full" value={sort}
               onChange={(e) => setSort(e.target.value as SortKey)}>
               {SORTS.map((s) => <option key={s.key} value={s.key}>{s.label}</option>)}
             </select>
@@ -129,7 +129,7 @@ export default function Rankings({
 
       {/* Compare tray -------------------------------------------------- */}
       {selected.length > 0 && (
-        <div className="card mb-4 flex flex-wrap items-center gap-3 p-3">
+        <div className="card sticky bottom-3 z-10 mb-4 flex flex-wrap items-center gap-3 p-3 shadow-lg md:static md:shadow-none">
           <span className="text-sm num">{selected.length} selected</span>
           <Link className="btn btn-primary"
             href={`/compare?ids=${selected.join(',')}${tripId ? `&trip=${tripId}` : ''}`}>
@@ -140,7 +140,97 @@ export default function Rankings({
       )}
 
       {/* Table ---------------------------------------------------------- */}
-      <div className="card overflow-x-auto">
+      {/* Mobile: cards. A twelve-column table cannot survive a 390px screen,
+          so the same data is restacked rather than left to scroll sideways. */}
+      <div className="space-y-3 md:hidden">
+        {filtered.map((r) => (
+          <div key={r.id} className="card p-4"
+            style={{ opacity: r.status === 'closed' ? 0.55 : 1 }}>
+            <div className="flex items-start justify-between gap-3">
+              <div className="min-w-0">
+                <Link href={`/resorts/${r.id}${tripQuery}`} className="font-medium hover:underline">
+                  {r.name}
+                </Link>
+                <div className="muted mt-0.5 flex flex-wrap items-center gap-x-2 text-xs">
+                  <span>{r.destination}</span>
+                  {r.transferMinutes != null && <span className="num">{r.transferMinutes} min</span>}
+                  {r.status === 'closed' && <span className="chip">Closed</span>}
+                </div>
+              </div>
+              <div className="shrink-0 text-right">
+                <div className="num text-lg font-semibold leading-tight">{money(r.price)}</div>
+                <div className="mt-0.5 flex flex-wrap justify-end gap-1">
+                  {r.onSale && <span className="chip chip-on">sale</span>}
+                  {r.isLow && r.history.length > 1 && <span className="chip chip-on">low</span>}
+                  {!r.taxesIncluded && (
+                    <span className="chip" style={{ color: 'var(--up)' }}>ex-tax</span>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-2 text-sm">
+              {r.targetName == null ? <span className="muted">No room set</span>
+                : r.targetUrl ? (
+                  <a href={r.targetUrl} target="_blank" rel="noreferrer" className="hover:underline">
+                    {r.targetName} <span className="muted">&#8599;</span>
+                  </a>
+                ) : r.targetName}
+            </div>
+            {r.entryPrice != null && (
+              <div className="muted num mt-0.5 text-xs">
+                cheapest {money(r.entryPrice)}
+                {r.upgradeCost != null && r.upgradeCost > 0 && ` · +${money(r.upgradeCost)} to upgrade`}
+              </div>
+            )}
+
+            <div className="mt-3 flex flex-wrap gap-1.5">
+              {criteria.map((c) => {
+                const has = r.met[c.key] === true;
+                const entryHas = r.entryMet[c.key] === true;
+                // Colour alone is a weak signal on a phone, so an unmet
+                // criterion is struck through as well as left unhighlighted.
+                return (
+                  <span key={c.key} className={`chip ${has ? 'chip-on' : ''}`}
+                    style={has ? undefined : { textDecoration: 'line-through', opacity: 0.65 }}>
+                    {c.label}{has && !entryHas ? ' (upgrade)' : ''}
+                  </span>
+                );
+              })}
+            </div>
+
+            <div className="mt-3 flex items-center justify-between gap-3 border-t pt-3 hairline">
+              <div className="flex items-center gap-2">
+                <div className="h-1.5 w-14 overflow-hidden rounded-full"
+                  style={{ background: 'var(--surface-2)' }}>
+                  <div className="h-full rounded-full"
+                    style={{ width: `${r.score}%`, background: 'var(--accent)' }} />
+                </div>
+                <span className="muted num text-xs">{r.score}%</span>
+                {r.delta != null && r.delta !== 0 && (
+                  <span className="num text-xs"
+                    style={{ color: r.delta < 0 ? 'var(--down)' : 'var(--up)' }}>
+                    {r.delta > 0 ? '+' : ''}{money(r.delta)}
+                  </span>
+                )}
+              </div>
+              <label className="flex items-center gap-1.5 text-xs">
+                <input type="checkbox" checked={selected.includes(r.id)}
+                  aria-label={`Select ${r.name} to compare`}
+                  onChange={() => toggle(selected, setSelected, r.id)} />
+                <span className="muted">compare</span>
+              </label>
+            </div>
+          </div>
+        ))}
+        {filtered.length === 0 && (
+          <div className="card muted p-8 text-center text-sm">
+            No resorts match these filters.
+          </div>
+        )}
+      </div>
+
+      <div className="card hidden overflow-x-auto md:block">
         <table className="grid">
           <thead>
             <tr>
