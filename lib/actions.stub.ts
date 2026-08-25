@@ -19,6 +19,7 @@ export const captureRound = unavailable;
 export const deletePrice = unavailable;
 export const saveCriteria = unavailable;
 export const addCriterion = unavailable;
-export const deleteCriterion = unavailable;
+export const removeCriterion = unavailable as unknown as (id: string) => Promise<void>;
+export const moveCriterion = unavailable as unknown as (id: string, direction: string) => Promise<void>;
 export const saveTrip = unavailable;
 export const deleteTrip = unavailable;

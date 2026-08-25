@@ -78,7 +78,7 @@ export function scoreRoom(
   const earned = met.reduce((s, c) => s + c.weight, 0);
 
   const missingRequired = criteria
-    .filter((c) => c.required && room.amenities[c.key] !== true)
+    .filter((c) => c.enabled !== false && c.required && room.amenities[c.key] !== true)
     .map((c) => c.key);
 
   return {

@@ -1062,52 +1062,58 @@
   ],
   "criteria": [
     {
-      "id": "crit_room-service",
-      "key": "room-service",
-      "label": "Room Service",
-      "weight": 2,
-      "required": false,
-      "sortOrder": 0
-    },
-    {
       "id": "crit_oceanview",
       "key": "oceanview",
       "label": "Ocean View",
-      "weight": 3,
+      "weight": 7,
       "required": false,
-      "sortOrder": 1
+      "sortOrder": 0,
+      "enabled": true
     },
     {
       "id": "crit_soaking-tub",
       "key": "soaking-tub",
       "label": "Soaking Tub",
-      "weight": 3,
+      "weight": 6,
       "required": false,
-      "sortOrder": 2
+      "sortOrder": 1,
+      "enabled": true
+    },
+    {
+      "id": "crit_room-service",
+      "key": "room-service",
+      "label": "Room Service",
+      "weight": 5,
+      "required": false,
+      "sortOrder": 2,
+      "enabled": true
     },
     {
       "id": "crit_ocean-front",
       "key": "ocean-front",
       "label": "Ocean Front",
-      "weight": 2,
+      "weight": 4,
       "required": false,
-      "sortOrder": 3
+      "sortOrder": 3,
+      "enabled": true
     },
     {
       "id": "crit_swim-up",
       "key": "swim-up",
       "label": "Swim-up / Swim-out",
-      "weight": 1,
+      "weight": 3,
       "required": false,
-      "sortOrder": 4
+      "sortOrder": 4,
+      "enabled": true
     },
     {
       "id": "crit_plunge-pool",
       "key": "plunge-pool",
       "label": "Private Plunge Pool",
-      "weight": 1,
+      "weight": 2,
       "required": false,
-      "sortOrder": 5
+      "sortOrder": 5,
+      "enabled": true
     },
     {
       "id": "crit_butler-club",
@@ -1115,7 +1121,8 @@
       "label": "Butler / Club Tier",
       "weight": 1,
       "required": false,
-      "sortOrder": 6
+      "sortOrder": 6,
+      "enabled": true
     }
   ],
   "trips": [

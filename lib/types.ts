@@ -65,11 +65,31 @@ export interface Criterion {
   id: Id;
   key: string;
   label: string;
-  /** Relative importance when computing a match score. 0 disables it. */
+  /**
+   * Derived from rank, never edited directly: the criterion at the top of the
+   * list carries the most weight. Recomputed by recomputeWeights() whenever
+   * the list is reordered or a criterion is toggled. Disabled ones are 0.
+   */
   weight: number;
+  /** Off means it plays no part in scoring, without having to delete it. */
+  enabled: boolean;
   /** Hard requirement: rooms that fail it are flagged as disqualified. */
   required: boolean;
+  /** Position in the priority list. 0 is most important. */
   sortOrder: number;
+}
+
+/**
+ * Weight follows position: with N enabled criteria the first is worth N, the
+ * last 1. Ranking things against each other is far easier than inventing
+ * numbers for them, and the numbers were never meaningful on their own.
+ */
+export function recomputeWeights(criteria: Criterion[]): void {
+  const ordered = [...criteria].sort((a, b) => a.sortOrder - b.sortOrder);
+  ordered.forEach((c, i) => { c.sortOrder = i; });
+  const enabled = ordered.filter((c) => c.enabled);
+  enabled.forEach((c, i) => { c.weight = enabled.length - i; });
+  for (const c of ordered) if (!c.enabled) c.weight = 0;
 }
 
 /** A set of travel dates being shopped. Every price belongs to one. */

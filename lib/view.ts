@@ -153,6 +153,10 @@ export function buildAllRankings(): AllRankings {
   return {
     trips,
     byTrip,
-    criteria: [...db.criteria].sort((a, b) => a.sortOrder - b.sortOrder),
+    // Disabled criteria play no part in scoring, so they are not shown as
+    // columns or offered as filters either.
+    criteria: db.criteria
+      .filter((c) => c.enabled !== false)
+      .sort((a, b) => a.sortOrder - b.sortOrder),
   };
 }

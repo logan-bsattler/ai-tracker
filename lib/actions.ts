@@ -3,6 +3,7 @@
 import { revalidatePath } from 'next/cache';
 import { mutate, newId } from './db';
 import type { Criterion, PriceSource, Resort, Room, Trip } from './types';
+import { recomputeWeights } from './types';
 
 // ---------------------------------------------------------------------------
 // All writes funnel through here. Every action revalidates broadly — the data
@@ -185,9 +186,33 @@ export async function saveCriteria(form: FormData) {
       const c = db.criteria.find((x) => x.id === id);
       if (!c) continue;
       c.label = str(form.get(`label:${id}`)) || c.label;
-      c.weight = numOrNull(form.get(`weight:${id}`)) ?? c.weight;
+      c.enabled = form.get(`enabled:${id}`) === 'on';
       c.required = form.get(`required:${id}`) === 'on';
     }
+    // Weight is a function of rank, so it is never taken from the form.
+    recomputeWeights(db.criteria);
+  });
+  refresh();
+}
+
+/**
+ * Move one criterion up or down the priority list.
+ *
+ * Arguments are bound at render time rather than read from the form: Next
+ * replaces a submit button's `name` with the server action's id, so a
+ * button's own name/value pair never reaches the action.
+ */
+export async function moveCriterion(id: string, direction: string) {
+  const dir = direction === 'up' ? -1 : 1;
+  if (!id) return;
+
+  mutate((db) => {
+    const ordered = [...db.criteria].sort((a, b) => a.sortOrder - b.sortOrder);
+    const i = ordered.findIndex((c) => c.id === id);
+    const j = i + dir;
+    if (i === -1 || j < 0 || j >= ordered.length) return;
+    [ordered[i].sortOrder, ordered[j].sortOrder] = [ordered[j].sortOrder, ordered[i].sortOrder];
+    recomputeWeights(db.criteria);
   });
   refresh();
 }
@@ -202,21 +227,24 @@ export async function addCriterion(form: FormData) {
       id: newId('crit'),
       key,
       label,
-      weight: numOrNull(form.get('weight')) ?? 1,
+      weight: 1, // replaced by recomputeWeights below
+      enabled: true,
       required: form.get('required') === 'on',
       sortOrder: db.criteria.length,
     };
     db.criteria.push(criterion);
+    recomputeWeights(db.criteria);
   });
   refresh();
 }
 
-export async function deleteCriterion(form: FormData) {
-  const id = str(form.get('id'));
+/** Bound-argument form, for the same reason as moveCriterion. */
+export async function removeCriterion(id: string) {
   mutate((db) => {
     const c = db.criteria.find((x) => x.id === id);
     db.criteria = db.criteria.filter((x) => x.id !== id);
     if (c) for (const room of db.rooms) delete room.amenities[c.key];
+    recomputeWeights(db.criteria);
   });
   refresh();
 }
