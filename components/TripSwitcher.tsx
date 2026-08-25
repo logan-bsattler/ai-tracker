@@ -1,17 +1,32 @@
 'use client';
 
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import type { Trip } from '@/lib/types';
 
 /**
  * The selected trip lives in the URL (?trip=...) so every page reads the same
- * value and links stay shareable/bookmarkable.
+ * value and links stay shareable.
+ *
+ * This reads window.location rather than useSearchParams(): the switcher sits
+ * in the root layout, and layouts are not re-rendered per query string on a
+ * static export, so useSearchParams() there stayed empty and the control fell
+ * back to the first trip — showing "April" while the page below rendered May.
  */
 export default function TripSwitcher({ trips }: { trips: Trip[] }) {
-  const router = useRouter();
-  const pathname = usePathname();
-  const params = useSearchParams();
-  const current = params.get('trip') ?? trips[0]?.id ?? '';
+  const [current, setCurrent] = useState<string>('');
+
+  const readFromUrl = () => {
+    const id = new URLSearchParams(window.location.search).get('trip');
+    setCurrent(id && trips.some((t) => t.id === id) ? id : trips[0]?.id ?? '');
+  };
+
+  useEffect(() => {
+    readFromUrl();
+    // Catches back/forward and any client-side navigation that changes ?trip=.
+    window.addEventListener('popstate', readFromUrl);
+    return () => window.removeEventListener('popstate', readFromUrl);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [trips]);
 
   if (trips.length === 0) return null;
 
@@ -22,9 +37,11 @@ export default function TripSwitcher({ trips }: { trips: Trip[] }) {
         className="select w-full sm:max-w-[22rem]"
         value={current}
         onChange={(e) => {
-          const next = new URLSearchParams(params.toString());
+          const next = new URLSearchParams(window.location.search);
           next.set('trip', e.target.value);
-          router.push(`${pathname}?${next.toString()}`);
+          // A full navigation, so every page below re-reads the trip. The data
+          // is already in the bundle, so this stays fast.
+          window.location.search = next.toString();
         }}
       >
         {trips.map((t) => (

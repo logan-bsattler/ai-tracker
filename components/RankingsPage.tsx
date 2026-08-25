@@ -11,13 +11,41 @@ import type { AllRankings } from '@/lib/view';
 const money = (n: number | null) =>
   n == null ? '—' : '$' + n.toLocaleString('en-US', { maximumFractionDigits: 0 });
 
-function Stat({ label, value, hint }: { label: string; value: string; hint?: string }) {
-  return (
-    <div className="card p-4">
+/**
+ * A headline figure. When it describes a particular resort it becomes a link
+ * to that resort — the figure is only useful if you can get from it to the
+ * thing it is about.
+ */
+function Stat({
+  label, value, hint, href, room,
+}: {
+  label: string;
+  value: string;
+  hint?: string;
+  href?: string;
+  room?: string | null;
+}) {
+  const body = (
+    <>
       <div className="muted text-xs uppercase tracking-wide">{label}</div>
       <div className="num mt-1 text-2xl font-semibold">{value}</div>
       {hint && <div className="muted mt-0.5 truncate text-xs">{hint}</div>}
-    </div>
+      {room && <div className="muted truncate text-xs">{room}</div>}
+      {href && (
+        <div className="mt-1 text-xs" style={{ color: 'var(--accent)' }}>
+          See resort &rarr;
+        </div>
+      )}
+    </>
+  );
+
+  if (!href) return <div className="card p-4">{body}</div>;
+  return (
+    <Link href={href}
+      className="card block p-4 transition-colors hover:border-current"
+      style={{ textDecoration: 'none' }}>
+      {body}
+    </Link>
   );
 }
 
@@ -60,6 +88,10 @@ export default function RankingsPage({
 
   const lastCapture = rows.map((r) => r.capturedAt).filter(Boolean).sort().pop();
 
+  const tripQuery = trip ? `?trip=${trip.id}` : '';
+  const resortHref = (row?: { id: string } | null) =>
+    row ? `/resorts/${row.id}${tripQuery}` : undefined;
+
   return (
     <>
       <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
@@ -87,13 +119,18 @@ export default function RankingsPage({
       </div>
 
       <div className="mb-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        <Stat label="Cheapest" value={money(cheapest?.price ?? null)} hint={cheapest?.name} />
+        <Stat label="Cheapest" value={money(cheapest?.price ?? null)}
+          hint={cheapest?.name} room={cheapest?.targetName}
+          href={resortHref(cheapest)} />
         <Stat label="Best match" value={bestMatch ? `${bestMatch.score}%` : '—'}
-          hint={bestMatch ? `${bestMatch.name} · ${money(bestMatch.price)}` : undefined} />
+          hint={bestMatch ? `${bestMatch.name} · ${money(bestMatch.price)}` : undefined}
+          room={bestMatch?.targetName} href={resortHref(bestMatch)} />
         <Stat label="Cheapest 100% match" value={money(cheapestPerfect?.price ?? null)}
-          hint={cheapestPerfect?.name ?? `${perfect.length} resorts meet every criterion`} />
+          hint={cheapestPerfect?.name ?? `${perfect.length} resorts meet every criterion`}
+          room={cheapestPerfect?.targetName} href={resortHref(cheapestPerfect)} />
         <Stat label="Biggest drop" value={bestDrop ? money(bestDrop.delta) : '—'}
-          hint={bestDrop?.name ?? 'No drops since last capture'} />
+          hint={bestDrop?.name ?? 'No drops since last capture'}
+          room={bestDrop?.targetName} href={resortHref(bestDrop)} />
       </div>
 
       {exTaxCount > 0 && (
