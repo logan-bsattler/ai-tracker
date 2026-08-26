@@ -50,12 +50,15 @@ export async function saveResort(form: FormData) {
       return;
     }
     const resortId = newId('res');
-    db.resorts.push({ id: resortId, createdAt: new Date().toISOString(), ...fields });
+    db.resorts.push({
+      id: resortId, createdAt: new Date().toISOString(), ...fields,
+      photos: [], videos: [], reviews: [], lat: null, lng: null,
+    });
     // A resort with no rooms can't be priced, so give it the two the workflow
     // assumes: the cheapest option and the one you'd actually book.
     db.rooms.push(
-      { id: newId('room'), resortId, name: 'Cheapest room', tier: 'entry', amenities: {}, url: null, notes: '' },
-      { id: newId('room'), resortId, name: 'Best room for us', tier: 'target', amenities: {}, url: null, notes: '' },
+      { id: newId('room'), resortId, name: 'Cheapest room', tier: 'entry', amenities: {}, url: null, photos: [], notes: '' },
+      { id: newId('room'), resortId, name: 'Best room for us', tier: 'target', amenities: {}, url: null, photos: [], notes: '' },
     );
   });
   refresh();
@@ -95,7 +98,7 @@ export async function saveRoom(form: FormData) {
     if (existing) {
       Object.assign(existing, { name, tier, notes, amenities, url });
     } else {
-      db.rooms.push({ id: newId('room'), resortId, name, tier, notes, amenities, url });
+      db.rooms.push({ id: newId('room'), resortId, name, tier, notes, amenities, url, photos: [] });
     }
   });
   refresh();

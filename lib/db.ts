@@ -15,10 +15,27 @@ const EMPTY: Database = {
   meta: { version: 1 },
 };
 
+/**
+ * Media arrays were added after the first few hundred rows were written, so
+ * every read fills them in rather than making each consumer guard. Cheaper
+ * than a migration, and it keeps working if an older backup is restored.
+ */
+function normalize(db: Database): Database {
+  for (const r of db.resorts) {
+    r.photos ??= [];
+    r.videos ??= [];
+    r.reviews ??= [];
+    r.lat ??= null;
+    r.lng ??= null;
+  }
+  for (const room of db.rooms) room.photos ??= [];
+  return db;
+}
+
 export function read(): Database {
   try {
     const raw = fs.readFileSync(DB_PATH, 'utf8');
-    return { ...EMPTY, ...JSON.parse(raw) } as Database;
+    return normalize({ ...EMPTY, ...JSON.parse(raw) } as Database);
   } catch {
     return structuredClone(EMPTY);
   }

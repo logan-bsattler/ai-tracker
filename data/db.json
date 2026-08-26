@@ -32,7 +32,25 @@
       "notes": "Engine: reservation-api.barcelo.com XHR, hotel_id 7389. GET deep link found on reservation.barcelo.com (not barcelo.com), confirmed 2026-08-26.",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z",
-      "pinnedRoomId": null
+      "pinnedRoomId": null,
+      "photos": [],
+      "videos": [
+        {
+          "youtubeId": "qjJoc9LngeY",
+          "title": "Barceló Bávaro Beach Adults Only All-Inclusive Resort Tour | Punta Cana",
+          "channel": "Trips with Angie"
+        }
+      ],
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "score": 4.4,
+          "outOf": 5,
+          "count": 16531,
+          "url": "https://www.tripadvisor.com/Search?q=Barcelo%20Bavaro%20Beach%20Punta%20Cana",
+          "capturedAt": "2026-08-26T22:48:56.743Z"
+        }
+      ]
     },
     {
       "id": "res_punta-cana-princess",
@@ -205,7 +223,62 @@
       "notes": "",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z",
-      "pinnedRoomId": null
+      "pinnedRoomId": null,
+      "photos": [
+        {
+          "url": "https://3f840d42a5c2e25c33bc-dd8f040381d63008401e8ccc233f58ca.ssl.cf1.rackcdn.com/u/XOB_Peninsula_Overview_LR.jpg",
+          "caption": "The peninsula from the air",
+          "credit": "Excellence Resorts"
+        },
+        {
+          "url": "https://3f840d42a5c2e25c33bc-dd8f040381d63008401e8ccc233f58ca.ssl.cf1.rackcdn.com/u/Excellence-Oyster-Bay-Resort-Main-Pool-Overview.jpg",
+          "caption": "Main pool",
+          "credit": "Excellence Resorts"
+        },
+        {
+          "url": "https://3f840d42a5c2e25c33bc-dd8f040381d63008401e8ccc233f58ca.ssl.cf1.rackcdn.com/u/_resort/beach-villa-with-private-pool-in-jamaica.jpg",
+          "caption": "Beach villa with private pool",
+          "credit": "Excellence Resorts"
+        },
+        {
+          "url": "https://3f840d42a5c2e25c33bc-dd8f040381d63008401e8ccc233f58ca.ssl.cf1.rackcdn.com/u/_spa/montego-bay-jamaica-miile-spa-resort-deals-1.jpg",
+          "caption": "Miile Spa",
+          "credit": "Excellence Resorts"
+        },
+        {
+          "url": "https://3f840d42a5c2e25c33bc-dd8f040381d63008401e8ccc233f58ca.ssl.cf1.rackcdn.com/u/_restaurantes/martini-bar-in-jamaica-resort-adults-only.jpg",
+          "caption": "Martini bar",
+          "credit": "Excellence Resorts"
+        },
+        {
+          "url": "https://3f840d42a5c2e25c33bc-dd8f040381d63008401e8ccc233f58ca.ssl.cf1.rackcdn.com/u/_actividades/all-inclusive-resorts-montego-bay-jamaica.jpg",
+          "caption": "Beach and watersports",
+          "credit": "Excellence Resorts"
+        },
+        {
+          "url": "https://3f840d42a5c2e25c33bc-dd8f040381d63008401e8ccc233f58ca.ssl.cf1.rackcdn.com/u/_bodas/weddings-in-jamaica-at-excellence-oyster-bay.jpg",
+          "caption": "Wedding setting on the sand",
+          "credit": "Excellence Resorts"
+        }
+      ],
+      "videos": [
+        {
+          "youtubeId": "UtD2qAUEejs",
+          "title": "Excellence Oyster Bay, Jamaica Review & Tour (2025)",
+          "channel": "Luxscape"
+        },
+        {
+          "youtubeId": "dvmnKFI1SuE",
+          "title": "My (Very Honest) Excellence Oyster Bay Jamaica All Inclusive Resort Review",
+          "channel": "Whitney Bonds"
+        },
+        {
+          "youtubeId": "h_gblL4ykYc",
+          "title": "This Is Why Excellence Oyster Bay is the #1 All-Inclusive Resort in Jamaica",
+          "channel": "Coolist"
+        }
+      ],
+      "reviews": []
     },
     {
       "id": "res_sanctuary-cap-cana",
@@ -734,7 +807,14 @@
         "butler-club": true
       },
       "notes": "Ocean front, private plunge pool and a jetted whirlpool bathtub, per the resort description.",
-      "url": null
+      "url": null,
+      "photos": [
+        {
+          "url": "https://3f840d42a5c2e25c33bc-dd8f040381d63008401e8ccc233f58ca.ssl.cf1.rackcdn.com/u/_habitaciones/XOB_EC_Rooftop_Terrace_Suite_With_Plunge_Pool_OCF_01_LR.jpg",
+          "caption": "Rooftop terrace with plunge pool, ocean front",
+          "credit": "Excellence Resorts"
+        }
+      ]
     },
     {
       "id": "room_mt7yqu1ziezhbc",

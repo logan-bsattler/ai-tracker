@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import Gallery from '@/components/Gallery';
 import PriceChart, { type Series } from '@/components/PriceChart';
+import ResortMap from '@/components/ResortMap';
+import ReviewScores from '@/components/ReviewScores';
+import VideoWall from '@/components/VideoWall';
 import {
   addPrice, deletePrice, deleteResort, deleteRoom, saveResort, saveRoom,
 } from '@/lib/actions';
@@ -131,6 +135,25 @@ export default async function ResortPage({
         </div>
       </div>
 
+      {resort.photos.length > 0 && (
+        <section className="card mb-5 p-5">
+          <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide">
+            Photos <span className="muted num font-normal">{resort.photos.length}</span>
+          </h2>
+          <Gallery photos={resort.photos} alt={resort.name} />
+          <p className="muted mt-3 text-xs">
+            Photos are the resort&rsquo;s own, shown from their site.
+          </p>
+        </section>
+      )}
+
+      {resort.reviews.length > 0 && (
+        <section className="mb-5">
+          <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide">Guest ratings</h2>
+          <ReviewScores reviews={resort.reviews} />
+        </section>
+      )}
+
       <section className="card mb-5 p-5">
         <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide">Price history</h2>
         <PriceChart series={series} />
@@ -165,6 +188,11 @@ export default async function ResortPage({
                     {money(sr.pricing.latest ? effectivePrice(sr.pricing.latest) : null)}
                   </span>
                 </div>
+                {sr.room.photos.length > 0 && (
+                  <div className="mt-2">
+                    <Gallery photos={sr.room.photos} alt={sr.room.name} variant="strip" />
+                  </div>
+                )}
                 <div className="mt-2 flex flex-wrap gap-1.5">
                   {criteria.map((c) => {
                     const has = sr.room.amenities[c.key] === true;
@@ -201,6 +229,11 @@ export default async function ResortPage({
                           {sr.room.name} <span className="muted">↗</span>
                         </a>
                       ) : sr.room.name}
+                      {sr.room.photos.length > 0 && (
+                        <div className="mt-1.5">
+                          <Gallery photos={sr.room.photos} alt={sr.room.name} variant="strip" />
+                        </div>
+                      )}
                     </td>
                     <td className="muted text-xs">
                       {sr.room.tier === 'entry' ? 'Cheapest' : sr.room.tier === 'target' ? 'Target' : 'Other'}
@@ -262,6 +295,12 @@ export default async function ResortPage({
                 </div>
               </div>
 
+              {sr.room.photos.length > 0 && (
+                <div className="mt-3">
+                  <Gallery photos={sr.room.photos} alt={sr.room.name} variant="strip" />
+                </div>
+              )}
+
               <div className="mt-3 flex flex-wrap items-center gap-4 border-t pt-3 hairline">
                 {criteria.map((c) => (
                   <label key={c.key} className="flex items-center gap-1.5 text-xs">
@@ -295,6 +334,30 @@ export default async function ResortPage({
           </form>
         </div>
         )}
+      </section>
+
+      {/* Video and map --------------------------------------------------- */}
+      <section className="mb-5 grid gap-5 lg:grid-cols-2">
+        <div className="card p-5">
+          <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide">Video tours</h2>
+          {resort.videos.length > 0 ? (
+            <VideoWall videos={resort.videos} />
+          ) : (
+            <p className="muted text-sm">
+              None saved yet.{' '}
+              <a className="underline" target="_blank" rel="noreferrer"
+                href={`https://www.youtube.com/results?search_query=${encodeURIComponent(`${resort.name} ${resort.destination} resort review`)}`}>
+                Search YouTube ↗
+              </a>
+            </p>
+          )}
+        </div>
+
+        <div className="card p-5">
+          <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide">Location</h2>
+          <ResortMap name={resort.name} destination={resort.destination}
+            lat={resort.lat} lng={resort.lng} propertyMapUrl={resort.websiteUrl} />
+        </div>
       </section>
 
       {/* Manual price entry --------------------------------------------- */}

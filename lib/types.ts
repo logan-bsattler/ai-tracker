@@ -10,6 +10,49 @@
 
 export type Id = string;
 
+// ---------------------------------------------------------------------------
+// Media.
+//
+// Everything here is somebody else's content, so the shapes below are built to
+// point at it rather than copy it:
+//
+//   photos  — hotlinked from the resort's own site, with a credit. The resort
+//             publishes these to be seen; we never re-host them.
+//   reviews — the aggregate score only. "4.4 from 16,531 reviews" is a fact
+//             about a page; the review text itself belongs to the review site,
+//             so we link out instead of reproducing any of it.
+//   videos  — YouTube ids. YouTube is built to be embedded and the creator
+//             keeps their view count, so embedding is the friendly option.
+// ---------------------------------------------------------------------------
+
+/** One image, hosted wherever it already lives. */
+export interface Photo {
+  url: string;
+  caption: string | null;
+  /** Shown as attribution under the image. */
+  credit: string | null;
+}
+
+/** An aggregate rating. Deliberately never individual reviews — see above. */
+export interface ReviewScore {
+  /** "TripAdvisor", "Google", "Booking.com", … */
+  source: string;
+  score: number;
+  /** Scales differ: TripAdvisor is out of 5, Booking.com out of 10. */
+  outOf: number;
+  count: number | null;
+  /** Where to go and actually read them. */
+  url: string | null;
+  capturedAt: string;
+}
+
+/** A walkthrough or review video. */
+export interface VideoRef {
+  youtubeId: string;
+  title: string;
+  channel: string | null;
+}
+
 export interface Resort {
   id: Id;
   name: string;
@@ -28,7 +71,17 @@ export interface Resort {
    */
   bookingUrlTemplate: string | null;
   websiteUrl: string | null;
+  /** Hero shot. Falls back to the first entry in `photos` when unset. */
   imageUrl: string | null;
+  photos: Photo[];
+  videos: VideoRef[];
+  reviews: ReviewScore[];
+  /**
+   * Used for the map. Absent means the map falls back to searching the
+   * resort's name, which is usually good enough for a beach resort.
+   */
+  lat: number | null;
+  lng: number | null;
   notes: string;
   status: 'active' | 'closed' | 'watchlist';
   /**
@@ -57,6 +110,7 @@ export interface Room {
    * empty and the link falls back to the resort's dated booking URL.
    */
   url: string | null;
+  photos: Photo[];
   notes: string;
 }
 
