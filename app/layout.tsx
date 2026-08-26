@@ -23,6 +23,7 @@ const NAV = [
   // Capturing needs a server to post to, so it is absent from the static site.
   ...(IS_STATIC ? [] : [{ href: '/capture', label: 'Capture' }]),
   { href: '/compare', label: 'Compare' },
+  { href: '/weeks', label: 'Weeks' },
   { href: '/trips', label: 'Trips' },
   { href: '/criteria', label: 'Criteria' },
 ];
