@@ -1075,6 +1075,57 @@
       },
       "url": null,
       "notes": ""
+    },
+    {
+      "id": "room_mtagfm1teq2fkb",
+      "resortId": "res_melia-punta-cana-beach",
+      "name": "Premium Room Tropical Palms",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mtagfm1t9jam55",
+      "resortId": "res_melia-punta-cana-beach",
+      "name": "The Level Suite Tropical Palms",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": true,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mtagfm1tj3y0sj",
+      "resortId": "res_melia-punta-cana-beach",
+      "name": "The Level Master Suite Tropical Palms",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": true,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
     }
   ],
   "criteria": [
@@ -4451,6 +4502,149 @@
       "url": "https://www.majestic-resorts.com/punta-cana/resorts/majestic-elegance-punta-cana",
       "notes": "",
       "capturedAt": "2026-08-26T18:48:23.858Z"
+    },
+    {
+      "id": "price_mtagfm1tlkt1lk",
+      "roomId": "room_mtagfm1teq2fkb",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 2791,
+      "salePrice": 2180,
+      "currency": "USD",
+      "taxesIncluded": false,
+      "url": "https://www.melia.com/en/hotels/dominican-republic/punta-cana/melia-punta-cana-beach-resort",
+      "notes": "",
+      "capturedAt": "2026-08-26T18:56:01.887Z"
+    },
+    {
+      "id": "price_mtagfm1tr6rdax",
+      "roomId": "room_mtagfm1t9jam55",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 3604,
+      "salePrice": 2815,
+      "currency": "USD",
+      "taxesIncluded": false,
+      "url": "https://www.melia.com/en/hotels/dominican-republic/punta-cana/melia-punta-cana-beach-resort",
+      "notes": "",
+      "capturedAt": "2026-08-26T18:56:01.887Z"
+    },
+    {
+      "id": "price_mtagfm1tl1qfke",
+      "roomId": "room_mtagfm1tj3y0sj",
+      "tripId": "trip_imported",
+      "source": "resort-direct",
+      "price": 4338,
+      "salePrice": 3389,
+      "currency": "USD",
+      "taxesIncluded": false,
+      "url": "https://www.melia.com/en/hotels/dominican-republic/punta-cana/melia-punta-cana-beach-resort",
+      "notes": "",
+      "capturedAt": "2026-08-26T18:56:01.887Z"
+    },
+    {
+      "id": "price_mtagmgbo8niu5l",
+      "roomId": "room_melia-punta-cana-beach_entry",
+      "tripId": "trip_20270515",
+      "source": "resort-direct",
+      "price": 2177,
+      "salePrice": 1700,
+      "currency": "USD",
+      "taxesIncluded": false,
+      "url": "https://www.melia.com/en/hotels/dominican-republic/punta-cana/melia-punta-cana-beach-resort",
+      "notes": "",
+      "capturedAt": "2026-08-26T19:01:21.060Z"
+    },
+    {
+      "id": "price_mtagmghkadhmxh",
+      "roomId": "room_mtagfm1teq2fkb",
+      "tripId": "trip_20270515",
+      "source": "resort-direct",
+      "price": 2320,
+      "salePrice": 1812,
+      "currency": "USD",
+      "taxesIncluded": false,
+      "url": "https://www.melia.com/en/hotels/dominican-republic/punta-cana/melia-punta-cana-beach-resort",
+      "notes": "",
+      "capturedAt": "2026-08-26T19:01:21.272Z"
+    },
+    {
+      "id": "price_mtagmgmqdk9ybb",
+      "roomId": "room_mtagfm1t9jam55",
+      "tripId": "trip_20270515",
+      "source": "resort-direct",
+      "price": 3197,
+      "salePrice": 2497,
+      "currency": "USD",
+      "taxesIncluded": false,
+      "url": "https://www.melia.com/en/hotels/dominican-republic/punta-cana/melia-punta-cana-beach-resort",
+      "notes": "",
+      "capturedAt": "2026-08-26T19:01:21.458Z"
+    },
+    {
+      "id": "price_mtagmgruhw9kpq",
+      "roomId": "room_mtagfm1tj3y0sj",
+      "tripId": "trip_20270515",
+      "source": "resort-direct",
+      "price": 3883,
+      "salePrice": 3033,
+      "currency": "USD",
+      "taxesIncluded": false,
+      "url": "https://www.melia.com/en/hotels/dominican-republic/punta-cana/melia-punta-cana-beach-resort",
+      "notes": "",
+      "capturedAt": "2026-08-26T19:01:21.642Z"
+    },
+    {
+      "id": "price_mtagthoa8jxal3",
+      "roomId": "room_melia-punta-cana-beach_entry",
+      "tripId": "trip_20270612",
+      "source": "resort-direct",
+      "price": 2177,
+      "salePrice": 1700,
+      "currency": "USD",
+      "taxesIncluded": false,
+      "url": "https://www.melia.com/en/hotels/dominican-republic/punta-cana/melia-punta-cana-beach-resort",
+      "notes": "",
+      "capturedAt": "2026-08-26T19:06:49.402Z"
+    },
+    {
+      "id": "price_mtagtjoxtzegvq",
+      "roomId": "room_mtagfm1teq2fkb",
+      "tripId": "trip_20270612",
+      "source": "resort-direct",
+      "price": 2319,
+      "salePrice": 1811,
+      "currency": "USD",
+      "taxesIncluded": false,
+      "url": "https://www.melia.com/en/hotels/dominican-republic/punta-cana/melia-punta-cana-beach-resort",
+      "notes": "",
+      "capturedAt": "2026-08-26T19:06:52.017Z"
+    },
+    {
+      "id": "price_mtagtkcrdqmjnz",
+      "roomId": "room_mtagfm1t9jam55",
+      "tripId": "trip_20270612",
+      "source": "resort-direct",
+      "price": 3172,
+      "salePrice": 2478,
+      "currency": "USD",
+      "taxesIncluded": false,
+      "url": "https://www.melia.com/en/hotels/dominican-republic/punta-cana/melia-punta-cana-beach-resort",
+      "notes": "",
+      "capturedAt": "2026-08-26T19:06:52.875Z"
+    },
+    {
+      "id": "price_mtagtkkhuvmnbj",
+      "roomId": "room_mtagfm1tj3y0sj",
+      "tripId": "trip_20270612",
+      "source": "resort-direct",
+      "price": 3863,
+      "salePrice": 3017,
+      "currency": "USD",
+      "taxesIncluded": false,
+      "url": "https://www.melia.com/en/hotels/dominican-republic/punta-cana/melia-punta-cana-beach-resort",
+      "notes": "",
+      "capturedAt": "2026-08-26T19:06:53.153Z"
     }
   ],
   "meta": {
