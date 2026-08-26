@@ -4399,6 +4399,58 @@
       "url": "https://www.majestic-resorts.com/punta-cana/resorts/majestic-elegance-punta-cana",
       "notes": "",
       "capturedAt": "2026-08-26T18:40:52.898Z"
+    },
+    {
+      "id": "price_mtag1jk7utbnio",
+      "roomId": "room_majestic-elegance_entry",
+      "tripId": "trip_20271113",
+      "source": "resort-direct",
+      "price": 6876.8,
+      "salePrice": 3438.4,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://www.majestic-resorts.com/punta-cana/resorts/majestic-elegance-punta-cana",
+      "notes": "",
+      "capturedAt": "2026-08-26T18:45:05.479Z"
+    },
+    {
+      "id": "price_mtag1jp6h5cxpz",
+      "roomId": "room_majestic-elegance_target",
+      "tripId": "trip_20271113",
+      "source": "resort-direct",
+      "price": 8467.2,
+      "salePrice": 4233.6,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://www.majestic-resorts.com/punta-cana/resorts/majestic-elegance-punta-cana",
+      "notes": "",
+      "capturedAt": "2026-08-26T18:45:05.658Z"
+    },
+    {
+      "id": "price_mtag5sgqlyyvpu",
+      "roomId": "room_majestic-elegance_entry",
+      "tripId": "trip_20271211",
+      "source": "resort-direct",
+      "price": 6876.8,
+      "salePrice": 3438.4,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://www.majestic-resorts.com/punta-cana/resorts/majestic-elegance-punta-cana",
+      "notes": "",
+      "capturedAt": "2026-08-26T18:48:23.642Z"
+    },
+    {
+      "id": "price_mtag5smqlyy84j",
+      "roomId": "room_majestic-elegance_target",
+      "tripId": "trip_20271211",
+      "source": "resort-direct",
+      "price": 8467.2,
+      "salePrice": 4233.6,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://www.majestic-resorts.com/punta-cana/resorts/majestic-elegance-punta-cana",
+      "notes": "",
+      "capturedAt": "2026-08-26T18:48:23.858Z"
     }
   ],
   "meta": {
