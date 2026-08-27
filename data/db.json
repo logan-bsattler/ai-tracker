@@ -16,7 +16,46 @@
       "notes": "Renamed by the chain to \"Bahia Principe Escape Ambar\".",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z",
-      "pinnedRoomId": null
+      "pinnedRoomId": null,
+      "photos": [
+        {
+          "url": "https://www.bahia-principe.com/data/webp/bahia-principe-escape-ambar-desktop-3b4b26cf76d692bbedb057308884c0e9-89c4c1557904d988ab557815840ec67c.webp",
+          "caption": "Resort exterior",
+          "credit": "Bahia Principe"
+        },
+        {
+          "url": "https://www.bahia-principe.com/data/webp/bahia-principe-escape-ambar-fuente-recepcion-desktop-6a234c989a159b7ee83216203c7820c2-39129e1c204cf09174758e38e899b05c.webp",
+          "caption": "Reception fountain",
+          "credit": "Bahia Principe"
+        },
+        {
+          "url": "https://www.bahia-principe.com/content/thumbs/870_580/content/imgsxml/galerias/panel_galleryslide/1/bahia-principe-escape-ambar-vista-aerea-habitaciones-desktop-acb28b99b1579b4b6a3590f3c1811cd3.jpg",
+          "caption": "Aerial view of the rooms",
+          "credit": "Bahia Principe"
+        }
+      ],
+      "videos": [
+        {
+          "youtubeId": "37Gmex5LIJQ",
+          "title": "Bahia Principe Luxury Ambar Punta Cana (HONEST Review & Full Tour)",
+          "channel": "Travallion"
+        },
+        {
+          "youtubeId": "1P7Qafb4ln4",
+          "title": "Bahia Principe Punta Cana | Tour the LUXURY AMBAR Adults Only Resort",
+          "channel": "Explorcation"
+        }
+      ],
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "score": 4.3,
+          "outOf": 5,
+          "count": 14514,
+          "url": "https://www.tripadvisor.com/Hotel_Review-g147293-d1199681-Reviews-Bahia_Principe_Escape_Ambar-Punta_Cana_La_Altagracia_Province_Dominican_Republic.html",
+          "capturedAt": "2026-08-27T02:22:15.386Z"
+        }
+      ]
     },
     {
       "id": "res_barcelo-bavaro-beach",
@@ -66,7 +105,56 @@
       "notes": "Engine: Mirai, idtokenprovider=100376314. Dispatcher loads but ignores checkin=. PRICES EXCLUDE TAXES, unlike every other resort here — not directly comparable. Mirai engine; the parties= parameter hard-codes 2 adults.",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z",
-      "pinnedRoomId": null
+      "pinnedRoomId": null,
+      "photos": [
+        {
+          "url": "https://www.princess-hotels.com/wp-content/blogs.dir/1738/files/punta-cana-princess-home//Banner_HighQ.jpeg",
+          "caption": "Resort overview",
+          "credit": "Princess Hotels"
+        },
+        {
+          "url": "https://www.princess-hotels.com/wp-content/blogs.dir/1738/files/punta-cana-princess-home//gastronomia.jpg",
+          "caption": "Dining",
+          "credit": "Princess Hotels"
+        },
+        {
+          "url": "https://www.princess-hotels.com/wp-content/blogs.dir/1738/files/punta-cana-princess-home//gimSpa.jpg",
+          "caption": "Gym and spa",
+          "credit": "Princess Hotels"
+        },
+        {
+          "url": "https://www.princess-hotels.com/wp-content/uploads/sites/1738/nggallery/punta-cana-princess-galeria-nueva-general//galeria-ubicacion-2.jpg",
+          "caption": "Grounds",
+          "credit": "Princess Hotels"
+        },
+        {
+          "url": "https://www.princess-hotels.com/wp-content/uploads/sites/1738/nggallery/punta-cana-princess-galeria-nueva-general//galeria-onlyadults-2.jpg",
+          "caption": "Adults-only pool area",
+          "credit": "Princess Hotels"
+        }
+      ],
+      "videos": [
+        {
+          "youtubeId": "-VaHYB4rWac",
+          "title": "Princess Punta Cana All Inclusive Resort (Full Resort Tour & Review)",
+          "channel": "Luxscape"
+        },
+        {
+          "youtubeId": "AHS1EizNxfw",
+          "title": "Best choice in Dominican Republic? Hotel Punta Cana Princess Adults Only Full Review",
+          "channel": "Hotel Guide"
+        }
+      ],
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "score": 4.3,
+          "outOf": 5,
+          "count": 9316,
+          "url": "https://www.tripadvisor.com/Hotel_Review-g3176298-d313884-Reviews-Punta_Cana_Princess-Bavaro_Punta_Cana_La_Altagracia_Province_Dominican_Republic.html",
+          "capturedAt": "2026-08-27T02:25:05.024Z"
+        }
+      ]
     },
     {
       "id": "res_catalonia-royal-bavaro",
@@ -84,7 +172,56 @@
       "notes": "Engine: Mirai, hotelBackCode=CRB. Public min-price API at apiweb.cataloniahotels.com.",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z",
-      "pinnedRoomId": null
+      "pinnedRoomId": null,
+      "photos": [
+        {
+          "url": "https://images.cataloniahotels.com/styles/talla_tres/cloud-storage/images/2024-09/hero-20.jpg.webp",
+          "caption": "Resort overview",
+          "credit": "Catalonia Hotels"
+        },
+        {
+          "url": "https://images.cataloniahotels.com/styles/talla_tres/cloud-storage/images/2024-08/highlight-hab-25.jpg.webp",
+          "caption": "A guest room",
+          "credit": "Catalonia Hotels"
+        },
+        {
+          "url": "https://images.cataloniahotels.com/styles/talla_dos/cloud-storage/images/2024-09/highlight-hotel-38.jpg.webp",
+          "caption": "Grounds",
+          "credit": "Catalonia Hotels"
+        },
+        {
+          "url": "https://images.cataloniahotels.com/styles/talla_dos/cloud-storage/images/2024-09/highlight-gastro-32.jpg.webp",
+          "caption": "Dining",
+          "credit": "Catalonia Hotels"
+        },
+        {
+          "url": "https://images.cataloniahotels.com/styles/talla_tres/cloud-storage/images/2024-09/highlight-instalaciones-37.jpg.webp",
+          "caption": "Facilities",
+          "credit": "Catalonia Hotels"
+        }
+      ],
+      "videos": [
+        {
+          "youtubeId": "zL0uypuOIvQ",
+          "title": "Catalonia Royal Bavaro Punta Cana (All-Inclusive) | HONEST Review & Full Tour",
+          "channel": "Luxscape"
+        },
+        {
+          "youtubeId": "xolLjy52JJA",
+          "title": "Catalonia Royal Bavaro Punta Cana Review 2025 (Everything You NEED To Know!)",
+          "channel": "Royal Retreats"
+        }
+      ],
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "score": 4.2,
+          "outOf": 5,
+          "count": 10202,
+          "url": "https://www.tripadvisor.com/Hotel_Review-g147293-d611703-Reviews-Catalonia_Royal_Bavaro-Punta_Cana_La_Altagracia_Province_Dominican_Republic.html",
+          "capturedAt": "2026-08-27T02:28:18.229Z"
+        }
+      ]
     },
     {
       "id": "res_serenade-all-suites",
@@ -95,12 +232,61 @@
       "stars": 5,
       "tags": [],
       "bookingUrlTemplate": "https://www.serenadepuntacana.com/booking1?startDate={checkInEUEnc}&endDate={checkOutEUEnc}&numRooms=1&adultsRoom1={adults}&childrenRoom1={children}",
-      "websiteUrl": "https://www.serenadepuntacana.com/",
+      "websiteUrl": "https://www.serenadeallsuites.com/",
       "imageUrl": null,
       "notes": "",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z",
-      "pinnedRoomId": null
+      "pinnedRoomId": null,
+      "photos": [
+        {
+          "url": "https://cdn2.paraty.es/serenade-all-suites/images/fd4c7c73762c724=s1600",
+          "caption": "Beach with palm trees and pier",
+          "credit": "Serenade All Suites"
+        },
+        {
+          "url": "https://cdn2.paraty.es/serenade-all-suites/images/8f768dd96ab74d2=s800",
+          "caption": "Waterfall pool at sunset",
+          "credit": "Serenade All Suites"
+        },
+        {
+          "url": "https://cdn2.paraty.es/serenade-all-suites/images/8f4299529efce99=s800",
+          "caption": "Bar",
+          "credit": "Serenade All Suites"
+        },
+        {
+          "url": "https://cdn2.paraty.es/serenade-all-suites/images/07eb31cc3cda3c4=s1500",
+          "caption": "Buffet",
+          "credit": "Serenade All Suites"
+        },
+        {
+          "url": "https://cdn2.paraty.es/serenade-all-suites/images/9772ef2d02bee35=s600",
+          "caption": "Infinity pool at sunset",
+          "credit": "Serenade All Suites"
+        }
+      ],
+      "videos": [
+        {
+          "youtubeId": "GLqWvvDkdGY",
+          "title": "Serenade All Suites Punta Cana Full Resort Tour",
+          "channel": "NittyGrittyTravelers"
+        },
+        {
+          "youtubeId": "6v9M31CSELA",
+          "title": "Serenade All Suites Punta Cana - Adult's Only Review (Everything You Need To Know)",
+          "channel": "Royal Retreats"
+        }
+      ],
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "score": 4.5,
+          "outOf": 5,
+          "count": 1363,
+          "url": "https://www.tripadvisor.com/Hotel_Review-g25226430-d26656550-Reviews-Serenade_All_Suites_Adults_Only_Resort_All_inclusive-Cabeza_De_Toro_Punta_Cana_La_A.html",
+          "capturedAt": "2026-08-27T02:32:59.334Z"
+        }
+      ]
     },
     {
       "id": "res_trs-turquesa",
@@ -118,7 +304,46 @@
       "notes": "",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z",
-      "pinnedRoomId": null
+      "pinnedRoomId": null,
+      "photos": [
+        {
+          "url": "https://www.palladiumhotelgroup.com/content/dam/palladium/images/hoteles/republica-dominicana/punta-cana/hotel/fachadas/trs-turquesa-hotel/trs-turquesa-hotel-slider.jpg",
+          "caption": "Resort overview",
+          "credit": "Palladium Hotel Group"
+        },
+        {
+          "url": "https://www.palladiumhotelgroup.com/content/dam/palladium/images/hoteles/republica-dominicana/punta-cana/hotel/piscinas/trs-turquesa-hotel/trs-turquesa-hotel-piscina-principal_03.jpg",
+          "caption": "Main pool",
+          "credit": "Palladium Hotel Group"
+        },
+        {
+          "url": "https://www.palladiumhotelgroup.com/content/dam/palladium/images/hoteles/republica-dominicana/punta-cana/hotel/playas/TRS-Turquesa-Hotel-Playa.jpg",
+          "caption": "Beach",
+          "credit": "Palladium Hotel Group"
+        }
+      ],
+      "videos": [
+        {
+          "youtubeId": "4SKJ-VsnOk8",
+          "title": "TRS Turquesa Punta Cana - Adult's Only (HONEST Review & Full Tour)",
+          "channel": "Luxscape"
+        },
+        {
+          "youtubeId": "CbqBR-ZE3jE",
+          "title": "Punta Cana's BEST Kept Secret TRS Turquesa Hotel And Resort Tour!",
+          "channel": "This Is Our Retirement"
+        }
+      ],
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "score": 4.5,
+          "outOf": 5,
+          "count": 20706,
+          "url": "https://www.tripadvisor.com/Hotel_Review-g3176298-d1005302-Reviews-TRS_Turquesa_Hotel-Bavaro_Punta_Cana_La_Altagracia_Province_Dominican_Republic.html",
+          "capturedAt": "2026-08-27T02:37:30.060Z"
+        }
+      ]
     },
     {
       "id": "res_majestic-elegance",
@@ -137,7 +362,46 @@
       "notes": "Engine: Hotetec SPA. No GET form exposed.",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z",
-      "pinnedRoomId": null
+      "pinnedRoomId": null,
+      "photos": [
+        {
+          "url": "https://www.majestic-resorts.com/dam/multiHotel-majesticresorts/resorts/majestic-elegance-punta-cana/home/header-majestic-elegance.jpg",
+          "caption": "Resort overview",
+          "credit": "Majestic Resorts"
+        },
+        {
+          "url": "https://www.majestic-resorts.com/dam/jcr:b57df7e0-6d5f-4b2f-a6b7-29f55a072b29/gallery6-majestic-elegance-punta-cana.jpg",
+          "caption": "General view of the One Bedroom Suite",
+          "credit": "Majestic Resorts"
+        },
+        {
+          "url": "https://www.majestic-resorts.com/dam/jcr:69d7033d-ec2f-4935-b58f-4792a4d6f456/gallery24-majestic-elegance-punta-cana.jpg",
+          "caption": "Aerial view of the resort",
+          "credit": "Majestic Resorts"
+        }
+      ],
+      "videos": [
+        {
+          "youtubeId": "I5uL18hIfqw",
+          "title": "Majestic Elegance Punta Cana Review (Everything You NEED To Know)",
+          "channel": "Royal Retreats"
+        },
+        {
+          "youtubeId": "0gbgSSUCG-U",
+          "title": "Majestic Elegance Punta Cana Hotel Tour & Review",
+          "channel": "Travel Geek"
+        }
+      ],
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "score": 4.6,
+          "outOf": 5,
+          "count": 29997,
+          "url": "https://www.tripadvisor.com/Hotel_Review-g3176298-d1068246-Reviews-Majestic_Elegance_Punta_Cana-Bavaro_Punta_Cana_La_Altagracia_Province_Dominican_Repub.html",
+          "capturedAt": "2026-08-27T02:42:15.195Z"
+        }
+      ]
     },
     {
       "id": "res_excellence-el-carmen",
@@ -153,7 +417,41 @@
       "notes": "",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z",
-      "pinnedRoomId": null
+      "pinnedRoomId": null,
+      "photos": [
+        {
+          "url": "https://76a7b323da8554ec22e0-d946e249d9a895ced1092e3c543d8d1e.ssl.cf1.rackcdn.com/u/XEC_Overview_LR.jpg",
+          "caption": "Resort overview",
+          "credit": "Excellence Resorts"
+        },
+        {
+          "url": "https://76a7b323da8554ec22e0-d946e249d9a895ced1092e3c543d8d1e.ssl.cf1.rackcdn.com/responsive/9:16/750px/u/Excellence-El-Carmen-Excellence-Club-Beachfront-Honeymoon-Swim-Up-Suites.jpg",
+          "caption": "Excellence Club beachfront honeymoon swim-up suites",
+          "credit": "Excellence Resorts"
+        }
+      ],
+      "videos": [
+        {
+          "youtubeId": "uVkYbNkeWWY",
+          "title": "Excellence El Carmen Punta Cana Review (In-Depth Resort Tour)",
+          "channel": "Luxscape"
+        },
+        {
+          "youtubeId": "oSbtEqTozTc",
+          "title": "Excellence El Carmen Punta Cana (HONEST Review & Full Tour)",
+          "channel": "Travallion"
+        }
+      ],
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "score": 4.5,
+          "outOf": 5,
+          "count": 13328,
+          "url": "https://www.tripadvisor.com/Hotel_Review-g3200043-d8709413-Reviews-Excellence_Carmen_Punta_Cana-Uvero_Alto_Punta_Cana_La_Altagracia_Province_Dominican_R.html",
+          "capturedAt": "2026-08-27T02:48:59.434Z"
+        }
+      ]
     },
     {
       "id": "res_melia-punta-cana-beach",
@@ -169,7 +467,51 @@
       "notes": "Engine: Melia SPA, hotelCode 5917. Query params ignored.",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z",
-      "pinnedRoomId": null
+      "pinnedRoomId": null,
+      "photos": [
+        {
+          "url": "https://dam.melia.com/melia/accounts/f8/4000018/projects/127/assets/16/102956/27c21c734ec34835642cae89fdb1313b-1656336716.jpg",
+          "caption": "Aerial view of the beach",
+          "credit": "Melia Hotels"
+        },
+        {
+          "url": "https://dam.melia.com/melia/accounts/f8/4000018/projects/127/assets/14/71122/05342a5a303fb9c4f582faa5269f8e28-1639125052.jpg",
+          "caption": "Resort pool",
+          "credit": "Melia Hotels"
+        },
+        {
+          "url": "https://dam.melia.com/melia/accounts/f8/4000018/projects/110/assets/7c/103028/1bb287cc1d2c94fcb2b8a5c4965a61ea-1656342475.jpg",
+          "caption": "Guest room",
+          "credit": "Melia Hotels"
+        },
+        {
+          "url": "https://dam.melia.com/melia/file/ruJJa432gib3hdWsBJN9.jpg",
+          "caption": "Wellness center",
+          "credit": "Melia Hotels"
+        }
+      ],
+      "videos": [
+        {
+          "youtubeId": "8Qq6_R9kARU",
+          "title": "Melia Punta Cana Beach Resort - All Inclusive (HONEST Review & Tour)",
+          "channel": "Luxscape"
+        },
+        {
+          "youtubeId": "O8uugrXtBs0",
+          "title": "Melia Punta Cana Beach Resort All-Inclusive (A Review You Can Trust)",
+          "channel": "Royal Retreats"
+        }
+      ],
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "score": 4.4,
+          "outOf": 5,
+          "count": 12105,
+          "url": "https://www.tripadvisor.com/Hotel_Review-g3176298-d14838260-Reviews-Melia_Punta_Cana_Beach-Bavaro_Punta_Cana_La_Altagracia_Province_Dominican_Republic.html",
+          "capturedAt": "2026-08-27T02:52:06.326Z"
+        }
+      ]
     },
     {
       "id": "res_joia-bavaro-by-iberostar",
@@ -187,7 +529,51 @@
       "notes": "",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z",
-      "pinnedRoomId": null
+      "pinnedRoomId": null,
+      "photos": [
+        {
+          "url": "https://apiimg.iberostar.com/uploads/image/81279/crops/16:9/1920/image.jpeg",
+          "caption": "Resort overview",
+          "credit": "Iberostar"
+        },
+        {
+          "url": "https://apiimg.iberostar.com/uploads/image/76031/crops/16:9/712/image.jpeg",
+          "caption": "Beach beds",
+          "credit": "Iberostar"
+        },
+        {
+          "url": "https://apiimg.iberostar.com/uploads/image/84869/crops/5:3/868/image.jpg",
+          "caption": "Poolside",
+          "credit": "Iberostar"
+        },
+        {
+          "url": "https://apiimg.iberostar.com/uploads/image/83778/crops/16:9/630/image.jpg",
+          "caption": "Guest room",
+          "credit": "Iberostar"
+        }
+      ],
+      "videos": [
+        {
+          "youtubeId": "ePb60GmRLfM",
+          "title": "JOIA Bavaro by Iberostar Is WAY More Luxurious Than I Expected",
+          "channel": "Hotel Guide"
+        },
+        {
+          "youtubeId": "k513q2uFvg0",
+          "title": "Goodbye Iberostar Grand - Hello JOIA BAVARO Punta Cana!",
+          "channel": "Coolist"
+        }
+      ],
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "score": 4.8,
+          "outOf": 5,
+          "count": 16229,
+          "url": "https://www.tripadvisor.com/Hotel_Review-g3176298-d1233228-Reviews-JOIA_Bavaro_by_Iberostar-Bavaro_Punta_Cana_La_Altagracia_Province_Dominican_Republic.html",
+          "capturedAt": "2026-08-27T02:54:58.268Z"
+        }
+      ]
     },
     {
       "id": "res_joia-rose-hall-by-iberostar",
@@ -205,7 +591,51 @@
       "notes": "",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z",
-      "pinnedRoomId": null
+      "pinnedRoomId": null,
+      "photos": [
+        {
+          "url": "https://apiimg.iberostar.com/uploads/image/89477/crops/16:9/1920/image.jpeg",
+          "caption": "Resort overview",
+          "credit": "Iberostar"
+        },
+        {
+          "url": "https://apiimg.iberostar.com/uploads/image/89750/crops/16:9/712/image.jpeg",
+          "caption": "Coastal view",
+          "credit": "Iberostar"
+        },
+        {
+          "url": "https://apiimg.iberostar.com/uploads/image/89491/crops/16:9/630/image.jpeg",
+          "caption": "Guest room",
+          "credit": "Iberostar"
+        },
+        {
+          "url": "https://apiimg.iberostar.com/uploads/image/89482/crops/5:3/868/image.jpeg",
+          "caption": "Terrace",
+          "credit": "Iberostar"
+        }
+      ],
+      "videos": [
+        {
+          "youtubeId": "sUSR0RpXr-8",
+          "title": "JOIA Rose Hall by Iberostar Jamaica - Review (Everything You NEED To Know!)",
+          "channel": "Royal Retreats"
+        },
+        {
+          "youtubeId": "gUiXiqdiU-I",
+          "title": "JOIA Rose Hall by Iberostar Full Tour & Review, Adults Only All Inclusive Jamaica Resort",
+          "channel": "TravelFinanceAdvisor"
+        }
+      ],
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "score": 4.6,
+          "outOf": 5,
+          "count": 10429,
+          "url": "https://www.tripadvisor.com/Hotel_Review-g660724-d1167103-Reviews-JOIA_Rose_Hall_by_Iberostar-Rose_Hall_Montego_Bay_Saint_James_Parish_Jamaica.html",
+          "capturedAt": "2026-08-27T02:59:20.166Z"
+        }
+      ]
     },
     {
       "id": "res_excellence-oyster-bay",
@@ -278,7 +708,16 @@
           "channel": "Coolist"
         }
       ],
-      "reviews": []
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "score": 4.5,
+          "outOf": 5,
+          "count": 8606,
+          "url": "https://www.tripadvisor.com/Hotel_Review-g612473-d12605999-Reviews-Excellence_Oyster_Bay-Falmouth_Trelawny_Parish_Jamaica.html",
+          "capturedAt": "2026-08-27T02:56:29.212Z"
+        }
+      ]
     },
     {
       "id": "res_sanctuary-cap-cana",
@@ -294,7 +733,46 @@
       "notes": "Marriott Luxury Collection property, code PUJLC. Marriott (PUJLC) serves a bot-protection interstitial. Not automatable.",
       "status": "active",
       "createdAt": "2025-01-15T12:00:00.000Z",
-      "pinnedRoomId": null
+      "pinnedRoomId": null,
+      "photos": [
+        {
+          "url": "https://cache.marriott.com/is/image/marriotts7prod/lc-pujlc-beach-main-pool-12214:Square",
+          "caption": "Beachfront pool with ocean view",
+          "credit": "Marriott"
+        },
+        {
+          "url": "https://cache.marriott.com/is/image/marriotts7prod/lc-pujlc-spa-exterior-29986:Square",
+          "caption": "Spa exterior pool",
+          "credit": "Marriott"
+        },
+        {
+          "url": "https://cache.marriott.com/is/image/marriotts7prod/lc-pujlc-the-steakhouse-19628:Classic-Hor",
+          "caption": "The Steakhouse restaurant",
+          "credit": "Marriott"
+        }
+      ],
+      "videos": [
+        {
+          "youtubeId": "vXGo-g0QoWM",
+          "title": "Sanctuary Cap Cana: Punta Cana's LIFE-CHANGING All Inclusive Resort",
+          "channel": "Coolist"
+        },
+        {
+          "youtubeId": "OtIj5B_MGW0",
+          "title": "Sanctuary Cap Cana Tour | Adults Only All-Inclusive Resort in Punta Cana (Full Walkthrough + Tips)",
+          "channel": "Trips with Angie"
+        }
+      ],
+      "reviews": [
+        {
+          "source": "TripAdvisor",
+          "score": 4.7,
+          "outOf": 5,
+          "count": 12259,
+          "url": "https://www.tripadvisor.com/Hotel_Review-g16884615-d1022212-Reviews-Sanctuary_Cap_Cana_a_Luxury_Collection_Resort_Dominican_Republic_Adult_All_Inclusive.html",
+          "capturedAt": "2026-08-27T03:03:03.449Z"
+        }
+      ]
     },
     {
       "id": "res_trs-cap-cana",
@@ -348,7 +826,14 @@
         "butler-club": false
       },
       "notes": "",
-      "url": null
+      "url": null,
+      "photos": [
+        {
+          "url": "https://www.bahia-principe.com/content/thumbs/530_353/content/imgsxml/galerias/habitaciones/23/junior-suite-deluxe-corner-bahia-principe-escape-ambar-desktop-acc12baacdfab8781852965a0f5eb927.jpg",
+          "caption": "King bed, junior suite deluxe corner",
+          "credit": "Bahia Principe"
+        }
+      ]
     },
     {
       "id": "room_barcelo-bavaro-beach_entry",
@@ -467,7 +952,14 @@
         "butler-club": false
       },
       "notes": "Renamed from \"Junior Suite Garden View\" (2026-08-24); the resort no longer offers that category.",
-      "url": null
+      "url": null,
+      "photos": [
+        {
+          "url": "https://cdn2.paraty.es/serenade-all-suites/images/649fb1dd1c55fc0=s800",
+          "caption": "Tropical-themed double room",
+          "credit": "Serenade All Suites"
+        }
+      ]
     },
     {
       "id": "room_serenade-all-suites_target",
@@ -484,7 +976,14 @@
         "butler-club": false
       },
       "notes": "Renamed from \"Junior Suite Ocean Front View\" (2026-08-24); the resort no longer offers that category.",
-      "url": null
+      "url": null,
+      "photos": [
+        {
+          "url": "https://cdn2.paraty.es/serenade-all-suites/images/c95ccdd551ee096=s600",
+          "caption": "Tropical luxury suite with ocean view",
+          "credit": "Serenade All Suites"
+        }
+      ]
     },
     {
       "id": "room_trs-turquesa_entry",
@@ -518,7 +1017,14 @@
         "butler-club": false
       },
       "notes": "",
-      "url": null
+      "url": null,
+      "photos": [
+        {
+          "url": "https://www.palladiumhotelgroup.com/content/dam/palladium/images/hoteles/republica-dominicana/punta-cana/habitaciones/trs-turquesa-hotel/jacuzzi-terrace-suite-beachside/trs-turquesa-hotel-jacuzzi-terrace-suite-beachside_01.jpg",
+          "caption": "Jacuzzi terrace suite, beachside",
+          "credit": "Palladium Hotel Group"
+        }
+      ]
     },
     {
       "id": "room_majestic-elegance_entry",
@@ -535,7 +1041,14 @@
         "butler-club": false
       },
       "notes": "",
-      "url": null
+      "url": null,
+      "photos": [
+        {
+          "url": "https://www.majestic-resorts.com/dam/jcr:bd9524a5-e422-470f-8e37-aa1df34213d5/gallery3-majestic-elegance-punta-cana.jpg",
+          "caption": "Room with indoor jacuzzi and private terrace",
+          "credit": "Majestic Resorts"
+        }
+      ]
     },
     {
       "id": "room_majestic-elegance_target",
@@ -552,7 +1065,14 @@
         "butler-club": false
       },
       "notes": "",
-      "url": null
+      "url": null,
+      "photos": [
+        {
+          "url": "https://www.majestic-resorts.com/dam/jcr:8a6e31ff-5a8c-4381-80bf-c3d4e83bb9bb/elegance-club-ocean-view-suite4-majestic-elegance-punta-cana.webp",
+          "caption": "Elegance Club ocean view suite",
+          "credit": "Majestic Resorts"
+        }
+      ]
     },
     {
       "id": "room_excellence-el-carmen_entry",
@@ -569,7 +1089,14 @@
         "butler-club": false
       },
       "notes": "",
-      "url": null
+      "url": null,
+      "photos": [
+        {
+          "url": "https://84c1b501fde61dba63bc-fa6d706bb129c036124b532437347c9f.ssl.cf1.rackcdn.com/responsive/4:3/750px/u/_xec/_suites/dominican-republic-suites-pool-view.jpg",
+          "caption": "Junior suite, pool view",
+          "credit": "Excellence Resorts"
+        }
+      ]
     },
     {
       "id": "room_excellence-el-carmen_target",
@@ -586,7 +1113,14 @@
         "butler-club": false
       },
       "notes": "",
-      "url": null
+      "url": null,
+      "photos": [
+        {
+          "url": "https://84c1b501fde61dba63bc-fa6d706bb129c036124b532437347c9f.ssl.cf1.rackcdn.com/responsive/4:3/750px/u/_xec/_suites/luxury-junior-suite-ocean-view-punta-cana.jpg",
+          "caption": "Luxury junior suite, ocean view",
+          "credit": "Excellence Resorts"
+        }
+      ]
     },
     {
       "id": "room_melia-punta-cana-beach_entry",
@@ -739,7 +1273,14 @@
         "butler-club": false
       },
       "notes": "",
-      "url": null
+      "url": null,
+      "photos": [
+        {
+          "url": "https://cache.marriott.com/is/image/marriotts7prod/lc-pujlc-jr-ste-ocean-view-26116-17918:Classic-Hor",
+          "caption": "Junior suite with balcony",
+          "credit": "Marriott"
+        }
+      ]
     },
     {
       "id": "room_sanctuary-cap-cana_target",
@@ -756,7 +1297,14 @@
         "butler-club": false
       },
       "notes": "",
-      "url": null
+      "url": null,
+      "photos": [
+        {
+          "url": "https://cache.marriott.com/is/image/marriotts7prod/lc-pujlc-premium-luxury-31378-09903:Classic-Hor",
+          "caption": "Premium luxury junior suite",
+          "credit": "Marriott"
+        }
+      ]
     },
     {
       "id": "room_trs-cap-cana_entry",
@@ -848,7 +1396,14 @@
         "room-service": true
       },
       "url": null,
-      "notes": ""
+      "notes": "",
+      "photos": [
+        {
+          "url": "https://www.palladiumhotelgroup.com/content/dam/palladium/images/hoteles/republica-dominicana/punta-cana/habitaciones/trs-turquesa-hotel/romance-suite-poolside/trs-turquesa-hotel-romance-suite-poolside_01.jpg",
+          "caption": "Romance suite, poolside",
+          "credit": "Palladium Hotel Group"
+        }
+      ]
     },
     {
       "id": "room_mt7yqu1zotkgwx",
@@ -1103,7 +1658,14 @@
         "room-service": true
       },
       "url": null,
-      "notes": ""
+      "notes": "",
+      "photos": [
+        {
+          "url": "https://www.bahia-principe.com/content/thumbs/530_353/content/imgsxml/galerias/habitaciones/107/ambar1kingbedswimuppremiumjuniorsuite1-e88562d4ef83cc440cab00b58861e129.jpg",
+          "caption": "Swim-up premium junior suite, king bed",
+          "credit": "Bahia Principe"
+        }
+      ]
     },
     {
       "id": "room_mt7yspw7zctdhg",
@@ -1120,7 +1682,14 @@
         "room-service": true
       },
       "url": null,
-      "notes": ""
+      "notes": "",
+      "photos": [
+        {
+          "url": "https://www.bahia-principe.com/content/thumbs/530_353/content/imgsxml/galerias/habitaciones/112/ambar2doublebedsswimuppremiumjuniorsuite2-fde3528f44b43f090a951236cddb1417.jpg",
+          "caption": "Swim-up premium junior suite, 2 double beds",
+          "credit": "Bahia Principe"
+        }
+      ]
     },
     {
       "id": "room_mt7yspw7km2ovi",
@@ -1137,7 +1706,14 @@
         "room-service": true
       },
       "url": null,
-      "notes": ""
+      "notes": "",
+      "photos": [
+        {
+          "url": "https://www.bahia-principe.com/content/thumbs/530_353/content/imgsxml/galerias/habitaciones/108/kingswimupcornerpremiumjs7-1ca0d0d80736273ee3b626004035f880.jpg",
+          "caption": "Swim-up corner premium junior suite",
+          "credit": "Bahia Principe"
+        }
+      ]
     },
     {
       "id": "room_mt8oqkr981za35",
@@ -1154,7 +1730,14 @@
         "room-service": true
       },
       "url": null,
-      "notes": ""
+      "notes": "",
+      "photos": [
+        {
+          "url": "https://www.palladiumhotelgroup.com/content/dam/palladium/images/hoteles/republica-dominicana/punta-cana/habitaciones/trs-turquesa-hotel/junior-suite-poolside-ocean-view/trs-turquesa-hotel-junior-suite-poolside-ocean-view_01.jpg",
+          "caption": "Junior suite, poolside ocean view",
+          "credit": "Palladium Hotel Group"
+        }
+      ]
     },
     {
       "id": "room_mtagfm1teq2fkb",
