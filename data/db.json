@@ -1789,6 +1789,74 @@
       },
       "url": null,
       "notes": ""
+    },
+    {
+      "id": "room_mueq1e2zpiqbwa",
+      "resortId": "res_trs-turquesa",
+      "name": "Junior Suite Ocean View",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": true,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mueq1yaokprz9l",
+      "resortId": "res_trs-turquesa",
+      "name": "Villa Suite Swim Out",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": true,
+        "plunge-pool": false,
+        "butler-club": false,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mueq2kvujtwx2a",
+      "resortId": "res_trs-turquesa",
+      "name": "Villa Suite",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
+    },
+    {
+      "id": "room_mueq4u7ku2r96f",
+      "resortId": "res_joia-bavaro-by-iberostar",
+      "name": "Upper Floor Suite",
+      "tier": "other",
+      "amenities": {
+        "ocean-front": false,
+        "oceanview": false,
+        "swim-up": false,
+        "plunge-pool": false,
+        "butler-club": false,
+        "soaking-tub": false,
+        "room-service": true
+      },
+      "url": null,
+      "notes": ""
     }
   ],
   "criteria": [
@@ -12315,6 +12383,110 @@
       "url": "https://www.melia.com/en/booking/room-and-rates?search=...checkIn=2027-12-11",
       "notes": "",
       "capturedAt": "2026-09-14T15:19:14.925Z"
+    },
+    {
+      "id": "price_mueq1e2zoq9uo6",
+      "roomId": "room_mueq1e2zpiqbwa",
+      "tripId": "trip_20270814",
+      "source": "resort-direct",
+      "price": 4805.96,
+      "salePrice": 2967.68,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://bookings.palladiumhotelgroup.com/bookcore/availability/suitesturquesa/2027-08-14/2027-08-21/2/0/",
+      "notes": "",
+      "capturedAt": "2026-09-23T23:15:41.574Z"
+    },
+    {
+      "id": "price_mueq1yaluiz38b",
+      "roomId": "room_mueq1e2zpiqbwa",
+      "tripId": "trip_20271009",
+      "source": "resort-direct",
+      "price": 4409.06,
+      "salePrice": 2722.59,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://bookings.palladiumhotelgroup.com/bookcore/availability/suitesturquesa/2027-10-09/2027-10-16/2/0/",
+      "notes": "",
+      "capturedAt": "2026-09-23T23:16:07.772Z"
+    },
+    {
+      "id": "price_mueq1yao0v3hwy",
+      "roomId": "room_mueq1yaokprz9l",
+      "tripId": "trip_20271009",
+      "source": "resort-direct",
+      "price": 5410.52,
+      "salePrice": 3341,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://bookings.palladiumhotelgroup.com/bookcore/availability/suitesturquesa/2027-10-09/2027-10-16/2/0/",
+      "notes": "",
+      "capturedAt": "2026-09-23T23:16:07.772Z"
+    },
+    {
+      "id": "price_mueq2kvtuhr3f7",
+      "roomId": "room_mueq1e2zpiqbwa",
+      "tripId": "trip_20271113",
+      "source": "resort-direct",
+      "price": 4898.26,
+      "salePrice": 3024.68,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://bookings.palladiumhotelgroup.com/bookcore/availability/suitesturquesa/2027-11-13/2027-11-20/2/0/",
+      "notes": "",
+      "capturedAt": "2026-09-23T23:16:37.046Z"
+    },
+    {
+      "id": "price_mueq2kvumqdzga",
+      "roomId": "room_mueq2kvujtwx2a",
+      "tripId": "trip_20271113",
+      "source": "resort-direct",
+      "price": 5342.84,
+      "salePrice": 3299.2,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://bookings.palladiumhotelgroup.com/bookcore/availability/suitesturquesa/2027-11-13/2027-11-20/2/0/",
+      "notes": "",
+      "capturedAt": "2026-09-23T23:16:37.046Z"
+    },
+    {
+      "id": "price_mueq2kvuz8w8jp",
+      "roomId": "room_mueq1yaokprz9l",
+      "tripId": "trip_20271113",
+      "source": "resort-direct",
+      "price": 6009.02,
+      "salePrice": 3710.57,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://bookings.palladiumhotelgroup.com/bookcore/availability/suitesturquesa/2027-11-13/2027-11-20/2/0/",
+      "notes": "",
+      "capturedAt": "2026-09-23T23:16:37.046Z"
+    },
+    {
+      "id": "price_mueq4u7kqxm4lk",
+      "roomId": "room_mueq4u7ku2r96f",
+      "tripId": "trip_20271113",
+      "source": "resort-direct",
+      "price": 7063,
+      "salePrice": 4450,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://www.iberostar.com/en/bookings/?vo_booking%5Bcheck_in_date%5D=11%2F13%2F2027&vo_booking%5Bcheck_out_date%5D=11%2F20%2F2027&vo_booking%5Bhotel_id%5D=78",
+      "notes": "",
+      "capturedAt": "2026-09-23T23:18:22.444Z"
+    },
+    {
+      "id": "price_mueq5zh5ghstql",
+      "roomId": "room_mueq4u7ku2r96f",
+      "tripId": "trip_20271211",
+      "source": "resort-direct",
+      "price": 7063,
+      "salePrice": 4450,
+      "currency": "USD",
+      "taxesIncluded": true,
+      "url": "https://www.iberostar.com/en/bookings/?vo_booking%5Bcheck_in_date%5D=12%2F11%2F2027&vo_booking%5Bcheck_out_date%5D=12%2F18%2F2027&vo_booking%5Bhotel_id%5D=78",
+      "notes": "",
+      "capturedAt": "2026-09-23T23:19:15.928Z"
     }
   ],
   "meta": {
